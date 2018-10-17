@@ -26,10 +26,14 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    noyau.c \
+    tuilebleu.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    noyau.h \
+    tuilebleu.h
 
 FORMS += \
         mainwindow.ui
