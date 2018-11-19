@@ -3,6 +3,12 @@ body {
   background-color: #696969;
 }
 
+header{
+  float: right;
+  position: absolute;
+  left: 82vw;
+}
+
 .icones{
   border:none;
   background: none;
@@ -13,6 +19,7 @@ body {
 }
 
 #barre_son{
+  position: absolute;
   display: none;
 }
 
@@ -53,5 +60,10 @@ body {
   #logo{
     height:auto;
     width: 100vw;
+  }
+  header{
+    float: none;
+    position: relative;
+    left: 0vw;
   }
 }
