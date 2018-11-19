@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     noyau.c \
-    tuile.cpp
+    tuile.cpp \
+    background.cpp
 
 HEADERS += \
         mainwindow.h \
     noyau.h \
-    tuile.h
+    tuile.h \
+    background.h
 
 FORMS += \
         mainwindow.ui
