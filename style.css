@@ -3,17 +3,38 @@ body {
   background-color: #696969;
 }
 
+.icones{
+  border:none;
+  background: none;
+}
 
-button{
+#son{
+  display: inline-block;
+}
+
+#barre_son{
+  display: none;
+}
+
+#son:hover #barre_son{
+  display: block;
+}
+
+.modes{
   padding:6px 0 6px 0;
-  margin: 6px 0 6px 0;
+  margin: 12px 0 6px 0;
 	font:Bold 13px Arial;
-	background:#d34836;
+	background:#FF4500;
 	color:#fff;
-	width: 35vw;
-  height: 12vh;
+	width: 30vw;
+  height: 10vh;
 	border:none;
   font-size: 20px;
+}
+
+.modes:hover{
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 #logo{
@@ -21,8 +42,9 @@ button{
   width: 50vw;
 }
 
+
 @media (max-width: 768px) {
-  button{
+  .modes{
     margin: 0 0 0 0;
     width: 100vw;
     height: 20vh;
