@@ -1,0 +1,35 @@
+body {
+  text-align: center;
+  background-color: #696969;
+}
+
+
+button{
+  padding:6px 0 6px 0;
+  margin: 6px 0 6px 0;
+	font:Bold 13px Arial;
+	background:#d34836;
+	color:#fff;
+	width: 35vw;
+  height: 12vh;
+	border:none;
+  font-size: 20px;
+}
+
+#logo{
+  height:auto;
+  width: 50vw;
+}
+
+@media (max-width: 768px) {
+  button{
+    margin: 0 0 0 0;
+    width: 100vw;
+    height: 20vh;
+    border-bottom: 1px black solid;
+  }
+  #logo{
+    height:auto;
+    width: 100vw;
+  }
+}
