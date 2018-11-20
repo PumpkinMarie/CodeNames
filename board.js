@@ -52,6 +52,18 @@ class Board{
 		}
 	}
 	
+	langUpdate(lang){//On change la langue de tous les mots
+		for(let i=0;i<5;i++){
+			for(let j=0;j<5;j++){
+				this.CardBoard[i][j].value=getWord(this.CardBoard[i][j].value,lang);
+			}
+		}
+	}
+	
+	getCardboard(){
+		return this.CardBoard;
+	}
+	
 	constructor(){
 		this.firstTeam="";
 		this.createCardBoard();
