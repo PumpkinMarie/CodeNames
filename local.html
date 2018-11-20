@@ -10,8 +10,10 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 
-	<body>
-		<header>
+	<body class="container">
+		<header class="row">
+			<div class="col-md-9 col-sd-5"></div>
+			<div class="col-md-3">
 			<div id="son">
 				<button class="icones" type="button"><img src="ressources/son.png" width="30px" width="auto" ></img></button>
 				<input id="barre_son" type="range" min="0" max="100" value="50">
@@ -20,24 +22,26 @@
 			<div id="langues">
 				<button class="icones" id="français" type="button"><img src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
 				<button class="icones" id="anglais" type="button"><img src="ressources/anglais.jpg" width="30px" width="auto" ></img></button>
-				<!rajout de langages>
 			</div>
 			<button class="icones" id="options" type="button"><img src="ressources/reg.png" width="30px" width="auto" ></img></button>
 			<a href="index.html"><button class="icones" type="button"><img src="ressources/exit.png" width="30px" width="auto" ></img></button></a>
+		</div>
 		</header>
-		<img id="logo" src="ressources/index.png" alt="logo code names">
-		<div>
-			<div class="modes_loc" >
+		<div class="row">
+			<img class="col-md-8 offset-md-2" id="logo" src="ressources/index.png" alt="logo code names">
+		</div>
+		<div class="row justify-content-center">
+			<div class="modes_loc">
 				<a href="competitif.html" class="modes_bout">Competitif	</a>
-				<p>"LOREM"</p>
+				<p class="desc">"LOREM"</p>
 			</div>
 			<div class="modes_loc">
 				<a href="index.html" class="modes_bout">Coop	</a>
-				<p>"LOREM"</p>
+				<p class="desc">"LOREM"</p>
 			</div>
 			<div class="modes_loc">
 				<a href="index.html" class="modes_bout">Solo	</a>
-				<p>"LOREM"</p>
+				<p class="desc">"LOREM"</p>
 			</div>
 		</div>
 

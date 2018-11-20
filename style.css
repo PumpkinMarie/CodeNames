@@ -29,13 +29,12 @@ body {
 .modes{
   padding:6px 0 6px 0;
   margin: 12px 0 6px 0;
-	font:Bold 13px Arial;
+	font:Bold 20px Arial;
 	background:#FF4500;
 	color:#fff;
 	width: 30vw;
   height: 10vh;
 	border:none;
-  font-size: 20px;
 }
 
 .modes:hover{

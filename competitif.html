@@ -10,8 +10,10 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 
-	<body>
-		<header>
+	<body class="container">
+		<header class="row">
+			<div class="col-md-9 col-sd-5"></div>
+			<div class="col-md-3">
 			<div id="son">
 				<button class="icones" type="button"><img src="ressources/son.png" width="30px" width="auto" ></img></button>
 				<input id="barre_son" type="range" min="0" max="100" value="50">
@@ -20,15 +22,17 @@
 			<div id="langues">
 				<button class="icones" id="français" type="button"><img src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
 				<button class="icones" id="anglais" type="button"><img src="ressources/anglais.jpg" width="30px" width="auto" ></img></button>
-				<!rajout de langages>
 			</div>
 			<button class="icones" id="options" type="button"><img src="ressources/reg.png" width="30px" width="auto" ></img></button>
 			<a href="index.html"><button class="icones" type="button"><img src="ressources/exit.png" width="30px" width="auto" ></img></button></a>
+		</div>
 		</header>
 
-		<img id="logo" src="ressources/index.png" alt="logo code names">
-			<div>
-			<div class="equipe">
+		<div class="row">
+			<img id="logo" class="col-md-8 offset-md-2" src="ressources/index.png" alt="logo code names">
+		</div>
+			<div class="row justify-content-center">
+			<div class="equipe col-md-3">
 				<p id="eq1">Equipe 1</p>
 				<form class="form">
 					<p> Couleur de l'équipe </p>
@@ -39,7 +43,7 @@
 					<input type="number"name="nbjoueurs" min="0" value="2">
 				</form>
 			</div>
-			<div class="equipe">
+			<div class="equipe col-md-3">
 				<p id="eq2">Equipe 2</p>
 				<form class="form">
 					<p> Couleur de l'équipe </p>
