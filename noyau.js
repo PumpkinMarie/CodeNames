@@ -1,10 +1,10 @@
 class noyau {
 
-	noyau(mode) {
+	constructor(mode) { //Precise if the game is competitive, cooperative, solo..
 
 	}
 
-	setTeam1() {
+	setTeam1() { //Set team parameters
 
 	}
 
@@ -24,7 +24,7 @@ class noyau {
 
 	}
 
-	setMasterSelection(cardArray) {
+	setMasterSelection(cardArray) { //Adds an array to a team's array of cards to find (linked by a common tip)
 
 	}
 
