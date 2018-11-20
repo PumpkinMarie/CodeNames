@@ -57,7 +57,6 @@ header{
 	color:#fff;
 	width: 20vw;
   height: 60vh;
-	border:black solid 1px;
 }
 
 .modes_loc:hover{
@@ -87,6 +86,30 @@ header{
   width: 50vw;
 }
 
+.equipe{
+  display: inline-block;
+  padding:6px 0 6px 0;
+  margin: 12px 12px 6px 12px;
+	color:#fff;
+	width: 25vw;
+  height: 35vh;
+}
+
+.form{
+  font:Bold 13px Arial;
+}
+
+#eq1{
+  padding: 6px 0 6px 0;
+  font:Bold 20px Arial;
+  background: blue;
+}
+
+#eq2{
+  padding: 6px 0 6px 0;
+  font:Bold 20px Arial;
+  background: red;
+}
 
 @media (max-width: 768px) {
   .modes{
