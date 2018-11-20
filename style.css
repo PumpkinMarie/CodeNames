@@ -102,13 +102,13 @@ header{
 #eq1{
   padding: 6px 0 6px 0;
   font:Bold 20px Arial;
-  background: blue;
+  background: #4d94ff;
 }
 
 #eq2{
   padding: 6px 0 6px 0;
   font:Bold 20px Arial;
-  background: red;
+  background: #ff751a;
 }
 
 @media (max-width: 768px) {
