@@ -10,7 +10,7 @@ body {
 }
 
 .iconesall{
-  padding: 6px 6px 6px 6px;
+  padding: 12px 6px 6px 6px;
 }
 
 #son{
@@ -27,7 +27,7 @@ body {
 }
 
 #langues{
-  display: none;
+  position:absolute;
 }
 
 .modes{
@@ -112,22 +112,17 @@ body {
 .box_tour{
   background: #4d94ff;
   margin: 6px 0 6px 6px;
-  padding: 6px 0 6px 0;
+  padding: 10px 0 6px 0;
   border-radius: 10px;
 }
 
 .choix_ME{
-  background: black;
   margin: 6px 0 6px 6px;
-  padding: 6px 0 6px 0;
-  border-radius: 10px;
-}
-
-#plateau{
+  padding: 6px 0 6px 20px;
 }
 
 .carte{
-  border: black 1px solid;
+  border: black 2px solid;
   height: 15vh;
   width: 15vw;
 }
@@ -141,8 +136,6 @@ body {
 }
 
 .colonne{
-  margin: 6px 6px 6px 6px;
-  padding: 6px 6px 6px 6px;
 }
 
 @media (max-width: 768px) {
