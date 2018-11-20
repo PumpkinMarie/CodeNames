@@ -27,6 +27,9 @@ body {
 }
 
 #langues{
+  background-color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  left: 35%;
   position:absolute;
 }
 

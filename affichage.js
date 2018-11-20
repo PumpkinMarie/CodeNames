@@ -1,9 +1,9 @@
-function Afficher_Langues(){
+function AfficherLangues(){
     $('#langues').css("visibility","visible");
-    $('#langage').onclick=Quitter_Langues;
+    document.getElementById('langage').onclick=QuitterLangues;
 }
 
-function Quitter_Langues(){
+function QuitterLangues(){
     $('#langues').css("visibility","hidden");
-    $('#langage').onclick=Afficher_Langues;
+    document.getElementById('langage').onclick=AfficherLangues;
 }
