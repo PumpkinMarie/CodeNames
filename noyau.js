@@ -28,7 +28,7 @@ class Noyau {
 		currentTeam.addCardArray(cardArray);
 	}
 
-	verifySpyCard() {
+	verifySpyCard() { //attributes the points/actions corresponding to the cards chosen by a team
 
 	}
 
