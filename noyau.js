@@ -1,5 +1,5 @@
-class noyau {
-
+class Noyau {
+	
 	constructor(mode) { //Precise if the game is competitive, cooperative, solo..
 
 	}
