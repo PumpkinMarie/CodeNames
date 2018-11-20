@@ -1,6 +1,6 @@
 class Card{
-	let isrevealed=false;
 	constructor(value,team){
+		this.isrevealed=false;
 		this.team=team;//Blue,Red,Grey,Black
 		this.value=value;//Word
 	}
@@ -11,7 +11,10 @@ class Card{
 		return this.team;
 	}
 	reveal(){ //the card has been chosen
-		isrevealed=true;
+		this.isrevealed=true;
+	}
+	isRevealed(){
+		return isrevealed;
 	}
 
 }
