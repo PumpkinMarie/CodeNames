@@ -1,15 +1,15 @@
-class noyau {
-
-	noyau(mode) {
-
+class Noyau {
+	let teams= new Array();
+	let currentTeam;
+	constructor(mode) { //Precise if the game is competitive, cooperative, solo..
+		this.mode=mode;
+		this.gameEnd=false
+		setTeam("Black","Trap",0); //non playable teams to represent grey and black cards
+		setTeam("Grey","Neutral",0);
 	}
 
-	setTeam1() {
-
-	}
-
-	setTeam2() {
-
+	setTeam(color,name,NbPlayers) { //Set team parameters
+		teams.push(new Team(color,name,NbPlayers));
 	}
 
 	getBoardState() {
@@ -21,11 +21,11 @@ class noyau {
 	}
 
 	isBleuTeam() {
-
+		return currentTeam.name=="Blue";
 	}
 
-	setMasterSelection(cardArray) {
-
+	setMasterSelection(cardArray) { //Adds an array to a team's array of cards to find (linked by a common tip)
+		currentTeam.addCardArray(cardArray);
 	}
 
 	verifySpyCard() {
@@ -41,10 +41,10 @@ class noyau {
 	}
 
 	getScore() {
-
+		return currentTeam.getScore();
 	}
 
 	isEndGame() {
-
+		return gameEnd;
 	}
 }
