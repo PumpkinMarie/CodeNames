@@ -5,22 +5,16 @@ class Board{
 	}
 	
 	randomCard(){
-		let random=Math.floor(4*Math.random);
-		if(random==0 && this.red>0){//Red
-			this.red--;
-			return new Card("Un mot","Red");
-		}else if(random==1 && this.blue>0){//Blue
-			this.blue--;
-			return new Card("Un mot","Blue");
-		}else if(random==2&& this.neutral>0){//Neutral
-			this.neutral--;
-			return new Card("Un mot","Grey");
-		}else if(random==3 && this.assassin>0){//Assassin
-			this.assassin--;
-			return new Card("Un mot","Black");
-		}else{//Assassin
-			return this.randomCard();
-		}
+		let teams=new Array();
+		if(this.red>0)
+			teams.push("Red");
+		if(this.blue>0)
+			teams.push("Blue");
+		if(this.neutral>0)
+			teams.push("Grey");
+		if(this.assassin>0)
+			teams.push("Black");
+		return new Card("Un mot",teams[Math.floor(teams.length*Math.random())]);
 	}
 	
 	createCardBoard(){
