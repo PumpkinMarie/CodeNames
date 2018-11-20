@@ -5,8 +5,8 @@ class Noyau {
 		this.gameEnd=false
 		//this.setTeam("Black","Trap",0); //non playable teams to represent grey and black cards
 		//this.setTeam("Grey","Neutral",0);
-		this.board=createBoard();
-		this.currentTeam=board.firstTeam; //"Blue" or "Red"
+		this.board=this.createBoard();
+		this.currentTeam=this.board.firstTeam; //"Blue" or "Red"
 		this.currentTeam=this.currentTeam=="Blue"?0:1;
 		this.teams=new Array();
 		this.setTeam("Blue",Team1Name,Team1NbPlayers);
@@ -43,10 +43,10 @@ class Noyau {
 	}
 
 	verifySpyCard(card) { //attributes the points/actions corresponding to the cards chosen by a team
-		if(card.team=="Black")
+		if(card.team=="Black"){
 			this.gameEnd=true;
 			this.winner=this.teams[(this.currentTeam+1)%2].name;
-		else if(card.team=="Grey"){
+		}else if(card.getTeam()=="Grey"){
 			this.endTour();
 		}
 		else if(card.team!=this.teams[this.currentTeam].color){ //Neither Black nor Grey. It must be blue or red and of the opposite team
