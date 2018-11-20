@@ -3,11 +3,6 @@ body {
   background-color: #696969;
 }
 
-header{
-  float: right;
-  position: absolute;
-  left: 82vw;
-}
 
 .icones{
   border:none;
@@ -86,6 +81,17 @@ header{
   width: 50vw;
 }
 
+.row{
+}
+
+#plateau{
+  background: red;
+}
+
+#sablier{
+  background: white;
+}
+
 .equipe{
   display: inline-block;
   padding:6px 0 6px 0;
@@ -127,7 +133,7 @@ header{
   .equipe{
     display: block;
     padding:6px 0 6px 0;
-    margin: 0 0 0 0;
+    margin: 0 0 20px 0;
     width: 100vw;
     height: auto;
   }
@@ -135,9 +141,5 @@ header{
     height:auto;
     width: 100vw;
   }
-  header{
-    float: none;
-    position: relative;
-    left: 0vw;
-  }
+
 }
