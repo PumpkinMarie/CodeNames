@@ -3,7 +3,7 @@ class Team{
 		this.color=color;
 		this.name=name;
 		this.NbPlayers=NbPlayers;
-		this.score=0;
+		this.score=8;
 		this.cardsToFind= new Array();
 		this.guesses=0;
 	}
@@ -11,7 +11,10 @@ class Team{
 		return this.score;
 	}
 	AddScore(points){
-		this.score+=points;
+		this.score-=points;
+	}
+	hasWon(){
+		return this.score==0;
 	}
 	getName(){
 		return this.name;
@@ -20,9 +23,9 @@ class Team{
 		return this.color; //Blue, Red, Grey, Black
 	}
 	addCardArray(cardArray){
-		this.cardsToFind[this.cardsToFind.length]=cardArray;
+		this.cardsToFind=cardArray;
 	}
-	getCardArray(){
-		return this.cardsToFind;
+	isInCardArray(card){
+		
 	}
 }

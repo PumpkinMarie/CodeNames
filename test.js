@@ -8,4 +8,6 @@ window.onload = function () {
 		}
 		console.log(message);
 	}
+	//On teste la création d'un noyau
+	let noyau= new Noyau("cooperative",EN,"Les bleus",2,"Les rouges",3);
 }
