@@ -130,8 +130,8 @@ body {
   width: 15vw;
 }
 
-#sablier{
-  transform: rotate(90deg) translate(20vh);
+.progress{
+  transform: rotate(90deg) translate(30vh);
 }
 
 .table{
