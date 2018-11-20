@@ -1,5 +1,6 @@
 class Team{
 	let score=0;
+	let cardsToFind= new Array();
 	constructor(color,name,NbPlayers){
 		this.color=color;
 		this.name=name;
