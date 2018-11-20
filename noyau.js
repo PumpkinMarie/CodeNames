@@ -1,47 +1,54 @@
 class Noyau {
-	let teams= new Array();
-	let currentTeam;
 	constructor(mode) { //Precise if the game is competitive, cooperative, solo..
 		this.mode=mode;
 		this.gameEnd=false
-		setTeam("Black","Trap",0); //non playable teams to represent grey and black cards
-		setTeam("Grey","Neutral",0);
+		this.setTeam("Black","Trap",0); //non playable teams to represent grey and black cards
+		this.setTeam("Grey","Neutral",0);
+		this.board=createBoard();
+		this.currentTeam=board.firstTeam;
+		this.teams= new Array();
 	}
 
 	setTeam(color,name,NbPlayers) { //Set team parameters
-		teams.push(new Team(color,name,NbPlayers));
+		this.teams.push(new Team(color,name,NbPlayers));
 	}
 
-	getBoardState() {
-
+	getBoardState() {//?
 	}
 
 	createBoard() {
-
+		return new Board();
 	}
 
 	isBleuTeam() {
-		return currentTeam.name=="Blue";
+		return this.currentTeam=="Blue";
 	}
 
 	setMasterSelection(cardArray) { //Adds an array to a team's array of cards to find (linked by a common tip)
-		currentTeam.addCardArray(cardArray);
+		this.currentTeam.addCardArray(cardArray);
 	}
 
-	verifySpyCard() { //attributes the points/actions corresponding to the cards chosen by a team
-
+	verifySpyCard(card) { //attributes the points/actions corresponding to the cards chosen by a team
+		if(card.team=="Black")
+			this.gameEnd=true;
+		else if(card.team=="Grey"){
+			this.endTour();
+		}
 	}
 
 	askEndTour() {
-
+		if(this.currentTeam.guesses!=0){
+			this.endTour();
+			return true;
+		}
+		return false;
 	}
 
 	endTour() {
-
 	}
 
 	getScore() {
-		return currentTeam.getScore();
+		return this.currentTeam.getScore();
 	}
 
 	isEndGame() {

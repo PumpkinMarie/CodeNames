@@ -14,7 +14,7 @@ class Card{
 		this.isrevealed=true;
 	}
 	isRevealed(){
-		return isrevealed;
+		return this.isrevealed;
 	}
 
 }

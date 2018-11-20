@@ -1,24 +1,28 @@
 class Team{
-	let score=0;
-	let cardsToFind= new Array();
 	constructor(color,name,NbPlayers){
 		this.color=color;
 		this.name=name;
 		this.NbPlayers=NbPlayers;
+		this.score=0;
+		this.cardsToFind= new Array();
+		this.guesses=0;
 	}
 	getScore(){
-		return score;
+		return this.score;
 	}
 	AddScore(points){
-		score+=points;
+		this.score+=points;
 	}
 	getName(){
-		return name;
+		return this.name;
 	}
 	getColor(){
-		return color; //Blue, Red, Grey, Black
+		return this.color; //Blue, Red, Grey, Black
 	}
 	addCardArray(cardArray){
-		cardsToFind[cardsToFind.length]=cardArray;
+		this.cardsToFind[this.cardsToFind.length]=cardArray;
+	}
+	getCardArray(){
+		return this.cardsToFind;
 	}
 }
