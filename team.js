@@ -7,15 +7,18 @@ class Team{
 		this.NbPlayers=NbPlayers;
 	}
 	getScore(){
-		return this.score;
+		return score;
 	}
 	AddScore(points){
-		this.score+=points;
+		score+=points;
 	}
 	getName(){
-		return this.name;
+		return name;
 	}
 	getColor(){
-		return this.color; //Blue, Red, Grey, Black
+		return color; //Blue, Red, Grey, Black
+	}
+	addCardArray(cardArray){
+		cardsToFind[cardsToFind.length]=cardArray;
 	}
 }

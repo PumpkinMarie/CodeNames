@@ -3,7 +3,8 @@ class Noyau {
 	let currentTeam;
 	constructor(mode) { //Precise if the game is competitive, cooperative, solo..
 		this.mode=mode;
-		setTeam("Black","Trap",0);
+		this.gameEnd=false
+		setTeam("Black","Trap",0); //non playable teams to represent grey and black cards
 		setTeam("Grey","Neutral",0);
 	}
 
@@ -24,7 +25,7 @@ class Noyau {
 	}
 
 	setMasterSelection(cardArray) { //Adds an array to a team's array of cards to find (linked by a common tip)
-
+		currentTeam.addCardArray(cardArray);
 	}
 
 	verifySpyCard() {
@@ -40,10 +41,10 @@ class Noyau {
 	}
 
 	getScore() {
-
+		return currentTeam.getScore();
 	}
 
 	isEndGame() {
-
+		return gameEnd;
 	}
 }
