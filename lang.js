@@ -13,7 +13,7 @@ const Dico = {
 	],
 	"Action": [
 		"Action",
-		"acción"
+		"Acción"
 	],
 	"Adolescent": [
 		"Teenager",
@@ -33,7 +33,7 @@ const Dico = {
 	],
 	"Allumer": [
 		"Light up",
-		"Luz"
+		"Encender"
 	],
 	"Alpes": [
 		"Alps",
@@ -153,7 +153,7 @@ const Dico = {
 	],
 	"Bac": [
 		"Ferry",
-		"Artesa"
+		"Lancha"
 	],
 	"Baguette": [
 		"Wand",
@@ -181,7 +181,7 @@ const Dico = {
 	],
 	"Bambou": [
 		"Bamboo",
-		"bambú"
+		"Bambú"
 	],
 	"Banane": [
 		"Banana",
@@ -237,10 +237,10 @@ const Dico = {
 	],
 	"Bière": [
 		"Beer",
-		"cerveza"
+		"Cerveza"
 	],
 	"Blanc": [
-		"white",
+		"White",
 		"Blanco"
 	],
 	"Blé": [
@@ -253,7 +253,7 @@ const Dico = {
 	],
 	"Bob": [
 		"Sunhat",
-		"Autre que chapeau en espagnol parce que bob c'est la même"
+		"Sombrero Bob"
 	],
 	"Boisson": [
 		"Drink",
@@ -305,7 +305,7 @@ const Dico = {
 	],
 	"Bouton": [
 		"Button",
-		"botón"
+		"Botón"
 	],
 	"Branche": [
 		"Branch",
@@ -317,7 +317,7 @@ const Dico = {
 	],
 	"Bravo": [
 		"Bravo",
-		"Bien hecho"
+		"Bravo"
 	],
 	"Bretagne": [
 		"Britain",
@@ -361,7 +361,7 @@ const Dico = {
 	],
 	"Cabane": [
 		"Hut",
-		"Cobertizo"
+		"Cabaña"
 	],
 	"Cabine": [
 		"Cabin",
@@ -431,7 +431,10 @@ const Dico = {
 		"Capitalism",
 		"Capitalismo"
 	],
-	"Car": [],
+	"Car": [
+		"Bus",
+		"Autobús"
+	],
 	"Carotte": [
 		"Carrot",
 		"Zanahoria"
@@ -474,7 +477,7 @@ const Dico = {
 	],
 	"Cellule": [
 		"Cell",
-		"Celda"
+		"Célula"
 	],
 	"Cercle": [
 		"Circle",
@@ -482,7 +485,7 @@ const Dico = {
 	],
 	"Chaîne": [
 		"Chain",
-		"Cordillera"
+		"Cadena"
 	],
 	"Chair": [
 		"Meat",
@@ -1209,7 +1212,7 @@ const Dico = {
 	"Zodiaque": [],
 	"Zone": [],
 	"Zoo": []
-}
+};
 const FR = 0;
 const EN = 1;
 const ES = 2;
