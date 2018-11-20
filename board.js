@@ -4,50 +4,56 @@ class Board{
 		return firsTeam;
 	}
 	
-	randomCard(){
-		let teams=new Array();
-		if(this.red>0)
-			teams.push("Red");
-		if(this.blue>0)
-			teams.push("Blue");
-		if(this.neutral>0)
-			teams.push("Grey");
-		if(this.assassin>0)
-			teams.push("Black");
-		return new Card("Un mot",teams[Math.floor(teams.length*Math.random())]);
+	randomCard(repartition){
+		let random=Math.floor(repartition.length*Math.random());
+		let result=new Card("Un mot",repartition[random]);
+		repartition.splice(random,1);
+		return result;
 	}
 	
 	createCardBoard(){
 		let random_boolean = Math.random() >= 0.5;//true->Blue false-> Red Choix de l'agent double
+		let blue=8,red=8,neutral=7,assassin=1;
+		let repartition=new Array();
 		if(random_boolean){
-			this.blue++;
+			blue++;
 			this.firsTeam="Blue";
 		}
 		else{
-			this.red++;
+			red++;
 			this.firsTeam="Red";
 		}
+		
+		while(blue+red+neutral+assassin>0){
+			if(blue>0){
+				repartition.push("Blue");
+				blue--;
+			}
+			if(red>0){
+				repartition.push("Red");
+				red--;
+			}
+			if(neutral>0){
+				repartition.push("Grey");
+				neutral--;
+			}
+			if(assassin>0){
+				repartition.push("Black");
+				assassin--;
+			}
+		}
+		
 		this.CardBoard=new Array();
 		for(let i=0;i<5;i++){
 			this.CardBoard[i]=new Array();
 			for(let j=0;j<5;j++){
-				this.CardBoard[i][j]=this.randomCard();
+				this.CardBoard[i][j]=this.randomCard(repartition);
 			}
 		}
-		delete(this.blue);
-		delete(this.red);
-		delete(this.neutral);
-		delete(this.assassin);
 	}
 	
 	constructor(){
-		this.firstTeam="test";
-		this.red=8;
-		this.blue=8;
-		this.neutral=7;
-		this.assassin=1;
+		this.firstTeam="";
 		this.createCardBoard();
 	}
-	
-
 }
