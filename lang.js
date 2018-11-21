@@ -1167,51 +1167,185 @@ const Dico = {
 	"Triangle": ["Not Translated", "Not Translated"],
 	"Triste": ["Not Translated", "Not Translated"],
 	"Trône": ["Not Translated", "Not Translated"],
-	"Troupeau": ["Not Translated", "Not Translated"],
-	"Tsar": ["Not Translated", "Not Translated"],
-	"Tube": ["Not Translated", "Not Translated"],
-	"Tuer": ["Not Translated", "Not Translated"],
-	"Tupperware": ["Not Translated", "Not Translated"],
-	"Tuyau": ["Not Translated", "Not Translated"],
-	"Twitter": ["Not Translated", "Not Translated"],
-	"Type": ["Not Translated", "Not Translated"],
-	"Université": ["Not Translated", "Not Translated"],
-	"Vache": ["Not Translated", "Not Translated"],
-	"Vague": ["Not Translated", "Not Translated"],
-	"Vaisselle": ["Not Translated", "Not Translated"],
-	"Valeur": ["Not Translated", "Not Translated"],
-	"Ver": ["Not Translated", "Not Translated"],
-	"Verdict": ["Not Translated", "Not Translated"],
-	"Verre": ["Not Translated", "Not Translated"],
-	"Vers": ["Not Translated", "Not Translated"],
-	"Vert": ["Not Translated", "Not Translated"],
-	"Veste": ["Not Translated", "Not Translated"],
-	"Viande": ["Not Translated", "Not Translated"],
-	"Vide": ["Not Translated", "Not Translated"],
-	"Vie": ["Not Translated", "Not Translated"],
-	"Vieux": ["Not Translated", "Not Translated"],
-	"Ville": ["Not Translated", "Not Translated"],
-	"Vin": ["Not Translated", "Not Translated"],
-	"Vingt": ["Not Translated", "Not Translated"],
-	"Violon": ["Not Translated", "Not Translated"],
-	"Vipère": ["Not Translated", "Not Translated"],
-	"Vision": ["Not Translated", "Not Translated"],
-	"Vite": ["Not Translated", "Not Translated"],
-	"Vive": ["Not Translated", "Not Translated"],
-	"Vœu": ["Not Translated", "Not Translated"],
-	"Voile": ["Not Translated", "Not Translated"],
-	"Voisin": ["Not Translated", "Not Translated"],
-	"Voiture": ["Not Translated", "Not Translated"],
-	"Vol": ["Not Translated", "Not Translated"],
-	"Volume": ["Not Translated", "Not Translated"],
-	"Vote": ["Not Translated", "Not Translated"],
-	"Vouloir": ["Not Translated", "Not Translated"],
-	"Voyage": ["Not Translated", "Not Translated"],
-	"Zen": ["Not Translated", "Not Translated"],
-	"Zéro": ["Not Translated", "Not Translated"],
-	"Zodiaque": ["Not Translated", "Not Translated"],
-	"Zone": ["Not Translated", "Not Translated"],
-	"Zoo": ["Not Translated", "Not Translated"]
+	"Troupeau": [
+		"Herd",
+		"Manada"
+	],
+	"Tsar": [
+		"Tsar",
+		"Tsar"
+	],
+	"Tube": [
+		"Tube",
+		"Tubo"
+	],
+	"Tuer": [
+		"Kill",
+		"Matar"
+	],
+	"Tupperware": [
+		"Tupperware",
+		"Tupperware"
+	],
+	"Tuyau": [
+		"Pipe",
+		"Manguera"
+	],
+	"Twitter": [
+		"Twitter",
+		"Twitter"
+	],
+	"Type": [
+		"Type",
+		"Tipo"
+	],
+	"Université": [
+		"University",
+		"Universidad"
+	],
+	"Vache": [
+		"Cow",
+		"Vaca"
+	],
+	"Vague": [
+		"Wave",
+		"Ola"
+	],
+	"Vaisselle": [
+		"Crockery",
+		"Vajilla"
+	],
+	"Valeur": [
+		"Value",
+		"Valor"
+	],
+	"Ver": [
+		"Worm",
+		"Lombriz"
+	],
+	"Verdict": [
+		"Verdict", 
+		"Veredicto"
+	],
+	"Verre": [
+		"Glass",
+		"Vidrio"
+		],
+	"Vers": [
+		"Towards", 
+		"Para"
+	],
+	"Vert": [
+		"Green", 
+		"Verde"
+	],
+	"Veste": [
+		"Jacket", 
+		"Chaqueta"
+	],
+	"Viande": [
+		"Meat", 
+		"Carne"
+	],
+	"Vide": [
+		"Empty", 
+		"Vacía"
+	],
+	"Vie": [
+		"Life", 
+		"Vida"
+	],
+	"Vieux": [
+		"Old", 
+		"Viejo"
+	],
+	"Ville": [
+		"City", 
+		"Ciudad"
+	],
+	"Vin": [
+		"Wine", 
+		"Vino"
+	],
+	"Vingt": [
+		"Twenty", 
+		"Veinte"
+	],
+	"Violon": [
+		"Violin", 
+		"Violín"
+	],
+	"Vipère": [
+		"Viper", 
+		"Víbora"
+	],
+	"Vision": [
+		"Vision", 
+		"Visión"
+	],
+	"Vite": [
+		"Quick", 
+		"Rápidamente"
+	],
+	"Vive": [
+		"Bright", 
+		"Brillante"
+	],
+	"Vœu": [
+		"Wish", 
+		"Voto"
+	],
+	"Voile": [
+		"Sail", 
+		"Velo"
+	],
+	"Voisin": [
+		"Neighbour", 
+		"Vecino"
+	],
+	"Voiture": [
+		"Car", 
+		"Carro"
+	],
+	"Vol": [
+		"Flight", 
+		"Vuelo"
+	],
+	"Volume": [
+		"Volume", 
+		"Volumen"
+	],
+	"Vote": [
+		"Vote", "Voto"
+	],
+	"Vouloir": [
+		"Want to", 
+		"Desear"
+	],
+	"Voyage": [
+		"Trip", 
+		"Viajes"
+	],
+	"Zen": [
+		"Zen", 
+		"Zen"
+	],
+	"Zéro": [
+		"Zero", 
+		"Cero"
+	],
+	"Zodiaque": [
+		"Zodiac", 
+		"Zodíaco"
+	],
+	"Zone": [
+		"Zone", 
+		"Zona"
+	],
+	"Zoo": [
+		"Zoo", 
+		"Zoo"
+	]
 };
 const FR = 0;
 const EN = 1;
