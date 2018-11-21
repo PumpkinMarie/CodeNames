@@ -1144,29 +1144,98 @@ const Dico = {
 	"Tête": ["Not Translated", "Not Translated"],
 	"Thé": ["Not Translated", "Not Translated"],
 	"Tigre": ["Not Translated", "Not Translated"],
-	"Tintin": ["Not Translated", "Not Translated"],
-	"Tissu": ["Not Translated", "Not Translated"],
-	"Titre": ["Not Translated", "Not Translated"],
-	"Toast": ["Not Translated", "Not Translated"],
-	"Toilette": ["Not Translated", "Not Translated"],
-	"Tokyo": ["Not Translated", "Not Translated"],
-	"Tombe": ["Not Translated", "Not Translated"],
-	"Ton": ["Not Translated", "Not Translated"],
-	"Top": ["Not Translated", "Not Translated"],
-	"Touche": ["Not Translated", "Not Translated"],
-	"Toujours": ["Not Translated", "Not Translated"],
-	"Tour": ["Not Translated", "Not Translated"],
-	"Tournoi": ["Not Translated", "Not Translated"],
-	"Tout": ["Not Translated", "Not Translated"],
-	"Trace": ["Not Translated", "Not Translated"],
-	"Train": ["Not Translated", "Not Translated"],
-	"Traîner": ["Not Translated", "Not Translated"],
-	"Transport": ["Not Translated", "Not Translated"],
-	"Travail": ["Not Translated", "Not Translated"],
-	"Trésor": ["Not Translated", "Not Translated"],
-	"Triangle": ["Not Translated", "Not Translated"],
-	"Triste": ["Not Translated", "Not Translated"],
-	"Trône": ["Not Translated", "Not Translated"],
+	"Tintin": [
+		"Tintin",
+		"Tintin"
+	],
+	"Tissu": [
+		"Fabric", 
+		"Paño"
+	],
+	"Titre": [
+		"Title", 
+		"Título"
+	],
+	"Toast": [
+		"Toast", 
+		"Tostada"
+	],
+	"Toilette": [
+		"Toilet", 
+		"Inodoro"
+	],
+	"Tokyo": [
+		"Tokyo", 
+		"Tokyo"
+	],
+	"Tombe": [
+		"Grave", 
+		"Tumba"
+	],
+	"Ton": [
+		"Your", 
+		"Tono"
+	],
+	"Top": [
+		"Top", 
+		"Top"
+	],
+	"Touche": [
+		"Touch", 
+		"Clave"
+	],
+	"Toujours": [
+		"Forever", 
+		"Siempre"
+	],
+	"Tour": [
+		"Turn", 
+		"Gira"
+	],
+	"Tournoi": [
+		"Tournament", 
+		"Torneo"
+	],
+	"Tout": [
+		"Everything", 
+		"Todo"
+	],
+	"Trace": [
+		"Trace", 
+		"Rastro"
+	],
+	"Train": [
+		"Train", 
+		"Tren"
+	],
+	"Traîner": [
+		"Drag", 
+		"Arrastrar"
+	],
+	"Transport": [
+		"Transport", 
+		"Transporte"
+	],
+	"Travail": [
+		"Job", 
+		"Trabajo"
+	],
+	"Trésor": [
+		"Treasure", 
+		"Tresoro"
+	],
+	"Triangle": [
+		"Triangle", 
+		"Triángulo"
+	],
+	"Triste": [
+		"Sad", 
+		"Triste"
+	],
+	"Trône": [
+		"Throne", 
+		"Trono"
+	],
 	"Troupeau": [
 		"Herd",
 		"Manada"
