@@ -16,6 +16,19 @@ function QuitterLangues(){
 function ChangerAnglais(){
     $('#langue_actuelle').attr("src","ressources/anglais.jpg");
     $('#langues').css("visibility","hidden");
+    document.getElementById('langage').onclick=AfficherLangues;
+}
+
+function ChangerEspagnol(){
+    $('#langue_actuelle').attr("src","ressources/espagnol.jpg");
+    $('#langues').css("visibility","hidden");
+    document.getElementById('langage').onclick=AfficherLangues;
+}
+
+function ChangerFrançais(){
+    $('#langue_actuelle').attr("src","ressources/Drapeau_France.png");
+    $('#langues').css("visibility","hidden");
+    document.getElementById('langage').onclick=AfficherLangues;
 }
 
 function banniereRemove(){
