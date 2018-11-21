@@ -1,3 +1,4 @@
+/*Fonction alea robin
 const FR = 0;
 const EN = 1;
 const ES = 2;
@@ -16,7 +17,7 @@ function getWordRandom(language) {
 	console.log(getWord(entries, rand, EN));
 }
 getWordRandom(ES);
-
+*/
 class Langue {
 
 	// Les langues
