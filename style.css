@@ -9,6 +9,11 @@ body {
   background: none;
 }
 
+.icones:hover{
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 .iconesall{
   padding: 12px 6px 6px 6px;
 }
@@ -146,7 +151,7 @@ body {
 }
 
 #tour{
-    padding:35vh 0 0 0; 
+    padding:35vh 0 0 0;
     text-align: center;
     margin: 20px 20px 20px 10vw;
     position: absolute;
