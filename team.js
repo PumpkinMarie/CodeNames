@@ -12,6 +12,7 @@ class Team{
 	}
 	AddScore(points){
 		this.score-=points;
+		return this.hasWon();
 	}
 	hasWon(){
 		return this.score==0;
@@ -26,6 +27,11 @@ class Team{
 		this.cardsToFind=cardArray;
 	}
 	isInCardArray(card){
-		
+		let names=new Array();
+		for(let i=0;i<this.cardsToFind.length;i++){
+			names.push(this.cardsToFind[i].value);
+		}
+		//Taking advantage of a string native method to search the stringified array for a word
+		return (names.toString()).indexOf(card.value)!=-1;
 	}
 }
