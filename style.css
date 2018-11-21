@@ -82,6 +82,13 @@ body {
   cursor: pointer;
 }
 
+.desc{
+  color: black;
+  padding: 10px 10px 10px 10px;
+  font: 0.9em sans-serif;
+  text-align:left ;
+}
+
 #logo{
   height:auto;
   width: 50vw;
@@ -138,7 +145,16 @@ body {
   height: 90vh;
 }
 
-.colonne{
+#tour{
+    padding:35vh 0 0 0; 
+    text-align: center;
+    margin: 20px 20px 20px 10vw;
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    opacity: 0.8;
+    background: red;
+    z-index: 1;
 }
 
 @media (max-width: 768px) {

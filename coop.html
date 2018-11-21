@@ -27,30 +27,25 @@
 			<a href="index.html"><button class="icones" type="button"><img src="ressources/exit.png" width="30px" width="auto" ></img></button></a>
 		</div>
 		</header>
+
 		<div class="row">
-			<img class="col-md-8 offset-md-2" id="logo" src="ressources/index.png" alt="logo code names">
+			<img id="logo" class="col-md-8 offset-md-2" src="ressources/index.png" alt="logo code names">
 		</div>
-		<div class="row justify-content-center">
-			<div class="modes_loc" onclick="window.location='competitif.html';">
-				<p class="modes_bout">Competitif	</p>
-				<p class="desc">Agents, préparez-vous pour une bataille acharnée.
-Votre mission, si toutefois vous choisissez ce mode, est de vaincre l’équipe adverse composée d’autres joueurs.
-Votre groupe d’ami sera divisé en 2 équipes d’au moins 2 joueurs(1 maitre espion et 1 agent).
-Bonne chance!</p>
+			<div class="row justify-content-center">
+			<div class="equipe col-md-3">
+				<p id="eq1">Equipe 1</p>
+				<form class="form">
+					<p> Couleur de l'équipe </p>
+					<input type="color" name="head" value="#4d94ff"></br></br>
+					<p>Nom de l'équipe : </p>
+					<input type="text" name="Nom" value="Equipe 1"></br></br>
+					<p>Nombre de joueurs : </p>
+					<input type="number"name="nbjoueurs" min="2" value="2">
+				</form>
 			</div>
-			<div class="modes_loc" onclick="window.location='coop.html';">
-				<p class="modes_bout">Coop	</p>
-				<p class="desc">Agents, les machines ont envahi le monde.
-Votre mission, si toutefois vous choisissez ce mode, est de vaincre l’équipe adverse composée de leurs agents.
-Votre équipe d'au moins 2 joueurs devra affronter une IA (débrancher l’ordinateur ne compte pas).
-Bonne chance !</p>
-			</div>
-			<div class="modes_loc" onclick="window.location='competitif.html';">
-				<p class="modes_bout">Solo	</p>
-				<p class="desc">Règle du mode solo : on ne joue pas au mode solo
-</p>
-			</div>
-		</div>
+		</div>	
+			<input type="submit" value="Lancer jeu">
+
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

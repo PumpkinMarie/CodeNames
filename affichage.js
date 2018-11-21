@@ -16,5 +16,8 @@ function QuitterLangues(){
 function ChangerAnglais(){
     $('#langue_actuelle').attr("src","ressources/anglais.jpg");
     $('#langues').css("visibility","hidden");
-    
+}
+
+function banniereRemove(){
+  $('#tour').css("visibility","hidden");
 }

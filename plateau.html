@@ -12,15 +12,15 @@
 
 	<body class="container-fluid">
 		<header class="row justify-content-between">
-			<div class="col-md-2 col-sd-5 box_tour">
+			<div class="col-md-2 order-xs-3	box_tour">
 				<p>Tour de l'équipe 1</p>
 			</div>
-			<div class="col-md-6 choix_ME">
+			<div class="col-md-6 order-xs-2 choix_ME">
 				<input type="text" name="indice" value="Indice">
 				<input type="number" name="nbcartes" value="1" min="1" max="9">
 				<input type="button" value="Go">
 			</div>
-			<div class="col-md-3 iconesall">
+			<div class="col-md-3 order-xs-1 iconesall">
 			<div id="son">
 				<button class="icones" type="button"><img src="ressources/son.png" width="30px" width="auto" ></img></button>
 				<input id="barre_son" type="range" min="0" max="100" value="50">
@@ -35,6 +35,7 @@
 		</div>
 		</header>
 			<div class="row table">
+				<div id="tour" onclick="banniereRemove()">Tour du joueur suivant</div>
 				<div class="col-md-2">
 					<div class="progress" style="width:inherit;height:30px">
 					<!--on pourrait changer la couleur si le temps devient critique-->
