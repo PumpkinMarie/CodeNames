@@ -1126,24 +1126,78 @@ const Dico = {
 	"Station": ["Not Translated", "Not Translated"],
 	"Stylo": ["Not Translated", "Not Translated"],
 	"Sur": ["Not Translated", "Not Translated"],
-	"Surface": ["Not Translated", "Not Translated"],
-	"Sushi": ["Not Translated", "Not Translated"],
-	"Swing": ["Not Translated", "Not Translated"],
-	"Tableau": ["Not Translated", "Not Translated"],
-	"Tache": ["Not Translated", "Not Translated"],
-	"Taille": ["Not Translated", "Not Translated"],
-	"Tante": ["Not Translated", "Not Translated"],
-	"Tapis": ["Not Translated", "Not Translated"],
-	"Tard": ["Not Translated", "Not Translated"],
-	"Taxi": ["Not Translated", "Not Translated"],
-	"Téléphone": ["Not Translated", "Not Translated"],
-	"Télévision": ["Not Translated", "Not Translated"],
-	"Temple": ["Not Translated", "Not Translated"],
-	"Temps": ["Not Translated", "Not Translated"],
-	"Tennis": ["Not Translated", "Not Translated"],
-	"Tête": ["Not Translated", "Not Translated"],
-	"Thé": ["Not Translated", "Not Translated"],
-	"Tigre": ["Not Translated", "Not Translated"],
+	"Surface": [
+		"Surface", 
+		"Superficie"
+	],
+	"Sushi": [
+		"Sushi", 
+		"Sushi"
+	],
+	"Swing": [
+		"Swing",
+		"Oscilación"
+	],
+	"Tableau": [
+		"Board", 
+		"Mesa"
+	],
+	"Tache": [
+		"Task", 
+		"Mancha"
+	],
+	"Taille": [
+		"Size", 
+		"Tamaño"
+	],
+	"Tante": [
+		"Aunt", 
+		"Tía"
+	],
+	"Tapis": [
+		"Carpet", 
+		"Alfombra"
+	],
+	"Tard": [
+		"Late", 
+		"Tarde"
+	],
+	"Taxi": [
+		"Taxi",
+		"Taxi"
+	],
+	"Téléphone": [
+		"Phone", 
+		"Teléfono"
+	],
+	"Télévision": [
+		"Television", 
+		"Televisión"
+	],
+	"Temple": [
+		"Temple", 
+		"Templo"
+	],
+	"Temps": [
+		"Time", 
+		"Tiempo"
+	],
+	"Tennis": [
+		"Tennis", 
+		"Tenis"
+	],
+	"Tête": [
+		"Head", 
+		"Cabeza"
+	],
+	"Thé": [
+		"Tea", 
+		"Té"
+	],
+	"Tigre": [
+		"Tigre", 
+		"Tigris"
+	],
 	"Tintin": [
 		"Tintin",
 		"Tintin"
