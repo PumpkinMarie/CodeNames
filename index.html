@@ -18,10 +18,10 @@
 				<button class="icones" type="button"><img src="ressources/son.png" width="30px" width="auto" ></img></button>
 				<input id="barre_son" type="range" min="0" max="100" value="50">
 			</div>
-			<button class="icones" id="langage" type="button"><img src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
-			<div id="langues">
+			<button class="icones" id="langage" type="button" onclick="AfficherLangues()"><img id="langue_actuelle" src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
+			<div id="langues" style="visibility:hidden">
 				<button class="icones" id="français" type="button"><img src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
-				<button class="icones" id="anglais" type="button"><img src="ressources/anglais.jpg" width="30px" width="auto" ></img></button>
+				<button class="icones" id="anglais" type="button" onclick="ChangerAnglais()"><img src="ressources/anglais.jpg" width="30px" width="auto" ></img></button>
 			</div>
 			<button class="icones" id="options" type="button"><img src="ressources/reg.png" width="30px" width="auto" ></img></button>
 		</div>
@@ -40,6 +40,7 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="affichage.js"></script>
 
 
 	</body>
