@@ -1,4 +1,8 @@
 class Noyau {
+	/* 
+	Parameters: mode=["competitive","cooperative"], lang=[EN,FR,ES]
+				(Team1Name,Team2Name):String (Team1NbPlayers,Team2NbPlayers):integer
+	*/
 	constructor(mode,lang,Team1Name,Team1NbPlayers,Team2Name,Team2NbPlayers) { //Precise if the game is competitive, cooperative, solo..
 		this.mode=mode;
 		this.language=lang;
@@ -50,11 +54,20 @@ class Noyau {
 			this.endTour();
 		}
 		else if(card.team!=this.teams[this.currentTeam].color){ //Neither Black nor Grey. It must be blue or red and of the opposite team
-			this.teams[(this.currentTeam+1)%2].AddScore(1);
-			this.EndTour();
-		}
-		else{ //Is the card related to the tip?
-			
+			if(this.teams[(this.currentTeam+1)%2].AddScore(1)){//Has the other team won from that mistake?
+				this.gameEnd=true;
+				this.winner=this.teams[(this.currentTeam+1)%2].name;
+			}
+			else
+				this.endTour();
+		}else{ //Is the card related to the tip?
+			if(this.teams[currentTeam].isInCardArray(card))
+				this.teams[currentTeam].AddScore(1);
+			else if(card.team==this.teams[currentTeam].color){
+				this.teams[currentTeam].AddScore(1);
+				this.endTour();
+			}else
+				this.endTour();
 		}
 	}
 
@@ -67,7 +80,7 @@ class Noyau {
 	}
 
 	endTour() {
-		
+		this.currentTeam=(this.currentTeam+1)%2;
 	}
 
 	getScore() {
