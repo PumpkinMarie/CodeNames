@@ -38,9 +38,9 @@
 				<p id="eq1">Equipe 1</p>
 				<form class="form">
 					<p> Couleur de l'équipe </p>
-					<input type="color" name="head" value="#4d94ff"></br></br>
+					<input id="col1" type="color" name="head" value="#4d94ff"></br></br>
 					<p>Nom de l'équipe : </p>
-					<input type="text" name="Nom" value="Equipe 1"></br></br>
+					<input id="nom1" type="text" name="Nom" value="Equipe 1"></br></br>
 					<p>Nombre de joueurs : </p>
 					<input type="number"name="nbjoueurs" min="2" value="2">
 				</form>
@@ -49,15 +49,15 @@
 				<p id="eq2">Equipe 2</p>
 				<form class="form">
 					<p> Couleur de l'équipe </p>
-					<input type="color" name="head" value="#ff751a"></br></br>
+					<input id="col2" type="color" name="head" value="#ff751a"></br></br>
 					<p>Nom de l'équipe : </p>
-					<input type="text" name="Nom2" value="Equipe 2"></br></br>
+					<input id="nom2" type="text" name="Nom2" value="Equipe 2"></br></br>
 					<p>Nombre de joueurs : </p>
 					<input type="number"name="nbjoueurs2" min="2" value="2">
 				</form>
 			</div>
 		</div>
-			<input type="submit" value="Lancer jeu" onclick="window.location='plateau.html';">
+			<input type="submit" value="Lancer jeu" onclick="AjoutEquipes()">
 
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
