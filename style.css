@@ -63,14 +63,12 @@ body {
 /*	2) index.html */
 /***********************************************************************/
 .modes {
-	padding: 6px 0 6px 0;
-	margin: 12px 0 6px 0;
 	font: Bold 20px Arial;
 	background: #FF4500;
 	color: #fff;
-	width: 30vw;
-	height: 10vh;
 	border: none;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
 }
 
 .modes:hover {
@@ -106,6 +104,12 @@ body {
 	cursor: pointer;
 }
 
+#log {
+	width: auto;
+	height: auto;
+	min-width: 480px;
+}
+
 /***********************************************************************/
 /*	3) local.html */
 /***********************************************************************/
@@ -114,11 +118,6 @@ body {
 	padding: 10px 10px 10px 10px;
 	font: 0.9em sans-serif;
 	text-align: left;
-}
-
-#logo {
-	height: auto;
-	width: 50vw;
 }
 
 .equipe {
@@ -193,12 +192,6 @@ body {
 /*	7) Media Queries */
 /***********************************************************************/
 @media (max-width: 768px) {
-	.modes {
-		margin: 0 0 0 0;
-		width: 100vw;
-		height: 20vh;
-		border-bottom: 1px black solid;
-	}
 
 	.modes_loc {
 		margin: 0 0 0 0;
