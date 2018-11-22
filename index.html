@@ -1,50 +1,69 @@
-	<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html>
-
 	<head>
 		<title>CodeNames</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+		<script src="affichage.js"></script>
 		<link rel="stylesheet" href="style.css">
 	</head>
-
 	<body class="container">
-		<header class="row justify-content-between head">
-			<div class="col-md-9"></div>
-			<div class="col-md-3">
-			<div id="son">
-				<button class="icones" type="button"><img src="ressources/son.png" width="30px"></img></button>
-				<input id="barre_son" type="range" min="0" max="100" value="50">
+		<header class="row">
+			<div class="offset-md-9 col-md-3 row">
+				<div id="son" class="col-3 col-sm-3">
+					<button class="icones" type="button" data-toggle="popover" data-placement="bottom">
+						<img src="ressources/son.png" width="30px">
+					</button>
+				</div>
+				<div class="col-3 col-sm-3">
+					<button class="icones" id="langage" type="button" onclick="AfficherLangues()">
+						<img id="langue_actuelle" src="ressources/Drapeau_France.png" width="30px">
+					</button>
+					<div id="langues" style="visibility:hidden">
+						<button class="icones" id="français" type="button" onclick="ChangerFrançais()">
+							<img src="ressources/Drapeau_France.png" width="30px">
+						</button>
+						<button class="icones" id="anglais" type="button" onclick="ChangerAnglais()">
+							<img src="ressources/anglais.jpg" width="30px">
+						</button>
+						<button class="icones" id="espagnol" type="button" onclick="ChangerEspagnol()">
+							<img src="ressources/espagnol.jpg" width="30px">
+						</button>
+					</div>
+				</div>
+				<div class="col-3 col-sm-3">
+					<button class="icones" id="options" type="button">
+						<img src="ressources/reg.png" width="30px">
+					</button>
+				</div>
+				<div class="col-3 col-sm-3">
+					<a href="index.html">
+						<button class="icones" type="button">
+							<img src="ressources/exit.png" width="30px">
+						</button>
+					</a>
+				</div>
 			</div>
-			<button class="icones" id="langage" type="button" onclick="AfficherLangues()"><img id="langue_actuelle" src="ressources/Drapeau_France.png" width="30px"></img></button>
-			<div id="langues" style="visibility:hidden">
-				<button class="icones" id="français" type="button" onclick="ChangerFrançais()"><img src="ressources/Drapeau_France.png" width="30px" ></img></button>
-				<button class="icones" id="anglais" type="button" onclick="ChangerAnglais()"><img src="ressources/anglais.jpg" width="30px"></img></button>
-				<button class="icones" id="espagnol" type="button" onclick="ChangerEspagnol()"><img src="ressources/espagnol.jpg" width="30px"></img></button>
-			</div>
-			<button class="icones" id="options" type="button"><img src="ressources/reg.png" width="30px"></img></button>
-			<a href="index.html"><button class="icones" type="button"><img src="ressources/exit.png" width="30px"></img></button></a>
-		</div>
 		</header>
 		<div class="row">
-		<img class="col-md-8 offset-md-2" id="logo" src="ressources/index.png" alt="logo code names">
+			<img class="col-md-8 offset-md-2" id="logo" src="ressources/index.png" alt="logo code names">
 		</div>
 		<div class="row justify-content-center">
 			<div class="col-mod-8">
-				<a href="local.html">	<button class="modes" type="button">Local</button></br></a>
-				<button class="modes" type="button">Reseau</button></br>
-				<button class="modes" type="button">Tutoriel</button></br>
+				<a href="local.html">
+					<button class="modes" type="button">Local</button>
+					</br></a>
+				<button class="modes" type="button">Reseau</button>
+				</br>
+				<button class="modes" type="button">Tutoriel</button>
+				</br>
 			</div>
 		</div>
-
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-		<script src="affichage.js"></script>
-
-
 	</body>
-
 </html>
