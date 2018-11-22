@@ -67,6 +67,11 @@ function ModeCompet(){
     window.open("competitif.html","_self");
 }
 
+function ModeCoop(){
+    localStorage.setItem("mode", "cooperative");
+    window.open("coop.html","_self");
+}
+
 function AjoutEquipes(){
     document.getElementById('col1').value;
     localStorage.setItem("couleur_equipe", document.getElementById('col1').value);
