@@ -147,6 +147,7 @@ function Clic_MasterAgent(){
     //Erreur lors de la sélection!!!!!!!
   }
   else{
+		$(carte).css("background","orange");
 		AfficheJoueur();
     noyau.setMasterSelection(masterSelection);//Change automatiquement le tour noyau
     masterSelection=new Array();//On reset

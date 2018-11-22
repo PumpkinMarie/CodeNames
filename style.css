@@ -38,6 +38,10 @@ body {
 	background: none;
 }
 
+.iconesimage{
+  width: 30px;
+}
+
 .icones:hover {
 	cursor: pointer;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
