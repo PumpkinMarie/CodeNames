@@ -56,6 +56,7 @@ class Noyau {
 
 	setMasterSelection(cardArray) { //Adds an array to a team's array of cards to find (linked by a common tip)
 		this.teams[this.currentTeam].addCardArray(cardArray);
+		this.askEndTour();
 	}
 
 	verifySpyCard(card) { //attributes the points/actions corresponding to the cards chosen by a team
@@ -63,28 +64,31 @@ class Noyau {
 		if(card.team=="Black"){
 			this.gameEnd=true;
 			this.winner=this.teams[(this.currentTeam+1)%2].name;
+			return false;
 		}else if(card.getTeam()=="Grey"){
-			this.endTour();
+			return this.endTour();
 		}
 		else if(card.team!=this.teams[this.currentTeam].color){ //Neither Black nor Grey. It must be blue or red and of the opposite team
 			if(this.teams[(this.currentTeam+1)%2].AddScore(1)){//Has the other team won from that mistake?
 				this.gameEnd=true;
 				this.winner=this.teams[(this.currentTeam+1)%2].name;
+				return this.endTour();
 			}
 			else
-				this.endTour();
+				return this.endTour();
 		}else{ //Is the card related to the tip?
 			if(this.teams[this.currentTeam].isInCardArray(card)){
 				if(this.teams[this.currentTeam].AddScore(1)){
 					this.gameEnd=true;
 					this.winner=this.teams[this.currentTeam].name;
 				}
+				return true;
 			}
 			else if(card.team==this.teams[currentTeam].color){
 				this.teams[this.currentTeam].AddScore(1);
-				this.endTour();
+				return this.endTour();
 			}else
-				this.endTour();
+				return this.endTour();
 		}
 	}
 
@@ -102,7 +106,7 @@ class Noyau {
 		else{
 			this.currentTeam=(this.currentTeam+1)%2;
 			this.switchMaster();
-
+			return false;
 	}
 
 	getScore() {
