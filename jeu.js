@@ -99,12 +99,13 @@ window.onload= function(){
   cardsUpdate();
   console.log("Noyau créé");
 }
+
 let masterSelection=new Array();
+
 function Click_Carte(x,y){
 	if(!noyau.isMaster()){//Tour du joueur
 		if(!verifySpyCard(getBoardState()[i][j])){//le tour se termine
       cardsUpdate();
-      masterSelection=new Array();
       //Message de changement de tour
     }
     else{//Les joueurs continuent
@@ -116,4 +117,14 @@ function Click_Carte(x,y){
     //Changer apparence de la carte sélectionnée?
   }
   cardsUpdate();//On met à jour l'affichage des cartes
+  if(noyau.isEndGame()){
+    //Le jeu est terminé
+    let winnerName=noyau.winner;
+  }
+}
+
+function Clic_MasterAgent(){
+  noyau.setMasterSelection(masterSelection);
+  masterSelection=new Array();//On reset
+  cardsUpdate();
 }
