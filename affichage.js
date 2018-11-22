@@ -79,10 +79,6 @@ function PhaseCoequipier(){
   document.getElementById("choix_J_inside").innerHTML = "Indice : " + localStorage.getItem("indice") + " Nombre de cartes visées : " + localStorage.getItem("nbindice");
 }
 
-function Click_Carte(){
-
-}
-
 function ModeCompet(){
     localStorage.setItem("mode", "competitive");
     window.open("competitif.html","_self");

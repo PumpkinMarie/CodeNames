@@ -106,8 +106,8 @@ function PhaseJoueur(){
 	PhaseCoequipier();
 }
 
-function Click_Carte(){
+function Click_Carte(x,y){
 	if(TourJ){
-		
+		verifySpyCard(getBoardState()[i][j]);
 	}
 }
