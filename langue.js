@@ -59,6 +59,9 @@ class Langue {
 		if (Langue.isLangueDisponible(langue)) {
 			this.actuel = (langue.is(String)) ? Langue.langue[langue] : langue;
 		}
+		else {
+			actuel = "FR";
+		}
 	}
 
 
