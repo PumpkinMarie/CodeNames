@@ -22,15 +22,15 @@ function getWordRandom(language) {
 }
 
 window.onload = function () {
+	//On teste la création d'un noyau
+	let noyau= new Noyau("cooperative",EN,"Les bleus",2,"Les rouges",3);
 	//On teste le code du fichier board
-	let board = new Board();
+	let cardBoard = noyau.getBoardState();
 	for (let i = 0; i < 5; i++) {
 		let message = "";
 		for (let j = 0; j < 5; j++) {
-			message += "("+board.CardBoard[i][j].team + " , "+board.CardBoard[i][j].value+") ";
+			message += "("+cardBoard[i][j].getTeam() + " , "+cardBoard[i][j].getValue()+") ";
 		}
 		console.log(message);
 	}
-	//On teste la création d'un noyau
-	let noyau= new Noyau("cooperative",EN,"Les bleus",2,"Les rouges",3);
 }
