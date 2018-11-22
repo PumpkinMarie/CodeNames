@@ -46,6 +46,7 @@ function ChangerAnglais(){
     $('#langues').css("visibility","hidden");
     document.getElementById('langage').onclick=AfficherLangues;
     localStorage.setItem("langue", "anglais.jpg");
+    changeLangue();
 }
 
 function ChangerEspagnol(){
@@ -53,6 +54,7 @@ function ChangerEspagnol(){
     $('#langues').css("visibility","hidden");
     document.getElementById('langage').onclick=AfficherLangues;
     localStorage.setItem("langue", "espagnol.jpg");
+    changeLangue();
 }
 
 function ChangerFrançais(){
@@ -60,6 +62,7 @@ function ChangerFrançais(){
     $('#langues').css("visibility","hidden");
     document.getElementById('langage').onclick=AfficherLangues;
     localStorage.setItem("langue", "Drapeau_France.png");
+    changeLangue();
 }
 
 function banniereRemove(){

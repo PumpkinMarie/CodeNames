@@ -33,7 +33,7 @@ function getLangue(){
 }
 
 function changeLangue(){
-
+  noyau.langUpdate(getLangue);
 }
 
 function getMode(){
