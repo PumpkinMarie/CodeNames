@@ -79,6 +79,14 @@ function ModeCoop(){
     window.open("coop.html","_self");
 }
 
+function AfficheJoueur(){
+  document.getElementById('choix_J_inside').innerHTML = "Indice :" + indice + " avec " + indiceNb;
+  $('#choix_J_inside').css("display","block");
+  $('#choix_ME_inside').css("display","none ");
+  $('#choix_ME_inside2').css("display","none");
+  $('#choix_ME_but').css("display","none");
+}
+
 function AjoutEquipes(){
     document.getElementById('col1').value;
     localStorage.setItem("couleur_equipe", document.getElementById('col1').value);
