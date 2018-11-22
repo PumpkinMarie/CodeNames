@@ -99,15 +99,21 @@ window.onload= function(){
   cardsUpdate();
   console.log("Noyau créé");
 }
-
-function PhaseJoueur(){
-	TourME = 0;
-	TourJ = 1;
-	PhaseCoequipier();
-}
-
+let masterSelection=new Array();
 function Click_Carte(x,y){
-	if(TourJ){
-		verifySpyCard(getBoardState()[i][j]);
+	if(!noyau.isMaster()){//Tour du joueur
+		if(!verifySpyCard(getBoardState()[i][j])){//le tour se termine
+      cardsUpdate();
+      masterSelection=new Array();
+      //Message de changement de tour
+    }
+    else{//Les joueurs continuent
+    //Message de félicitation
+    }
 	}
+  else{//On ajoute à la sélection du master
+    masterSelection.push(getBoardState()[i][j]);
+    //Changer apparence de la carte sélectionnée?
+  }
+  cardsUpdate();//On met à jour l'affichage des cartes
 }
