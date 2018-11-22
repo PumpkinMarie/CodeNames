@@ -80,6 +80,12 @@ function banniereRemove () {
 	$('#tour').css("visibility", "hidden");
 }
 
+function banniereAffiche () {
+   test = noyau.teams[noyau.currentTeam].getName();
+   document.getElementById("tour").innerHTML = test + " à toi de jouer!";
+	 $('#tour').css("visibility", "visible");
+}
+
 function PhaseCoequipier(){
   localStorage.setItem("indice", document.getElementById('choix_ME_inside').value);
   $('#choix_ME_inside').css("display","none");
@@ -87,6 +93,18 @@ function PhaseCoequipier(){
   $('#choix_ME_but').css("display","none");
   $('#choix_J_inside').css("display","inline-block");
   document.getElementById("choix_J_inside").innerHTML = "Indice : " + localStorage.getItem("indice") + " Nombre de cartes visées : " + localStorage.getItem("nbindice");
+}
+
+function PhaseME(){
+  test =noyau.teams[noyau.currentTeam].getColor();
+  $('#box_tour').css("background",test);
+  $('#choix_ME_inside').css("display","inline-block");
+  $('#choix_ME_inside2').css("display","inline-block");
+  $('#choix_ME_but').css("display","inline-block");
+  $('#choix_J_inside').css("display","none");
+  $('#choix_J').css("display","none");
+  banniereAffiche();
+
 }
 
 function ModeCompet(){
@@ -100,6 +118,7 @@ function ModeCoop() {
 }
 
 function AfficheJoueur(){
+  $(".carte").css("box-shadow","0 0");
   document.getElementById('choix_J_inside').innerHTML = "Indice :" + indice + " en " + indiceNb + " cartes";
   $('#choix_J_inside').css("display","block");
   $('#choix_ME_inside').css("display","none ");
@@ -121,4 +140,9 @@ function AjoutEquipes(){
     document.getElementById('nbj2').value;
     localStorage.setItem("nbj2", document.getElementById('nbj2').value);
     window.open("plateau.html","_self");
+}
+
+function banniereFJ (nom) {
+   document.getElementById("tour").innerHTML = "Bravo" + nom + ". Tu as gagné!";
+	 $('#tour').css("visibility", "visible");
 }

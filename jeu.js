@@ -101,16 +101,21 @@ let indice;
 let indiceNb;
 let masterSelection=new Array();
 
+function GO(){
+	cardsUpdate();
+	PhaseME();
+}
+
 function Click_Carte(x,y){
 	affCarte="#c"+x+y;
 	if(!noyau.isMaster()){//Tour du joueur
-		$(affCarte).css("box-shadow","0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19");
-		$(affCarte).css("background","yellow");
 		if(!noyau.verifySpyCard(noyau.getBoardState()[x][y])){//le tour se termine
       cardsUpdate();
+			PhaseME();
       //Message de changement de tour
     }
     else{//Les joueurs continuent
+			$("#choix_J").css("display","inline-block");
     //Message de félicitation
     }
 	}
@@ -137,6 +142,7 @@ function Click_Carte(x,y){
   if(noyau.isEndGame()){
     //Le jeu est terminé
     let winnerName=noyau.winner;
+		banniereFJ(winnerName);
   }
 }
 
@@ -147,7 +153,6 @@ function Clic_MasterAgent(){
     //Erreur lors de la sélection!!!!!!!
   }
   else{
-		$(carte).css("background","orange");
 		AfficheJoueur();
     noyau.setMasterSelection(masterSelection);//Change automatiquement le tour noyau
     masterSelection=new Array();//On reset
