@@ -1030,56 +1030,205 @@ const Dico = {
 	"Portefeuille": ["Not Translated", "Not Translated"],
 	"Positif": ["Not Translated", "Not Translated"],
 	"Poste": ["Not Translated", "Not Translated"],
-	"Poubelle": ["Not Translated", "Not Translated"],
-	"Poule": ["Not Translated", "Not Translated"],
-	"Poupée": ["Not Translated", "Not Translated"],
-	"Pousser": ["Not Translated", "Not Translated"],
-	"Poussière": ["Not Translated", "Not Translated"],
-	"Pouvoir": ["Not Translated", "Not Translated"],
-	"Préhistoire": ["Not Translated", "Not Translated"],
-	"Premier": ["Not Translated", "Not Translated"],
-	"Présent": ["Not Translated", "Not Translated"],
-	"Presse": ["Not Translated", "Not Translated"],
-	"Prier": ["Not Translated", "Not Translated"],
-	"Princesse": ["Not Translated", "Not Translated"],
-	"Prise": ["Not Translated", "Not Translated"],
-	"Privé": ["Not Translated", "Not Translated"],
-	"Professeur": ["Not Translated", "Not Translated"],
-	"Psychologie": ["Not Translated", "Not Translated"],
-	"Public": ["Not Translated", "Not Translated"],
-	"Pull": ["Not Translated", "Not Translated"],
-	"Punk": ["Not Translated", "Not Translated"],
-	"Puzzle": ["Not Translated", "Not Translated"],
-	"Pyjama": ["Not Translated", "Not Translated"],
-	"Quatre": ["Not Translated", "Not Translated"],
-	"Quinze": ["Not Translated", "Not Translated"],
-	"Race": ["Not Translated", "Not Translated"],
-	"Radio": ["Not Translated", "Not Translated"],
-	"Raisin": ["Not Translated", "Not Translated"],
-	"Rap": ["Not Translated", "Not Translated"],
-	"Rat": ["Not Translated", "Not Translated"],
-	"Rayé": ["Not Translated", "Not Translated"],
-	"Rayon": ["Not Translated", "Not Translated"],
-	"Réfléchir": ["Not Translated", "Not Translated"],
-	"Reine": ["Not Translated", "Not Translated"],
-	"Repas": ["Not Translated", "Not Translated"],
-	"Reptile": ["Not Translated", "Not Translated"],
-	"Requin": ["Not Translated", "Not Translated"],
-	"Rêve": ["Not Translated", "Not Translated"],
-	"Riche": ["Not Translated", "Not Translated"],
-	"Rideau": ["Not Translated", "Not Translated"],
-	"Rien": ["Not Translated", "Not Translated"],
-	"Rire": ["Not Translated", "Not Translated"],
-	"Robinet": ["Not Translated", "Not Translated"],
-	"Roche": ["Not Translated", "Not Translated"],
-	"Roi": ["Not Translated", "Not Translated"],
-	"Rond": ["Not Translated", "Not Translated"],
-	"Rose": ["Not Translated", "Not Translated"],
-	"Roue": ["Not Translated", "Not Translated"],
-	"Rouge": ["Not Translated", "Not Translated"],
-	"Rouille": ["Not Translated", "Not Translated"],
-	"Roux": ["Not Translated", "Not Translated"],
-	"Russie": ["Not Translated", "Not Translated"],
+	"Poubelle": [
+		"Trash can", 
+		"cubo de basura"
+	],
+	"Poule": [
+		"Chicken", 
+		"Pollo"
+	],
+	"Poupée": [
+		"Doll", 
+		"Muñeca"
+	],
+	"Pousser": [
+		"To push", 
+		"Empuje"
+	],
+	"Poussière": [
+		"Dust", 
+		"Polvo"
+	],
+	"Pouvoir": [
+		"Power", 
+		"Poder"
+	],
+	"Préhistoire": [
+		"Prehistory", 
+		"Prehistoria"
+	],
+	"Premier": [
+		"First", 
+		"Primero"
+	],
+	"Présent": [
+		"Present", 
+		"Presente"
+	],
+	"Presse": [
+		"Press", 
+		"Prensa"
+	],
+	"Prier": [
+		"Pray", 
+		"Rezar"
+	],
+	"Princesse": [
+		"Princess", 
+		"Princesa"
+	],
+	"Prise": [
+		"Taken",
+		"Toma"
+	],
+	"Privé": [
+		"Private", 
+		"Privado"
+	],
+	"Professeur": [
+		"Professor",
+		"Profesor"
+	],
+	"Psychologie": [
+		"Psychologu",
+		"Psicología"
+	],
+	"Public": [
+		"Public", 
+		"Público"
+	],
+	"Pull": [
+		"Sweater", 
+		"Suéter"
+	],
+	"Punk": [
+		"Punk", 
+		"Punk"
+	],
+	"Puzzle": [
+		"Puzzle", 
+		"Rompecabezas"
+	],
+	"Pyjama": [
+		"Pajamas", 
+		"Pijama"
+	],
+	"Quatre": [
+		"Four", 
+		"Cuatro"
+	],
+	"Quinze": [
+		"fifteen", 
+		"quince"
+	],
+	"Race": [
+		"Race",
+		"Raza"
+	],
+	"Radio": [
+		"Radio",
+		"Radio"
+	],
+	"Raisin": [
+		"Grapes", 
+		"Uvas"
+	],
+	"Rap": [
+		"Rap", 
+		"Rap"
+	],
+	"Rat": [
+		"Rat", 
+		"Rata"
+	],
+	"Rayé": [
+		"Striped", 
+		"Rayas"
+	],
+	"Rayon": [
+		"Ray", 
+		"Rayo"
+	],
+	"Réfléchir": [
+		"to reflect", 
+		"Pensar"
+	],
+	"Reine": [
+		"Queen", 
+		"Reina"
+	],
+	"Repas": [
+		"Meal", 
+		"Comida"
+	],
+	"Reptile": [
+		"Reptile", 
+		"Reptil"
+	],
+	"Requin": [
+		"Shark", 
+		"Tiburón"
+	],
+	"Rêve": [
+		"Dream",
+		"Soñar"
+	],
+	"Riche": [
+		"Rich", 
+		"Rico"
+	],
+	"Rideau": [
+		"Curtains", 
+		"Cortina"
+	],
+	"Rien": [
+		"Nothing", 
+		"Nada"
+	],
+	"Rire": [
+		"Laughter", 
+		"Risa"
+	],
+	"Robinet": [
+		"Tap", 
+		"Grifo"
+	],
+	"Roche": [
+		"Rock", 
+		"Roca"
+	],
+	"Roi": [
+		"King", 
+		"Rey"
+	],
+	"Rond": [
+		"Round", 
+		"Ronda"
+	],
+	"Rose": [
+		"Pink", 
+		"Rose"
+	],
+	"Roue": [
+		"Wheel", 
+		"Rueda"],
+	"Rouge": [
+		"Red", 
+		"Roja"
+	],
+	"Rouille": [
+		"Rust", 
+		"Herrumbre"
+	],
+	"Roux": [
+		"Red", 
+		"Rojo"
+	],
+	"Russie": [
+		"Russia", 
+		"Rusia"
+	],
 	"Sable": [
 		"Sand", 
 		"Arena"
