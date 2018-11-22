@@ -11,23 +11,45 @@
 	</head>
 
 	<body class="container">
-		<header class="row">
-			<div class="col-md-9"></div>
-			<div class="col-md-3">
-			<div id="son">
-				<button class="icones" type="button"><img src="ressources/son.png" width="30px"></img></button>
-				<input id="barre_son" type="range" min="0" max="100" value="50">
+		<header class="row mt-2">
+			<div class="col-12 offset-sm-6 col-sm-6 offset-md-7 col-md-5 offset-lg-8 col-lg-4 row">
+				<div id="son" class="col-3 col-sm-3">
+					<button class="icones" type="button" data-toggle="popover" data-placement="bottom">
+						<img src="ressources/son.png" width="30px">
+					</button>
+				</div>
+				<div class="col-4 col-sm-4 dropdown dropright">
+					<button id="langage" class="icones dropdown-toggle" data-toggle="dropdown" type="button" onclick="AfficherLangues()">
+						<img id="langue_actuelle" src="ressources/Drapeau_France.png" width="30px">
+					</button>
+					<div class="dropdown-menu">
+						<button id="français" class="dropdown-item"  type="button" onclick="ChangerFrançais()">
+							<img src="ressources/Drapeau_France.png" class="mr-2" width="30px">
+							Français
+						</button>
+						<button id="anglais" class="dropdown-item" type="button" onclick="ChangerAnglais()">
+							<img src="ressources/anglais.jpg" class="mr-2" width="30px">
+							English
+						</button>
+						<button id="espagnol" class="dropdown-item"  type="button" onclick="ChangerEspagnol()">
+							<img src="ressources/espagnol.jpg" class="mr-2" width="30px">
+							Español
+						</button>
+					</div>
+				</div>
+				<div class="col-3 col-sm-3">
+					<button class="icones" id="options" type="button">
+						<img src="ressources/reg.png" width="30px">
+					</button>
+				</div>
+				<div class="col-2 col-sm-2">
+					<a href="index.html">
+						<button class="icones" type="button">
+							<img src="ressources/exit.png" width="30px">
+						</button>
+					</a>
+				</div>
 			</div>
-			<button class="icones" id="langage" type="button" onclick="AfficherLangues()"><img id="langue_actuelle" src="ressources/Drapeau_France.png" width="30px" ></img></button>
-			<div id="langues" style="visibility:hidden">
-				<button class="icones" id="français" type="button" onclick="ChangerFrançais()"><img src="ressources/Drapeau_France.png" width="30px"></img></button>
-				<button class="icones" id="anglais" type="button" onclick="ChangerAnglais()"><img src="ressources/anglais.jpg" width="30px"></img></button>
-				<button class="icones" id="espagnol" type="button" onclick="ChangerEspagnol()"><img src="ressources/espagnol.jpg" width="30px"></img></button>
-
-			</div>
-			<button class="icones" id="options" type="button"><img src="ressources/reg.png" width="30px" width="auto" ></img></button>
-			<a href="index.html"><button class="icones" type="button"><img src="ressources/exit.png" width="30px" width="auto" ></img></button></a>
-		</div>
 		</header>
 
 		<div class="row">
