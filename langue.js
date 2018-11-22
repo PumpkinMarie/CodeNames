@@ -2,24 +2,9 @@
 
 getWordRandom(ES);
 */
+const FR = 0, EN = 1, ES = 2;
 class Langue {
-
-	// Les langues
-	FR = 0;
-	EN = 1;
-	ES = 2;
-	static langue = {
-		"FR": this.FR,
-		"EN": this.EN,
-		"ES": this.ES
-	};
-
-	// Variable de classe
-	actuel;
-
-	// Méthodes de classe
-
-	static getWord(entries, index, language) {
+	getWord(entries, index, language) {
 		if (language == FR) {
 			return entries[index][0];
 		} else if (language == EN) {
@@ -29,17 +14,17 @@ class Langue {
 		}
 	}
 
-	static getWordRandom() {
+	getWordRandom() {
 		this.getWordRandom(actuel);
 	}
 
-	static getWordRandom(language) {
+	getWordRandom(language) {
 		let entries = Object.entries(Dico);
 		let rand = Math.floor(Math.random() * Math.floor(entries.length));
 		console.log(getWord(entries, rand, EN));
 	}
 
-	static isLangueDisponible(langue) {
+	isLangueDisponible(langue) {
 		if (langue.is(String)) {
 			return this.langue.hasOwnProperty(langue)
 		}
@@ -55,14 +40,11 @@ class Langue {
 		return false;
 	}
 
-	constructor(langue) {
-		if (Langue.isLangueDisponible(langue)) {
-			this.actuel = (langue.is(String)) ? Langue.langue[langue] : langue;
-		}
-		else {
-			actuel = "FR";
+	constructor(lang = FR) {
+		if (lang != FR && lang != EN && lang != ES) {
+			this.actuel = FR;
+		} else {
+			this.actuel = lang;
 		}
 	}
-
-
 }
