@@ -24,7 +24,6 @@ if (typeof(Storage) !== "undefined") {
         document.getElementById("Tour_Eq2").innerHTML = localStorage.getItem("nom_equipe2");
         document.getElementById("Tour_Eq2").innerHTML = localStorage.getItem("nom_equipe2")+ " à toi de jouer!";
     }
-
 }
 
 function changeNoyauLang(){
@@ -47,7 +46,7 @@ function ChangerAnglais(){
     $('#langues').css("visibility","hidden");
     document.getElementById('langage').onclick=AfficherLangues;
     localStorage.setItem("langue", "anglais.jpg");
-    changeLangue();
+    changeNoyauLang();
 }
 
 function ChangerEspagnol(){
@@ -55,7 +54,7 @@ function ChangerEspagnol(){
     $('#langues').css("visibility","hidden");
     document.getElementById('langage').onclick=AfficherLangues;
     localStorage.setItem("langue", "espagnol.jpg");
-    changeLangue();
+    changeNoyauLang();
 }
 
 function ChangerFrançais(){
@@ -63,20 +62,11 @@ function ChangerFrançais(){
     $('#langues').css("visibility","hidden");
     document.getElementById('langage').onclick=AfficherLangues;
     localStorage.setItem("langue", "Drapeau_France.png");
-    changeLangue();
+    changeNoyauLang();
 }
 
 function banniereRemove(){
     $('#tour').css("visibility","hidden");
-}
-
-function PhaseCoequipier(){
-  localStorage.setItem("indice", document.getElementById('choix_ME_inside').value);
-  $('#choix_ME_inside').css("display","none");
-  $('#choix_ME_inside2').css("display","none");
-  $('#choix_ME_but').css("display","none");
-  $('#choix_J_inside').css("display","inline-block");
-  document.getElementById("choix_J_inside").innerHTML = "Indice : " + localStorage.getItem("indice") + " Nombre de cartes visées : " + localStorage.getItem("nbindice");
 }
 
 function ModeCompet(){

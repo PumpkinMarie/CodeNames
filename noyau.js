@@ -107,6 +107,7 @@ class Noyau {
 			this.currentTeam=(this.currentTeam+1)%2;
 			this.switchMaster();
 			return false;
+		}
 	}
 
 	getScore() {

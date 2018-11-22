@@ -36,9 +36,6 @@ function getLangue(){
     return FR; //else
 }
 
-function changeLangue(){
-  noyau.langUpdate(getLangue);
-}
 
 function getMode(){
   return localStorage.getItem("mode");
@@ -100,11 +97,13 @@ window.onload= function(){
   console.log("Noyau créé");
 }
 
+let indice;
+let indiceNb;
 let masterSelection=new Array();
 
 function Click_Carte(x,y){
 	if(!noyau.isMaster()){//Tour du joueur
-		if(!verifySpyCard(getBoardState()[i][j])){//le tour se termine
+		if(!verifySpyCard(noyau.getBoardState()[x][y])){//le tour se termine
       cardsUpdate();
       //Message de changement de tour
     }
@@ -113,7 +112,18 @@ function Click_Carte(x,y){
     }
 	}
   else{//On ajoute à la sélection du master
-    masterSelection.push(getBoardState()[i][j]);
+    let test=false;
+    for(let i=0;i<masterSelection.length;i++){
+      if(masterSelection[i].getValue()==noyau.getBoardState()[x][y].getValue()){
+        test=true;
+        break;
+      }
+    }
+    if(!test)//Carte pas présente, on ajoute
+      masterSelection.push(noyau.getBoardState()[x][y]);
+    else {
+      masterSelection.splice(i,1);//On retire la carte
+    }
     //Changer apparence de la carte sélectionnée?
   }
   cardsUpdate();//On met à jour l'affichage des cartes
@@ -124,7 +134,14 @@ function Click_Carte(x,y){
 }
 
 function Clic_MasterAgent(){
-  noyau.setMasterSelection(masterSelection);
-  masterSelection=new Array();//On reset
-  cardsUpdate();
+  indice=document.getElementById("choix_ME_inside").value;
+  indiceNb=document.getElementById("choix_ME_inside2").value;
+  if(indiceNb!=masterSelection.length){
+    //Erreur lors de la sélection!!!!!!!
+  }
+  else{
+    noyau.setMasterSelection(masterSelection);//Change automatiquement le tour noyau
+    masterSelection=new Array();//On reset
+  }
+  cardsUpdate();//On affiche les cartes des joueurs si réussi, sinon cartes ME
 }
