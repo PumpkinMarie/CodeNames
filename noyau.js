@@ -35,6 +35,13 @@ class Noyau {
 		return this.turn=="master";
 	}
 
+	switchMaster(){
+		if(this.isMaster())
+			this.turn="player";
+		else
+			this.turn="master";
+	}
+
 	getBoardState() {//board of the game
 		return this.board.getCardboard();
 	}
@@ -66,8 +73,12 @@ class Noyau {
 			else
 				this.endTour();
 		}else{ //Is the card related to the tip?
-			if(this.teams[this.currentTeam].isInCardArray(card))
-				this.teams[this.currentTeam].AddScore(1);
+			if(this.teams[this.currentTeam].isInCardArray(card)){
+				if(this.teams[this.currentTeam].AddScore(1)){
+					this.gameEnd=true;
+					this.winner=this.teams[this.currentTeam].name;
+				}
+			}
 			else if(card.team==this.teams[currentTeam].color){
 				this.teams[this.currentTeam].AddScore(1);
 				this.endTour();
@@ -77,7 +88,7 @@ class Noyau {
 	}
 
 	askEndTour() {
-		if(this.teams[this.currentTeam].guesses!=0){
+		if(this.teams[this.currentTeam].guesses!=0 || this.isMaster()){
 			this.endTour();
 			return true;
 		}
@@ -85,7 +96,12 @@ class Noyau {
 	}
 
 	endTour() {
-		this.currentTeam=(this.currentTeam+1)%2;
+		if(this.isMaster())
+			this.switchMaster();
+		else{
+			this.currentTeam=(this.currentTeam+1)%2;
+			this.switchMaster();
+		
 	}
 
 	getScore() {
