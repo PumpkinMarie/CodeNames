@@ -1,3 +1,7 @@
+let TourEq=1;
+let TourME=1;
+let TourJ=0;
+
 //Temporaire
 function getWord(entries, index, language) {
 	if (language == FR) {
@@ -94,4 +98,16 @@ window.onload= function(){
   HasCore=1;
   cardsUpdate();
   console.log("Noyau créé");
+}
+
+function PhaseJoueur(){
+	TourME = 0;
+	TourJ = 1;
+	PhaseCoequipier();
+}
+
+function Click_Carte(){
+	if(TourJ){
+		
+	}
 }

@@ -24,6 +24,7 @@ if (typeof(Storage) !== "undefined") {
         document.getElementById("Tour_Eq2").innerHTML = localStorage.getItem("nom_equipe2");
         document.getElementById("Tour_Eq2").innerHTML = localStorage.getItem("nom_equipe2")+ " à toi de jouer!";
     }
+
 }
 
 function changeNoyauLang(){
@@ -67,6 +68,19 @@ function ChangerFrançais(){
 
 function banniereRemove(){
     $('#tour').css("visibility","hidden");
+}
+
+function PhaseCoequipier(){
+  localStorage.setItem("indice", document.getElementById('choix_ME_inside').value);
+  $('#choix_ME_inside').css("display","none");
+  $('#choix_ME_inside2').css("display","none");
+  $('#choix_ME_but').css("display","none");
+  $('#choix_J_inside').css("display","inline-block");
+  document.getElementById("choix_J_inside").innerHTML = "Indice : " + localStorage.getItem("indice") + " Nombre de cartes visées : " + localStorage.getItem("nbindice");
+}
+
+function Click_Carte(){
+
 }
 
 function ModeCompet(){

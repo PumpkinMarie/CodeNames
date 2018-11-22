@@ -18,9 +18,13 @@
 				<p id="Tour_Eq"></p>
 			</div>
 			<div class="col-md-6 order-3 choix_ME">
-				<input id="choix_ME_inside2" type="text" name="indice" placeholder="Indice">
-				<input id="choix_ME_inside" type="number" name="nbcartes" value="1" min="1" max="9">
-				<input type="button" value="Go">
+				<input id="choix_ME_inside" type="text" name="indice" placeholder="Indice">
+				<input id="choix_ME_inside2" type="number" name="nbcartes" value="1" min="1" max="9">
+				<input id="choix_ME_but" type="button" value="Go" onclick="PhaseJoueur()">
+
+				<p id="choix_J_inside" style="display:none"></p>
+				<input id="choix_ME_but" type="button" value="Go" style="display:none" onclick="PhaseME()">
+
 			</div>
 			<div class="col-md-3 col-sm-6 order-2 order-sm-3 iconesall">
 			<div id="son">
@@ -48,7 +52,7 @@
 					</div>
 				</div>
 				<div class="col-md-2 col-2" class="colonne">
-						<p id="c00" class="carte">carte</p>
+						<p id="c00" class="carte" ondblclick="Click_Carte()">carte</p>
 						<p id="c10" class="carte">carte</p>
 						<p id="c20" class="carte">carte</p>
 						<p id="c30" class="carte">carte</p>
