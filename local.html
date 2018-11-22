@@ -18,10 +18,12 @@
 				<button class="icones" type="button"><img src="ressources/son.png" width="30px" width="auto" ></img></button>
 				<input id="barre_son" type="range" min="0" max="100" value="50">
 			</div>
-			<button class="icones" id="langage" type="button" onclick="AfficherLangues()"><img src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
+			<button class="icones" id="langage" type="button" onclick="AfficherLangues()"><img id="langue_actuelle" src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
 			<div id="langues" style="visibility:hidden">
-				<button class="icones" id="français" type="button"><img src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
-				<button class="icones" id="anglais" type="button"><img src="ressources/anglais.jpg" width="30px" width="auto" ></img></button>
+				<button class="icones" id="français" type="button" onclick="ChangerFrançais()"><img src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
+				<button class="icones" id="anglais" type="button" onclick="ChangerAnglais()"><img src="ressources/anglais.jpg" width="30px" width="auto" ></img></button>
+				<button class="icones" id="espagnol" type="button" onclick="ChangerEspagnol()"><img src="ressources/espagnol.jpg" width="30px" width="auto" ></img></button>
+
 			</div>
 			<button class="icones" id="options" type="button"><img src="ressources/reg.png" width="30px" width="auto" ></img></button>
 			<a href="index.html"><button class="icones" type="button"><img src="ressources/exit.png" width="30px" width="auto" ></img></button></a>
@@ -33,15 +35,22 @@
 		<div class="row justify-content-center">
 			<div class="modes_loc" onclick="window.location='competitif.html';">
 				<p class="modes_bout">Competitif	</p>
-				<p class="desc">"LOREM"</p>
+				<p class="desc">Agents, préparez-vous pour une bataille acharnée.
+Votre mission, si toutefois vous choisissez ce mode, est de vaincre l’équipe adverse composée d’autres joueurs.
+Votre groupe d’ami sera divisé en 2 équipes d’au moins 2 joueurs(1 maitre espion et 1 agent).
+Bonne chance!</p>
 			</div>
-			<div class="modes_loc" onclick="window.location='competitif.html';">
+			<div class="modes_loc" onclick="window.location='coop.html';">
 				<p class="modes_bout">Coop	</p>
-				<p class="desc">"LOREM"</p>
+				<p class="desc">Agents, les machines ont envahi le monde.
+Votre mission, si toutefois vous choisissez ce mode, est de vaincre l’équipe adverse composée de leurs agents.
+Votre équipe d'au moins 2 joueurs devra affronter une IA (débrancher l’ordinateur ne compte pas).
+Bonne chance !</p>
 			</div>
 			<div class="modes_loc" onclick="window.location='competitif.html';">
 				<p class="modes_bout">Solo	</p>
-				<p class="desc">"LOREM"</p>
+				<p class="desc">Règle du mode solo : on ne joue pas au mode solo
+</p>
 			</div>
 		</div>
 

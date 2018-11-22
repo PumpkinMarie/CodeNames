@@ -1,16 +1,16 @@
 class Board{
-	
+
 	getFirstTeam(){
 		return firsTeam;
 	}
-	
+
 	randomCard(repartition){
 		let random=Math.floor(repartition.length*Math.random());
-		let result=new Card("Un mot",repartition[random]);
+		let result=new Card(getWordRandom(this.lang),repartition[random]);
 		repartition.splice(random,1);
 		return result;
 	}
-	
+
 	createCardBoard(){
 		let random_boolean = Math.random() >= 0.5;//true->Blue false-> Red Choix de l'agent double
 		let blue=8,red=8,neutral=7,assassin=1;
@@ -23,7 +23,7 @@ class Board{
 			red++;
 			this.firsTeam="Red";
 		}
-		
+
 		while(blue+red+neutral+assassin>0){
 			if(blue>0){
 				repartition.push("Blue");
@@ -42,7 +42,7 @@ class Board{
 				assassin--;
 			}
 		}
-		
+
 		this.CardBoard=new Array();
 		for(let i=0;i<5;i++){
 			this.CardBoard[i]=new Array();
@@ -51,7 +51,7 @@ class Board{
 			}
 		}
 	}
-	
+
 	langUpdate(lang){//On change la langue de tous les mots
 		for(let i=0;i<5;i++){
 			for(let j=0;j<5;j++){
@@ -59,12 +59,13 @@ class Board{
 			}
 		}
 	}
-	
+
 	getCardboard(){
 		return this.CardBoard;
 	}
-	
-	constructor(){
+
+	constructor(lang){
+		this.lang=lang;
 		this.firstTeam="";
 		this.createCardBoard();
 	}

@@ -1347,24 +1347,3 @@ const Dico = {
 		"Zoo"
 	]
 };
-const FR = 0;
-const EN = 1;
-const ES = 2;
-
-function getWord(entries, index, language) {
-	if (language == FR) {
-		return entries[index][0];
-	} else if (language == EN) {
-		return entries[index][1][0];
-	} else if (language == ES) {
-		return entries[index][1][1];
-	}
-}
-
-function getWordRandom(language) {
-	let entries = Object.entries(Dico);
-	let rand = Math.floor(Math.random() * Math.floor(entries.length));
-
-	console.log(getWord(entries, rand, EN));
-}
-getWordRandom(ES);
