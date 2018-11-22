@@ -18,12 +18,12 @@ function getWordRandom(language) {
 	}
 	return word;
 }
-
+let noyau;
 window.onload = function () {
 	//on teste la création d'une langue
 	let lang = new Langue();
 	//On teste la création d'un noyau
-	let noyau = new Noyau("cooperative", EN, "Les bleus", 2, "Les rouges", 3);
+	noyau = new Noyau("cooperative", EN, "Les bleus", 2, "Les rouges", 3);
 	//On teste le code du fichier board
 	let cardBoard = noyau.getBoardState();
 	for (let i = 0; i < 5; i++) {
