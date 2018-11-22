@@ -1,158 +1,176 @@
+
+/***********************************************************************/
+/*	Organisation du fichier */
+/**/
+/**/
+/**/
+/*	1) Général */
+/**/
+/**/
+/*	2) index.html */
+/**/
+/**/
+/*	3) local.html */
+/**/
+/**/
+/*	4) coop.html */
+/**/
+/**/
+/*	5) competitif.html */
+/**/
+/**/
+/*	6) plateau.html */
+/**/
+/**/
+/*	7) Media Queries */
+/***********************************************************************/
+
+/***********************************************************************/
+/*	1) Général */
+/***********************************************************************/
 body {
-  text-align: center;
-  background-color: #696969;
+	text-align: center;
+	background-color: #696969;
 }
 
-
-.icones{
-  border:none;
-  background: none;
+.icones {
+	border: none;
+	background: none;
 }
 
-.iconesimage{
-  width: 30px;
+.icones:hover {
+	cursor: pointer;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.icones:hover{
-  cursor: pointer;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.iconesall {
+	padding: 12px 6px 6px 6px;
 }
 
-.iconesall{
-  padding: 12px 6px 6px 6px;
+#langues {
+	background-color: black;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	left: 35%;
+	position: absolute;
 }
 
-#son{
-  display: inline-block;
-}
-
-#barre_son{
-  position: absolute;
-  display: none;
-}
-
-#son:hover #barre_son{
-  display: block;
-}
-
-#langues{
-  background-color: black;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  left: 35%;
-  position:absolute;
-}
-
-.modes{
-  padding:6px 0 6px 0;
-  margin: 12px 0 6px 0;
-	font:Bold 20px Arial;
-	background:#FF4500;
-	color:#fff;
+/***********************************************************************/
+/*	2) index.html */
+/***********************************************************************/
+.modes {
+	padding: 6px 0 6px 0;
+	margin: 12px 0 6px 0;
+	font: Bold 20px Arial;
+	background: #FF4500;
+	color: #fff;
 	width: 30vw;
-  height: 10vh;
-	border:none;
+	height: 10vh;
+	border: none;
 }
 
-.modes:hover{
-  cursor: pointer;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.modes:hover {
+	cursor: pointer;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.modes_loc{
-  padding:6px 0 6px 0;
-  margin: 12px 25px 6px 25px;
-	font:Bold 20px Arial;
-	background:#FF4500;
-	color:#fff;
+.modes_loc {
+	padding: 6px 0 6px 0;
+	margin: 12px 25px 6px 25px;
+	font: Bold 20px Arial;
+	background: #FF4500;
+	color: #fff;
 }
 
-.modes_loc:hover{
-  cursor: pointer;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.modes_loc:hover {
+	cursor: pointer;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.modes_bout{
-  padding: 12px 0 24px 0;
-	font:Bold 20px Arial;
-	background:#FF4500;
-	color:#fff;
-  border: none;
+.modes_bout {
+	padding: 12px 0 24px 0;
+	font: Bold 20px Arial;
+	background: #FF4500;
+	color: #fff;
+	border: none;
 	border-bottom: black solid 1px;
 }
 
-.modes_bout:hover{
-  text-decoration:none;
-  color: inherit;
-  cursor: pointer;
+.modes_bout:hover {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
 }
 
-.desc{
-  color: black;
-  padding: 10px 10px 10px 10px;
-  font: 0.9em sans-serif;
-  text-align:left;
+/***********************************************************************/
+/*	3) local.html */
+/***********************************************************************/
+.desc {
+	color: black;
+	padding: 10px 10px 10px 10px;
+	font: 0.9em sans-serif;
+	text-align: left;
 }
 
-#logo{
-  height:auto;
-  width: 50vw;
+#logo {
+	height: auto;
+	width: 50vw;
 }
 
-.equipe{
-  display: inline-block;
-  padding:6px 0 6px 0;
-  margin: 12px 12px 6px 12px;
-	color:#fff;
+.equipe {
+	display: inline-block;
+	padding: 6px 0 6px 0;
+	margin: 12px 12px 6px 12px;
+	color: #fff;
 	width: 25vw;
-  height: 48vh;
+	height: 48vh;
 }
 
-.form{
-  font:Bold 13px Arial;
+.form {
+	font: Bold 13px Arial;
 }
 
-#eq1{
-  padding: 6px 0 6px 0;
-  font:Bold 20px Arial;
-  background: #4d94ff;
+#eq1 {
+	padding: 6px 0 6px 0;
+	font: Bold 20px Arial;
+	background: #4d94ff;
 }
 
-#eq2{
-  padding: 6px 0 6px 0;
-  font:Bold 20px Arial;
-  background: #ff751a;
+#eq2 {
+	padding: 6px 0 6px 0;
+	font: Bold 20px Arial;
+	background: #ff751a;
 }
 
-.box_tour{
-  background: #4d94ff;
-  margin: 6px 0 6px 6px;
-  padding: 10px 0 6px 0;
-  border-radius: 10px;
+.box_tour {
+	background: #4d94ff;
+	margin: 6px 0 6px 6px;
+	padding: 10px 0 6px 0;
+	border-radius: 10px;
 }
 
-.choix_ME{
-  margin: 6px 0 6px 6px;
-  padding: 6px 0 6px 20px;
+.choix_ME {
+	margin: 6px 0 6px 6px;
+	padding: 6px 0 6px 20px;
 }
 
-.carte{
-  color: #ffffff;
-  border: black 2px solid;
-  height: 15vh;
-  width: 15vw;
+.carte {
+	color: #ffffff;
+	border: black 2px solid;
+	height: 15vh;
+	width: 15vw;
 }
 
-.carte:hover{
-  cursor: pointer;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.carte:hover {
+	cursor: pointer;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.progress{
-  transform: rotate(90deg) translate(30vh);
+.progress {
+	transform: rotate(90deg) translate(30vh);
 }
 
-.table{
-  height: 90vh;
+.table {
+	height: 90vh;
 }
 
 #tour{
@@ -166,59 +184,71 @@ body {
     z-index: 1;
 }
 
+/***********************************************************************/
+/*	7) Media Queries */
+/***********************************************************************/
 @media (max-width: 768px) {
-  .modes{
-    margin: 0 0 0 0;
-    width: 100vw;
-    height: 20vh;
-    border-bottom: 1px black solid;
-  }
-  .modes_loc{
-    margin: 0 0 0 0;
-    border-bottom: 1px black solid;
-  }
-  .modes_bout{
-    border: none;
-  }
-  .desc{
-    display: none;
-  }
+	.modes {
+		margin: 0 0 0 0;
+		width: 100vw;
+		height: 20vh;
+		border-bottom: 1px black solid;
+	}
 
-  .equipe{
-    display: block;
-    padding:6px 0 6px 0;
-    margin: 0 0 20px 0;
-    width: 100vw;
-    height: auto;
-  }
-  #logo{
-    height:auto;
-    width: 100vw;
-  }
+	.modes_loc {
+		margin: 0 0 0 0;
+		border-bottom: 1px black solid;
+	}
 
-  .box_tour{
-    height: 10vh;
-    margin: 0 0 0 0;
-    width: 45%;
+	.modes_bout {
+		border: none;
+	}
 
-  }
-  .iconesall{
-    width: 50%;
-    margin: 0 0 0 0;
-    padding: 10px 0 0 0;
-  }
-  .iconesimage{
-    width: 20px;
-  }
-  .choix_ME{
-    width: 100%;
-    height: auto;
-    padding: 0 0 0 0;
-  }
-  #choix_ME_inside{
-    width: 20%;
-  }
-  #choix_ME_inside2{
-    width: 50%;
-  }
+	.desc {
+		display: none;
+	}
+
+	.equipe {
+		display: block;
+		padding: 6px 0 6px 0;
+		margin: 0 0 20px 0;
+		width: 100vw;
+		height: auto;
+	}
+
+	#logo {
+		height: auto;
+		width: 100vw;
+	}
+
+	.box_tour {
+		height: 10vh;
+		margin: 0 0 0 0;
+		width: 45%;
+
+	}
+
+	.iconesall {
+		width: 50%;
+		margin: 0 0 0 0;
+		padding: 10px 0 0 0;
+	}
+
+	.iconesimage {
+		width: 20px;
+	}
+
+	.choix_ME {
+		width: 100%;
+		height: auto;
+		padding: 0 0 0 0;
+	}
+
+	#choix_ME_inside {
+		width: 20%;
+	}
+
+	#choix_ME_inside2 {
+		width: 50%;
+	}
 }
