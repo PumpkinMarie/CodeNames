@@ -31,7 +31,7 @@ getLangue(){
 }
 
 getMode(){
-  
+  return localStorage.getItem("mode");
 }
 
 cardsUpdate(){
@@ -42,12 +42,20 @@ getEquipe1(){
   return localStorage.getItem("nom_equipe1");
 }
 
+getNumberEquipe1(){
+  return localStorage.getItem("nbj1");
+}
+
 getEquipe2(){
   return localStorage.getItem("nom_equipe2");
 }
 
+getNumberEquipe2(){
+  return localStorage.getItem("nbj2");
+}
+
 window.onload= function(){
   //Création du noyau
-  let noyau = new Noyau("cooperative", EN, "Les bleus", 2, "Les rouges", 3);
+  let noyau = new Noyau(getMode(), getLangue(), getEquipe1(), getNumberEquipe1(), getEquipe2(), getNumberEquipe2());
   HasCore=1;
 }
