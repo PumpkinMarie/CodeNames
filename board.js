@@ -6,7 +6,7 @@ class Board{
 
 	randomCard(repartition){
 		let random=Math.floor(repartition.length*Math.random());
-		let result=new Card(getWordRandom(this.lang),repartition[random]);
+		let result=new Card(getWordRandom(this.lang),repartition[random],this.noyau);
 		repartition.splice(random,1);
 		return result;
 	}
@@ -60,11 +60,12 @@ class Board{
 		}
 	}
 
-	getCardboard(){
+	getCardboard(isMaster){
 		return this.CardBoard;
 	}
 
-	constructor(lang){
+	constructor(lang,noyau){
+		this.noyau=noyau;
 		this.lang=lang;
 		this.firstTeam="";
 		this.createCardBoard();
