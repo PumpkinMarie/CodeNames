@@ -1224,126 +1224,126 @@ const Dico = {
 		"Lombriz"
 	],
 	"Verdict": [
-		"Verdict", 
+		"Verdict",
 		"Veredicto"
 	],
 	"Verre": [
 		"Glass",
 		"Vidrio"
-		],
+	],
 	"Vers": [
 		"Towards", 
-		"Hacia"
+		"Para"
 	],
 	"Vert": [
-		"Green", 
+		"Green",
 		"Verde"
 	],
 	"Veste": [
-		"Jacket", 
+		"Jacket",
 		"Chaqueta"
 	],
 	"Viande": [
-		"Meat", 
+		"Meat",
 		"Carne"
 	],
 	"Vide": [
 		"Empty", 
-		"Vacío"
+		"Vacía"
 	],
 	"Vie": [
-		"Life", 
+		"Life",
 		"Vida"
 	],
 	"Vieux": [
-		"Old", 
+		"Old",
 		"Viejo"
 	],
 	"Ville": [
-		"City", 
+		"City",
 		"Ciudad"
 	],
 	"Vin": [
-		"Wine", 
+		"Wine",
 		"Vino"
 	],
 	"Vingt": [
-		"Twenty", 
+		"Twenty",
 		"Veinte"
 	],
 	"Violon": [
-		"Violin", 
+		"Violin",
 		"Violín"
 	],
 	"Vipère": [
-		"Viper", 
+		"Viper",
 		"Víbora"
 	],
 	"Vision": [
-		"Vision", 
+		"Vision",
 		"Visión"
 	],
 	"Vite": [
 		"Quick", 
-		"Rápido"
+		"Rápidamente"
 	],
 	"Vive": [
 		"Bright", 
-		"Viva"
+		"Brillante"
 	],
 	"Vœu": [
 		"Wish", 
-		"Deseo"
+		"Voto"
 	],
 	"Voile": [
-		"Sail", 
+		"Sail",
 		"Velo"
 	],
 	"Voisin": [
-		"Neighbour", 
+		"Neighbour",
 		"Vecino"
 	],
 	"Voiture": [
-		"Car", 
+		"Car",
 		"Carro"
 	],
 	"Vol": [
-		"Flight", 
+		"Flight",
 		"Vuelo"
 	],
 	"Volume": [
-		"Volume", 
+		"Volume",
 		"Volumen"
 	],
 	"Vote": [
 		"Vote", "Voto"
 	],
 	"Vouloir": [
-		"Want to", 
+		"Want to",
 		"Desear"
 	],
 	"Voyage": [
-		"Trip", 
+		"Trip",
 		"Viajes"
 	],
 	"Zen": [
-		"Zen", 
+		"Zen",
 		"Zen"
 	],
 	"Zéro": [
-		"Zero", 
+		"Zero",
 		"Cero"
 	],
 	"Zodiaque": [
-		"Zodiac", 
+		"Zodiac",
 		"Zodíaco"
 	],
 	"Zone": [
-		"Zone", 
+		"Zone",
 		"Zona"
 	],
 	"Zoo": [
 		"Zoo", 
-		"Zoológico"
+		"Zoo"
 	]
 };

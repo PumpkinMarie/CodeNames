@@ -9,6 +9,10 @@ body {
   background: none;
 }
 
+.iconesimage{
+  width: 30px;
+}
+
 .icones:hover{
   cursor: pointer;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -55,14 +59,11 @@ body {
 }
 
 .modes_loc{
-  display: inline-block;
   padding:6px 0 6px 0;
   margin: 12px 25px 6px 25px;
 	font:Bold 20px Arial;
 	background:#FF4500;
 	color:#fff;
-	width: 20vw;
-  height: 60vh;
 }
 
 .modes_loc:hover{
@@ -72,11 +73,9 @@ body {
 
 .modes_bout{
   padding: 12px 0 24px 0;
-  display: block;
 	font:Bold 20px Arial;
 	background:#FF4500;
 	color:#fff;
-  width: auto;
   border: none;
 	border-bottom: black solid 1px;
 }
@@ -91,7 +90,7 @@ body {
   color: black;
   padding: 10px 10px 10px 10px;
   font: 0.9em sans-serif;
-  text-align:left ;
+  text-align:left;
 }
 
 #logo{
@@ -137,9 +136,15 @@ body {
 }
 
 .carte{
+  color: #ffffff;
   border: black 2px solid;
   height: 15vh;
   width: 15vw;
+}
+
+.carte:hover{
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .progress{
@@ -171,10 +176,15 @@ body {
   }
   .modes_loc{
     margin: 0 0 0 0;
-    width: 100vw;
-    height: 20vh;
     border-bottom: 1px black solid;
   }
+  .modes_bout{
+    border: none;
+  }
+  .desc{
+    display: none;
+  }
+
   .equipe{
     display: block;
     padding:6px 0 6px 0;
@@ -187,4 +197,29 @@ body {
     width: 100vw;
   }
 
+  .box_tour{
+    height: 10vh;
+    margin: 0 0 0 0;
+    width: 45%;
+
+  }
+  .iconesall{
+    width: 50%;
+    margin: 0 0 0 0;
+    padding: 10px 0 0 0;
+  }
+  .iconesimage{
+    width: 20px;
+  }
+  .choix_ME{
+    width: 100%;
+    height: auto;
+    padding: 0 0 0 0;
+  }
+  #choix_ME_inside{
+    width: 20%;
+  }
+  #choix_ME_inside2{
+    width: 50%;
+  }
 }

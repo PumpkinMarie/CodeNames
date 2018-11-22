@@ -12,7 +12,7 @@
 
 	<body class="container">
 		<header class="row">
-			<div class="col-md-9 col-sd-5"></div>
+			<div class="col-md-9"></div>
 			<div class="col-md-3">
 			<div id="son">
 				<button class="icones" type="button"><img src="ressources/son.png" width="30px" width="auto" ></img></button>
@@ -38,33 +38,32 @@
 				<p id="eq1">Equipe 1</p>
 				<form class="form">
 					<p> Couleur de l'équipe </p>
-					<input type="color" name="head" value="#4d94ff"></br></br>
+					<input id="col1" type="color" name="head" value="#4d94ff"></br></br>
 					<p>Nom de l'équipe : </p>
-					<input type="text" name="Nom" value="Equipe 1"></br></br>
+					<input id="nom1" type="text" name="Nom" value="Equipe 1"></br></br>
 					<p>Nombre de joueurs : </p>
-					<input type="number"name="nbjoueurs" min="2" value="2">
+					<input id="nbj1" type="number"name="nbjoueurs" min="2" value="2">
 				</form>
 			</div>
 			<div class="equipe col-md-3">
 				<p id="eq2">Equipe 2</p>
 				<form class="form">
 					<p> Couleur de l'équipe </p>
-					<input type="color" name="head" value="#ff751a"></br></br>
+					<input id="col2" type="color" name="head" value="#ff751a"></br></br>
 					<p>Nom de l'équipe : </p>
-					<input type="text" name="Nom2" value="Equipe 2"></br></br>
+					<input id="nom2" type="text" name="Nom2" value="Equipe 2"></br></br>
 					<p>Nombre de joueurs : </p>
-					<input type="number"name="nbjoueurs2" min="2" value="2">
+					<input id="nbj2" type="number"name="nbjoueurs2" min="2" value="2">
 				</form>
 			</div>
 		</div>
-			<input type="submit" value="Lancer jeu" onclick="window.location='plateau.html';">
+			<input type="submit" value="Lancer jeu" onclick="AjoutEquipes()">
 
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<script src="affichage.js"></script>
-
 
 	</body>
 

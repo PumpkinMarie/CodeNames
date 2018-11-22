@@ -11,79 +11,94 @@
 	</head>
 
 	<body class="container-fluid">
-		<header class="row justify-content-between">
-			<div class="col-md-2 order-3 order-sm-1	box_tour">
-				<p>Tour de l'équipe 1</p>
+
+
+		<header class="row justify-content-between head">
+			<div class="col-md-2 col-sm-6 order-1	box_tour">
+				<p id="Tour_Eq"></p>
 			</div>
-			<div class="col-md-6 order-2 choix_ME">
-				<input type="text" name="indice" value="Indice">
-				<input type="number" name="nbcartes" value="1" min="1" max="9">
-				<input type="button" value="Go">
+			<div class="col-md-6 order-3 choix_ME">
+				<input id="choix_ME_inside" type="text" name="indice" placeholder="Indice">
+				<input id="choix_ME_inside2" type="number" name="nbcartes" value="1" min="1" max="9">
+				<input id="choix_ME_but" type="button" value="Go" onclick="PhaseJoueur()">
+
+				<p id="choix_J_inside" style="display:none"></p>
+				<input id="choix_ME" type="button" value="Go" style="display:none" onclick="PhaseME()">
+
 			</div>
-			<div class="col-md-3 order-1 order-sm-3 iconesall">
+			<div class="col-md-3 col-sm-6 order-2 order-sm-3 iconesall">
 			<div id="son">
-				<button class="icones" type="button"><img src="ressources/son.png" width="30px" width="auto" ></img></button>
+				<button class="icones" type="button"><img class="iconesimage" src="ressources/son.png"></img></button>
 				<input id="barre_son" type="range" min="0" max="100" value="50">
 			</div>
-			<button class="icones" id="langage" type="button" onclick="AfficherLangues()"><img id="langue_actuelle" src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
+			<button class="icones" id="langage" type="button" onclick="AfficherLangues()"><img class="iconesimage" id="langue_actuelle" src="ressources/Drapeau_France.png"></img></button>
 			<div id="langues" style="visibility:hidden">
-				<button class="icones" id="français" type="button" onclick="ChangerFrançais()"><img src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
-				<button class="icones" id="anglais" type="button" onclick="ChangerAnglais()"><img src="ressources/anglais.jpg" width="30px" width="auto" ></img></button>
-				<button class="icones" id="espagnol" type="button" onclick="ChangerEspagnol()"><img src="ressources/espagnol.jpg" width="30px" width="auto" ></img></button>
+				<button class="icones" id="français" type="button" onclick="ChangerFrançais()"><img class="iconesimage" src="ressources/Drapeau_France.png"  ></img></button>
+				<button class="icones" id="anglais" type="button" onclick="ChangerAnglais()"><img class="iconesimage" src="ressources/anglais.jpg" ></img></button>
+				<button class="icones" id="espagnol" type="button" onclick="ChangerEspagnol()"><img class="iconesimage" src="ressources/espagnol.jpg"></img></button>
 			</div>
-			<button class="icones" id="options" type="button"><img src="ressources/reg.png" width="30px" width="auto" ></img></button>
-			<a href="index.html"><button class="icones" type="button"><img src="ressources/exit.png" width="30px" width="auto" ></img></button></a>
+			<button class="icones" id="options" type="button"><img class="iconesimage" src="ressources/reg.png"></img></button>
+			<a href="index.html"><button class="icones" type="button"><img class="iconesimage" src="ressources/exit.png"></img></button></a>
 		</div>
 		</header>
+
+
 			<div class="row table">
-				<div id="tour" onclick="banniereRemove()">Tour du joueur suivant</div>
-				<div class="col-md-2">
+				<div id="tour" onclick="banniereRemove()"></div>
+				<div class="col-md-2 col-2">
 					<div class="progress" style="width:inherit;height:30px">
 					<!--on pourrait changer la couleur si le temps devient critique-->
  						<div id="sablier" class="progress-bar progress-bar-striped progress-bar-animated" style="width:50%;height:30px"></div>
 					</div>
 				</div>
-				<div class="col-md-2" class="colonne">
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
+				<div class="col-md-2 col-2" class="colonne">
+						<p id="c00" class="carte" onclick="Click_Carte(0,0)"></p>
+						<p id="c10" class="carte"></p>
+						<p id="c20" class="carte"></p>
+						<p id="c30" class="carte"></p>
+						<p id="c40" class="carte"></p>
 					</div>
-					<div class="col-md-2" class="colonne">
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
+					<div class="col-md-2 col-2" class="colonne">
+						<p id="c01" class="carte"></p>
+						<p id="c11" class="carte"></p>
+						<p id="c21" class="carte"></p>
+						<p id="c31" class="carte"></p>
+						<p id="c41" class="carte"></p>
 					</div>
-					<div class="col-md-2" class="colonne">
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
+					<div class="col-md-2 col-2" class="colonne">
+						<p id="c02" class="carte"></p>
+						<p id="c12" class="carte"></p>
+						<p id="c22" class="carte"></p>
+						<p id="c32" class="carte"></p>
+						<p id="c42" class="carte"></p>
 					</div>
-					<div class="col-md-2" class="colonne">
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
+					<div class="col-md-2 col-2" class="colonne">
+						<p id="c03" class="carte"></p>
+						<p id="c13" class="carte"></p>
+						<p id="c23" class="carte"></p>
+						<p id="c33" class="carte"></p>
+						<p id="c43" class="carte"></p>
 					</div>
-					<div class="col-md-2" class="colonne">
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
-						<p class="carte">carte</p>
+					<div class="col-md-2 col-2" class="colonne">
+						<p id="c04" class="carte"></p>
+						<p id="c14" class="carte"></p>
+						<p id="c24" class="carte"></p>
+						<p id="c34" class="carte"></p>
+						<p id="c44" class="carte"></p>
 					</div>
 				</div>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="card.js"></script>
+		<script src="board.js"></script>
+		<script src="langue.js"></script>
+		<script src="dico.js"></script>
+		<script src="team.js"></script>
+		<script src="noyau.js"></script>
 		<script src="affichage.js"></script>
+		<script src="jeu.js"></script>
 
 	</body>
 

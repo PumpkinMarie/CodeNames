@@ -7,6 +7,7 @@ class Noyau {
 		this.mode=mode;
 		this.language=lang;
 		this.gameEnd=false
+		this.turn="master";//master or player
 		//this.setTeam("Black","Trap",0); //non playable teams to represent grey and black cards
 		//this.setTeam("Grey","Neutral",0);
 		this.board=this.createBoard();
@@ -30,12 +31,23 @@ class Noyau {
 
 	}
 
-	getBoardState() {//board of the spy-master
+	isMaster(){
+		return this.turn=="master";
+	}
+
+	switchMaster(){
+		if(this.isMaster())
+			this.turn="player";
+		else
+			this.turn="master";
+	}
+
+	getBoardState() {//board of the game
 		return this.board.getCardboard();
 	}
 
 	createBoard() {
-		return new Board(this.language);
+		return new Board(this.language,this);
 	}
 
 	isBleuTeam() {
@@ -47,6 +59,7 @@ class Noyau {
 	}
 
 	verifySpyCard(card) { //attributes the points/actions corresponding to the cards chosen by a team
+		card.reveal();
 		if(card.team=="Black"){
 			this.gameEnd=true;
 			this.winner=this.teams[(this.currentTeam+1)%2].name;
@@ -61,10 +74,14 @@ class Noyau {
 			else
 				this.endTour();
 		}else{ //Is the card related to the tip?
-			if(this.teams[currentTeam].isInCardArray(card))
-				this.teams[currentTeam].AddScore(1);
+			if(this.teams[this.currentTeam].isInCardArray(card)){
+				if(this.teams[this.currentTeam].AddScore(1)){
+					this.gameEnd=true;
+					this.winner=this.teams[this.currentTeam].name;
+				}
+			}
 			else if(card.team==this.teams[currentTeam].color){
-				this.teams[currentTeam].AddScore(1);
+				this.teams[this.currentTeam].AddScore(1);
 				this.endTour();
 			}else
 				this.endTour();
@@ -72,7 +89,7 @@ class Noyau {
 	}
 
 	askEndTour() {
-		if(this.currentTeam.guesses!=0){
+		if(this.teams[this.currentTeam].guesses!=0 || this.isMaster()){
 			this.endTour();
 			return true;
 		}
@@ -80,14 +97,19 @@ class Noyau {
 	}
 
 	endTour() {
-		this.currentTeam=(this.currentTeam+1)%2;
+		if(this.isMaster())
+			this.switchMaster();
+		else{
+			this.currentTeam=(this.currentTeam+1)%2;
+			this.switchMaster();
+
 	}
 
 	getScore() {
-		return this.currentTeam.getScore();
+		return this.teams[this.currentTeam].getScore();
 	}
 
-	isEndGame(winner) {
-		return gameEnd;
+	isEndGame() {
+		return this.gameEnd;
 	}
 }

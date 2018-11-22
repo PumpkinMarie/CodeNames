@@ -1,41 +1,30 @@
 /*Fonction alea robin
-const FR = 0;
-const EN = 1;
-const ES = 2;
-function getWord(entries, index, language) {
-	if (language == FR) {
-		return entries[index][0];
-	} else if (language == EN) {
-		return entries[index][1][0];
-	} else if (language == ES) {
-		return entries[index][1][1];
-	}
-}
-function getWordRandom(language) {
-	let entries = Object.entries(Dico);
-	let rand = Math.floor(Math.random() * Math.floor(entries.length));
-	console.log(getWord(entries, rand, EN));
-}
+
 getWordRandom(ES);
 */
+const FR = 0, EN = 1, ES = 2;
 class Langue {
+	getWord(entries, index, language) {
+		if (language == FR) {
+			return entries[index][0];
+		} else if (language == EN) {
+			return entries[index][1][0];
+		} else if (language == ES) {
+			return entries[index][1][1];
+		}
+	}
 
-	// Les langues
-	Francais = 0;
-	Anglais = 1;
-	Espagnol = 2;
-	static langue = {
-		"Francais": this.Francais,
-		"Anglais": this.Anglais,
-		"Espagnol": this.Espagnol
-	};
+	getWordRandom() {
+		this.getWordRandom(actuel);
+	}
 
-	// Variable de classe
-	actuel;
+	getWordRandom(language) {
+		let entries = Object.entries(Dico);
+		let rand = Math.floor(Math.random() * Math.floor(entries.length));
+		console.log(getWord(entries, rand, EN));
+	}
 
-	// Méthodes de classe
-
-	static isLangueDisponible(langue) {
+	isLangueDisponible(langue) {
 		if (langue.is(String)) {
 			return this.langue.hasOwnProperty(langue)
 		}
@@ -51,17 +40,11 @@ class Langue {
 		return false;
 	}
 
-	constructor(langue) {
-		if (Langue.isLangueDisponible(langue)) {
-			this.actuel = (langue.is(String)) ? Langue.langue[langue] : langue;
+	constructor(lang = FR) {
+		if (lang != FR && lang != EN && lang != ES) {
+			this.actuel = FR;
+		} else {
+			this.actuel = lang;
 		}
-
-		let json1 = document.getElementsByTagName("head").item(0).createElement("script");
-		json1.setAttribute("type", "text/javascript");
-		json1.setAttribute("src", "./words.json");
-
-		loadJSON
 	}
-
-
 }
