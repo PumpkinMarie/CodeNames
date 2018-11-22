@@ -59,6 +59,7 @@ class Noyau {
 	}
 
 	verifySpyCard(card) { //attributes the points/actions corresponding to the cards chosen by a team
+		card.reveal();
 		if(card.team=="Black"){
 			this.gameEnd=true;
 			this.winner=this.teams[(this.currentTeam+1)%2].name;
@@ -101,7 +102,7 @@ class Noyau {
 		else{
 			this.currentTeam=(this.currentTeam+1)%2;
 			this.switchMaster();
-		
+
 	}
 
 	getScore() {

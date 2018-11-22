@@ -11,7 +11,7 @@ class Card{
 	getTeam(){ //card's type: Blue,Red,Grey,Black,hidden
 	if(!this.noyau.isMaster() && !this.isrevealed)
 		return "hidden";
-		return this.team;
+	return this.team;
 	}
 	reveal(){ //the card has been chosen
 		this.isrevealed=true;
