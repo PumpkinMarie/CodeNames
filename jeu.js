@@ -102,8 +102,11 @@ let indiceNb;
 let masterSelection=new Array();
 
 function Click_Carte(x,y){
+	affCarte="#c"+x+y;
 	if(!noyau.isMaster()){//Tour du joueur
-		if(!verifySpyCard(noyau.getBoardState()[x][y])){//le tour se termine
+		$(affCarte).css("box-shadow","0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19");
+		$(affCarte).css("background","yellow");
+		if(!noyau.verifySpyCard(noyau.getBoardState()[x][y])){//le tour se termine
       cardsUpdate();
       //Message de changement de tour
     }
@@ -111,18 +114,22 @@ function Click_Carte(x,y){
     //Message de félicitation
     }
 	}
-  else{//On ajoute à la sélection du master
+	else{//On ajoute à la sélection du master
     let test=false;
-    for(let i=0;i<masterSelection.length;i++){
+    let i;
+    for(i=0;i<masterSelection.length;i++){
       if(masterSelection[i].getValue()==noyau.getBoardState()[x][y].getValue()){
         test=true;
         break;
       }
     }
-    if(!test)//Carte pas présente, on ajoute
+    if(!test){//Carte pas présente, on ajoute
       masterSelection.push(noyau.getBoardState()[x][y]);
+			$(affCarte).css("box-shadow","10px 10px");
+		}
     else {
       masterSelection.splice(i,1);//On retire la carte
+			$(affCarte).css("box-shadow","0 0");
     }
     //Changer apparence de la carte sélectionnée?
   }
@@ -140,6 +147,7 @@ function Clic_MasterAgent(){
     //Erreur lors de la sélection!!!!!!!
   }
   else{
+		AfficheJoueur();
     noyau.setMasterSelection(masterSelection);//Change automatiquement le tour noyau
     masterSelection=new Array();//On reset
   }
