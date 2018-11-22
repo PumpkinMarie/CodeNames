@@ -11,10 +11,10 @@ function getWord(entries, index, language) {
 function getWordRandom(language) {
 	let entries = Object.entries(Dico);
 	let rand = Math.floor(Math.random() * Math.floor(entries.length));
-	let word = getWord(entries, rand, EN);
+	let word = getWord(entries, rand, language);
 	while (word == "Not Translated") {
 		rand = Math.floor(Math.random() * Math.floor(entries.length));
-		word = getWord(entries, rand, EN);
+		word = getWord(entries, rand, language);
 	}
 	return word;
 }//Fin temporaire
@@ -22,7 +22,7 @@ function getWordRandom(language) {
 let noyau;
 
 function getLangue(){
-    lang=localStorage.getItem("langue");
+    let lang=localStorage.getItem("langue");
     if(lang=="Drapeau_France.png")
       return FR;
     else if(lang=="anglais.jpg")
@@ -32,24 +32,29 @@ function getLangue(){
     return FR; //else
 }
 
+function changeLangue(){
+
+}
+
 function getMode(){
   return localStorage.getItem("mode");
 }
 
 function ApplyColor(card,color){//card's type: Blue,Red,Grey,Black,hidden
-  let c=#FF4500;
+  let c="FF4500";
   if(color=="Blue"){
+    c="1AA3FF";
   }
   else if(color=="Red"){
-    c=0xFF3300;
+    c="FF3300";
   }
   else if(color=="Grey"){
-
+    c="A3A3C2";
   }
   else if(color=="Black"){
-
+    c="000000";
   }
-  card.css("background", c);
+  card.style.backgroundColor= "#"+c;
 }
 
 function cardsUpdate(){
@@ -61,6 +66,7 @@ function cardsUpdate(){
      for(let j=0;j<5;j++){
         htmlCard[i][j]=document.getElementById("c"+i+j);
         htmlCard[i][j].innerHTML=CardArray[i][j].getValue();
+        ApplyColor(htmlCard[i][j],CardArray[i][j].getTeam());
      }
   }
 
