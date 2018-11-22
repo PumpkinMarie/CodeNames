@@ -1,5 +1,5 @@
 class Noyau {
-	/* 
+	/*
 	Parameters: mode=["competitive","cooperative"], lang=[EN,FR,ES]
 				(Team1Name,Team2Name):String (Team1NbPlayers,Team2NbPlayers):integer
 	*/
@@ -23,19 +23,19 @@ class Noyau {
 	}
 
 	langUpdate(lang){
-		if(this.lang!=lang){
-			this.lang=lang;
+		if(this.language!=lang){
+			this.language=lang;
 			this.board.langUpdate(lang);
 		}
-		
+
 	}
-	
+
 	getBoardState() {//board of the spy-master
 		return this.board.getCardboard();
 	}
 
 	createBoard() {
-		return new Board();
+		return new Board(this.language);
 	}
 
 	isBleuTeam() {

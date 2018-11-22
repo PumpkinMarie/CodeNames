@@ -13,7 +13,12 @@ function getWord(entries, index, language) {
 function getWordRandom(language) {
 	let entries = Object.entries(Dico);
 	let rand = Math.floor(Math.random() * Math.floor(entries.length));
-	return getWord(entries, rand, EN);
+	let word=getWord(entries, rand, EN);
+	while(word=="Not Translated"){
+		rand = Math.floor(Math.random() * Math.floor(entries.length));
+		word=getWord(entries, rand, EN);
+	}
+	return word;
 }
 
 window.onload = function () {
@@ -22,7 +27,7 @@ window.onload = function () {
 	for (let i = 0; i < 5; i++) {
 		let message = "";
 		for (let j = 0; j < 5; j++) {
-			message += board.CardBoard[i][j].team + " ";
+			message += "("+board.CardBoard[i][j].team + " , "+board.CardBoard[i][j].value+") ";
 		}
 		console.log(message);
 	}
