@@ -14,12 +14,16 @@ if (typeof(Storage) !== "undefined") {
 
     if(localStorage.getItem("nom_equipe1")==null)
       localStorage.setItem("nom_equipe1", "Equipe 1");
-    document.getElementById("Tour_Eq").innerHTML = localStorage.getItem("nom_equipe1");
-    document.getElementById("tour").innerHTML = localStorage.getItem("nom_equipe1") + " à toi de jouer!";
+    if(document.getElementById("Tour_Eq")!=null){
+        document.getElementById("Tour_Eq").innerHTML = localStorage.getItem("nom_equipe1");
+        document.getElementById("tour").innerHTML = localStorage.getItem("nom_equipe1") + " à toi de jouer!";
+    }
     if(localStorage.getItem("nom_equipe2")==null)
       localStorage.setItem("nom_equipe2", "Equipe 2");
-    document.getElementById("Tour_Eq2").innerHTML = localStorage.getItem("nom_equipe2");
-    document.getElementById("Tour_Eq2").innerHTML = localStorage.getItem("nom_equipe2")+ " à toi de jouer!";
+    if(document.getElementById("Tour_Eq2")!=null){
+        document.getElementById("Tour_Eq2").innerHTML = localStorage.getItem("nom_equipe2");
+        document.getElementById("Tour_Eq2").innerHTML = localStorage.getItem("nom_equipe2")+ " à toi de jouer!";
+    }
 }
 
 function changeNoyauLang(){

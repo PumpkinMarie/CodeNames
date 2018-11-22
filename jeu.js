@@ -19,7 +19,9 @@ function getWordRandom(language) {
 	return word;
 }//Fin temporaire
 
-getLangue(){
+let noyau;
+
+function getLangue(){
     lang=localStorage.getItem("langue");
     if(lang=="Drapeau_France.png")
       return FR;
@@ -30,32 +32,33 @@ getLangue(){
     return FR; //else
 }
 
-getMode(){
+function getMode(){
   return localStorage.getItem("mode");
 }
 
-cardsUpdate(){
+function cardsUpdate(){
 
 }
 
-getEquipe1(){
+function getEquipe1(){
   return localStorage.getItem("nom_equipe1");
 }
 
-getNumberEquipe1(){
+function getNumberEquipe1(){
   return localStorage.getItem("nbj1");
 }
 
-getEquipe2(){
+function getEquipe2(){
   return localStorage.getItem("nom_equipe2");
 }
 
-getNumberEquipe2(){
+function getNumberEquipe2(){
   return localStorage.getItem("nbj2");
 }
 
 window.onload= function(){
   //Création du noyau
-  let noyau = new Noyau(getMode(), getLangue(), getEquipe1(), getNumberEquipe1(), getEquipe2(), getNumberEquipe2());
+  noyau = new Noyau(getMode(), getLangue(), getEquipe1(), getNumberEquipe1(), getEquipe2(), getNumberEquipe2());
   HasCore=1;
+  console.log("Noyau créé");
 }
