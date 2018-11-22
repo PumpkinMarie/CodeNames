@@ -80,7 +80,7 @@ function ModeCoop(){
 }
 
 function AfficheJoueur(){
-  document.getElementById('choix_J_inside').innerHTML = "Indice :" + indice + " avec " + indiceNb;
+  document.getElementById('choix_J_inside').innerHTML = "Indice :" + indice + " en " + indiceNb + " cartes";
   $('#choix_J_inside').css("display","block");
   $('#choix_ME_inside').css("display","none ");
   $('#choix_ME_inside2').css("display","none");
