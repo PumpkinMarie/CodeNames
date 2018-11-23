@@ -3,7 +3,7 @@ let TourME=1;
 let TourJ=0;
 
 //Temporaire
-function getWord(entries, index, language) {
+/*function getWord(entries, index, language) {
 	if (language == FR) {
 		return entries[index][0];
 	} else if (language == EN) {
@@ -21,7 +21,7 @@ function getWordRandom(language) {
 		word = getWord(entries, rand, language);
 	}
 	return word;
-}//Fin temporaire
+}//Fin temporaire*/
 
 let noyau;
 

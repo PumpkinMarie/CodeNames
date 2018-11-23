@@ -14,6 +14,35 @@ class Langue {
 		}
 	}
 
+	getWordIndex(word,lang){
+		let i,j;
+		for(i=0;i<Dico.length;i++){
+			if(lang==FR){
+				if(Dico[i][0]==word)
+					return i;
+			}else if(lang==EN){
+				if(Dico[i][1][0]==word)
+					return i;
+			}else{
+				if(Dico[i][1][1]==word)
+					return i;
+			}
+		}
+		return -1;
+	}
+
+	Translatefrom(word,lang,newLang){
+		let ind=getWordIndex(word,lang);
+		if(ind!=-1){
+			if(newLang==FR)
+				return Dico[ind][0];
+			else if(newLang==EN)
+				return Dico[ind][1][0];
+			else
+				return Dico[ind][1][1];
+		}
+	}
+
 	getWordRandom() {
 		this.getWordRandom(actuel);
 	}
@@ -26,7 +55,7 @@ class Langue {
 
 	isLangueDisponible(langue) {
 		if (langue.is(String)) {
-			return this.langue.hasOwnProperty(langue)
+			return false;
 		}
 		else if (langue.is(Number)) {
 			let bool = 0;
@@ -40,7 +69,7 @@ class Langue {
 		return false;
 	}
 
-	constructor(lang = FR) {
+	constructor(lang) {
 		if (lang != FR && lang != EN && lang != ES) {
 			this.actuel = FR;
 		} else {
