@@ -95,6 +95,7 @@ body {
 	font: Bold 20px Arial;
 	background: #FF4500;
 	color: #fff;
+	border-radius: 10px;
 }
 
 .modes-box:hover {
