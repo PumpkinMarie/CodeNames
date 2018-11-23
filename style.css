@@ -70,6 +70,13 @@ p {
 	display: none;
 }
 
+@media screen and (max-width: 600px) {
+	#navbar > div {
+		padding-left: 0.2em ;
+		padding-right: 0.2em ;
+	}
+}
+
 /***********************************************************************/
 /*	2) index.html */
 /***********************************************************************/
@@ -107,8 +114,8 @@ p {
 }
 
 .modes-title {
-	padding-top: 1em;
-	padding-bottom: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 	font: Bold 20px Arial;
 	background: #FF4500;
 	color: #fff;
@@ -130,6 +137,8 @@ p {
 	padding: 10px 10px 10px 10px;
 	font: 0.9em sans-serif;
 	text-align: left;
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
 }
 
 /***********************************************************************/

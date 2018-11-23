@@ -41,7 +41,8 @@
 				</span>
 			</button>
 
-			<div id="navbar" class="collapse navbar-collapse col-10 offset-sm-6 col-sm-6 offset-md-7 col-md-5 offset-lg-8 col-lg-4 row">
+			<div id="navbar"
+			     class="collapse navbar-collapse col-10 offset-sm-6 col-sm-6 offset-md-7 col-md-5 offset-lg-8 col-lg-4 row">
 				<div id="son" class="col-3 col-sm-3">
 					<button class="icones" type="button" data-toggle="popover" data-placement="bottom">
 						<img src="ressources/son.png" width="30px">
@@ -52,7 +53,7 @@
 						<img id="langue_actuelle" src="" width="30px">
 					</button>
 					<div class="dropdown-menu">
-						<button id="français" class="dropdown-item"  type="button" onclick="ChangerFrançais()">
+						<button id="français" class="dropdown-item" type="button" onclick="ChangerFrançais()">
 							<img src="ressources/Drapeau_France.png" class="mr-2" width="30px">
 							Français
 						</button>
@@ -60,7 +61,7 @@
 							<img src="ressources/anglais.jpg" class="mr-2" width="30px">
 							English
 						</button>
-						<button id="espagnol" class="dropdown-item"  type="button" onclick="ChangerEspagnol()">
+						<button id="espagnol" class="dropdown-item" type="button" onclick="ChangerEspagnol()">
 							<img src="ressources/espagnol.jpg" class="mr-2" width="30px">
 							Español
 						</button>
@@ -98,42 +99,39 @@
 			</div>
 			<div class="col-12 row mb-5">
 				<a class="offset-1 col-10 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6">
-					<button class="btn modes w-75" type="button" data-toggle="modal" data-target="#myModal">Tutoriel</button>
+					<button class="btn modes w-75" type="button" data-toggle="modal" data-target="#modal">Tutoriel
+					</button>
 				</a>
 			</div>
 		</div>
 
+		<!-- Modal -->
+		<div class="modal fade" id="modal" role="dialog">
+			<div class="modal-dialog">
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Header</h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-					<div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=szYTmx0bYyw"></iframe>
-				</div>
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Tutoriel</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
 					</div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-    </div>
-
-</div>
-
-</body>
-</html>
-
+					<div class="modal-body">
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/szYTmx0bYyw"
+						        frameborder="0"
+					            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				                allowfullscreen>
+							</iframe>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<audio src="./ressources/SoundEffect/MainTheme.mp3" loop autoplay width=0>
 			Florent Combe
-			https://www.youtube.com/watch?v=zAoqbN0mWIA
 		</audio>
 	</body>
 </html>

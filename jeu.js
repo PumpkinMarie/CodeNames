@@ -1,6 +1,6 @@
-let TourEq=1;
-let TourME=1;
-let TourJ=0;
+let TourEq = 1;
+let TourME = 1;
+let TourJ = 0;
 
 //Temporaire
 /*function getWord(entries, index, language) {
@@ -25,174 +25,174 @@ function getWordRandom(language) {
 
 let noyau;
 
-function getLangue(){
-    let lang=localStorage.getItem("langue");
-    if(lang=="Drapeau_France.png")
-      return FR;
-    else if(lang=="anglais.jpg")
-      return EN;
-    else if(lang=="espagnol.jpg")
-      return ES;
-    return FR; //else
+function getLangue () {
+	let lang = localStorage.getItem("langue");
+	if ( lang == "Drapeau_France.png" )
+		return FR;
+	else if ( lang == "anglais.jpg" )
+		return EN;
+	else if ( lang == "espagnol.jpg" )
+		return ES;
+	return FR; //else
 }
 
 
-function getMode(){
-  return localStorage.getItem("mode");
+function getMode () {
+	return localStorage.getItem("mode");
 }
 
-function ApplyColor(card,color){//card's type: Blue,Red,Grey,Black,hidden
-  let c="FF4500";
-  if(color=="Blue"){
-    c="1AA3FF";
-  }
-  else if(color=="Red"){
-    c="FF3300";
-  }
-  else if(color=="Grey"){
-    c="A3A3C2";
-  }
-  else if(color=="Black"){
-    c="000000";
-  }
-  card.style.backgroundColor= "#"+c;
+function ApplyColor ( card, color ) {//card's type: Blue,Red,Grey,Black,hidden
+	let c = "FF4500";
+	if ( color == "Blue" ) {
+		c = "1AA3FF";
+	}
+	else if ( color == "Red" ) {
+		c = "FF3300";
+	}
+	else if ( color == "Grey" ) {
+		c = "A3A3C2";
+	}
+	else if ( color == "Black" ) {
+		c = "000000";
+	}
+	card.style.backgroundColor = "#" + c;
 }
 
-function seeAsPlayer(){
-  //On récupère les cartes
-  let CardArray=noyau.getBoardState();
-  let htmlCard=new Array();
-  for(let i=0;i<5;i++){
-     htmlCard[i]=new Array();
-     for(let j=0;j<5;j++){
-        htmlCard[i][j]=document.getElementById("c"+i+j);
-        htmlCard[i][j].innerHTML=CardArray[i][j].getValue();
-        ApplyColor(htmlCard[i][j].parentElement,CardArray[i][j].seeAsPlayer());
-     }
-  }
+function seeAsPlayer () {
+	//On récupère les cartes
+	let CardArray = noyau.getBoardState();
+	let htmlCard = new Array();
+	for ( let i = 0 ; i < 5 ; i++ ) {
+		htmlCard[i] = new Array();
+		for ( let j = 0 ; j < 5 ; j++ ) {
+			htmlCard[i][j] = document.getElementById("c" + i + j);
+			htmlCard[i][j].innerHTML = CardArray[i][j].getValue();
+			ApplyColor(htmlCard[i][j].parentElement, CardArray[i][j].seeAsPlayer());
+		}
+	}
 }
 
-function cardsUpdate(){
-  //On récupère les cartes
-  let CardArray=noyau.getBoardState();
-  let htmlCard=new Array();
-  for(let i=0;i<5;i++){
-     htmlCard[i]=new Array();
-     for(let j=0;j<5;j++){
-        htmlCard[i][j]=document.getElementById("c"+i+j);
-        htmlCard[i][j].innerHTML=CardArray[i][j].getValue();
-        ApplyColor(htmlCard[i][j].parentElement,CardArray[i][j].getTeam());
-     }
-  }
+function cardsUpdate () {
+	//On récupère les cartes
+	let CardArray = noyau.getBoardState();
+	let htmlCard = new Array();
+	for ( let i = 0 ; i < 5 ; i++ ) {
+		htmlCard[i] = new Array();
+		for ( let j = 0 ; j < 5 ; j++ ) {
+			htmlCard[i][j] = document.getElementById("c" + i + j);
+			htmlCard[i][j].innerHTML = CardArray[i][j].getValue();
+			ApplyColor(htmlCard[i][j].parentElement, CardArray[i][j].getTeam());
+		}
+	}
 }
 
-function getEquipe1(){
-  return localStorage.getItem("nom_equipe1");
+function getEquipe1 () {
+	return localStorage.getItem("nom_equipe1");
 }
 
-function getNumberEquipe1(){
-  return localStorage.getItem("nbj1");
+function getNumberEquipe1 () {
+	return localStorage.getItem("nbj1");
 }
 
-function getEquipe2(){
-  return localStorage.getItem("nom_equipe2");
+function getEquipe2 () {
+	return localStorage.getItem("nom_equipe2");
 }
 
-function getNumberEquipe2(){
-  return localStorage.getItem("nbj2");
+function getNumberEquipe2 () {
+	return localStorage.getItem("nbj2");
 }
 
 let canPass;
 
-window.onload= function(){
-  //Création du noyau
-  noyau = new Noyau(getMode(), getLangue(), getEquipe1(), getNumberEquipe1(), getEquipe2(), getNumberEquipe2());
-  HasCore=1;
-	canPass=false;
-  cardsUpdate();
-  console.log("Noyau créé");
-	console.log("Current:"+noyau.teams[noyau.currentTeam].getName());
-	console.log(noyau.teams[0].getName()+": "+noyau.teams[0].getScore());
-	console.log(noyau.teams[1].getName()+": "+noyau.teams[0].getScore());
+window.onload = function () {
+	//Création du noyau
+	noyau = new Noyau(getMode(), getLangue(), getEquipe1(), getNumberEquipe1(), getEquipe2(), getNumberEquipe2());
+	HasCore = 1;
+	canPass = false;
+	cardsUpdate();
+	console.log("Noyau créé");
+	console.log("Current:" + noyau.teams[noyau.currentTeam].getName());
+	console.log(noyau.teams[0].getName() + ": " + noyau.teams[0].getScore());
+	console.log(noyau.teams[1].getName() + ": " + noyau.teams[0].getScore());
 }
 
 let indice;
 let indiceNb;
-let masterSelection=new Array();
+let masterSelection = new Array();
 
-function GO(){
+function GO () {
 	noyau.endTour();
 	cardsUpdate();
 	PhaseME();
 }
 
-function pursue(){
+function pursue () {
 	let e = document.getElementById("closingRed");
-	if(canPass){//sinon faux positif
+	if ( canPass ) {//sinon faux positif
 		cardsUpdate();
 		PhaseME();
 	}
-	e.style.opacity="0";
+	e.style.opacity = "0";
 }
 
-function waitForEnding(){
+function waitForEnding () {
 	seeAsPlayer();
-	let e=document.getElementById("closingRed");
-	e.style.opacity="1";
+	let e = document.getElementById("closingRed");
+	e.style.opacity = "1";
 }
 
-function Click_Carte(x,y){
-	affCarte="#c"+x+y;
-	if(!noyau.isMaster()){//Tour du joueur
-		if(!noyau.verifySpyCard(noyau.getBoardState()[x][y])){//le tour se termine
-			canPass=true;
+function Click_Carte ( x, y ) {
+	affCarte = "#c" + x + y;
+	if ( !noyau.isMaster() ) {//Tour du joueur
+		if ( !noyau.verifySpyCard(noyau.getBoardState()[x][y]) ) {//le tour se termine
+			canPass = true;
 			waitForEnding();
-      //Message de changement de tour
-    }
-    else{//Les joueurs continuent
-			$("#choix_J").css("display","inline-block");
-			cardsUpdate();
-    //Message de félicitation
-    }
-	}
-	else{//On ajoute à la sélection du master
-    let test=false;
-    let i;
-    for(i=0;i<masterSelection.length;i++){
-      if(masterSelection[i].getValue()==noyau.getBoardState()[x][y].getValue()){
-        test=true;
-        break;
-      }
-    }
-    if(!test){//Carte pas présente, on ajoute
-      masterSelection.push(noyau.getBoardState()[x][y]);
-			$(affCarte).css("box-shadow","10px 10px");
+			//Message de changement de tour
 		}
-    else {
-      masterSelection.splice(i,1);//On retire la carte
-			$(affCarte).css("box-shadow","0 0");
-    }
-
+		else {//Les joueurs continuent
+			$("#choix_J").css("display", "inline-block");
+			cardsUpdate();
+			//Message de félicitation
+		}
+	}
+	else {//On ajoute à la sélection du master
+		let test = false;
+		let i;
+		for ( i = 0 ; i < masterSelection.length ; i++ ) {
+			if ( masterSelection[i].getValue() == noyau.getBoardState()[x][y].getValue() ) {
+				test = true;
+				break;
+			}
+		}
+		if ( !test ) {//Carte pas présente, on ajoute
+			masterSelection.push(noyau.getBoardState()[x][y]);
+			$(affCarte).css("box-shadow", "10px 10px");
+		}
+		else {
+			masterSelection.splice(i, 1);//On retire la carte
+			$(affCarte).css("box-shadow", "0 0");
+		}
+		
 		cardsUpdate();
-  }
-  //cardsUpdate();//On met à jour l'affichage des cartes
-  if(noyau.isEndGame()){
-    //Le jeu est terminé
-    let winnerName=noyau.winner;
+	}
+	//cardsUpdate();//On met à jour l'affichage des cartes
+	if ( noyau.isEndGame() ) {
+		//Le jeu est terminé
+		let winnerName = noyau.winner;
 		banniereFJ(winnerName);
-  }
+	}
 }
 
-function Clic_MasterAgent(){
-  indice=document.getElementById("choix_ME_inside").value;
-  indiceNb=document.getElementById("choix_ME_inside2").value;
-  if(indiceNb!=masterSelection.length){
-    //Erreur lors de la sélection!!!!!!!
-  }
-  else{
+function Clic_MasterAgent () {
+	indice = document.getElementById("choix_ME_inside").value;
+	indiceNb = document.getElementById("choix_ME_inside2").value;
+	if ( indiceNb != masterSelection.length ) {
+		//Erreur lors de la sélection!!!!!!!
+	}
+	else {
 		AfficheJoueur();
-    noyau.setMasterSelection(masterSelection);//Change automatiquement le tour noyau
-    masterSelection=new Array();//On reset
-  }
-  cardsUpdate();//On affiche les cartes des joueurs si réussi, sinon cartes ME
+		noyau.setMasterSelection(masterSelection);//Change automatiquement le tour noyau
+		masterSelection = new Array();//On reset
+	}
+	cardsUpdate();//On affiche les cartes des joueurs si réussi, sinon cartes ME
 }
