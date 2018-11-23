@@ -16,15 +16,16 @@ class Langue {
 
 	static getWordIndex(word, lang) {
 		let i, j;
-		for (i = 0; i < Dico.length; i++) {
+		let entries = Object.entries(Dico);
+		for (i = 0; i < entries.length; i++) {
 			if (lang == FR) {
-				if (Dico[i][0] == word)
+				if (entries[i][0] == word)
 					return i;
 			} else if (lang == EN) {
-				if (Dico[i][1][0] == word)
+				if (entries[i][1][0] == word)
 					return i;
 			} else {
-				if (Dico[i][1][1] == word)
+				if (entries[i][1][1] == word)
 					return i;
 			}
 		}
@@ -32,14 +33,15 @@ class Langue {
 	}
 
 	static Translatefrom(word, lang, newLang) {
-		let ind = getWordIndex(word, lang);
+		let entries = Object.entries(Dico);
+		let ind = Langue.getWordIndex(word, lang);
 		if (ind != -1) {
 			if (newLang == FR)
-				return Dico[ind][0];
+				return entries[ind][0];
 			else if (newLang == EN)
-				return Dico[ind][1][0];
+				return entries[ind][1][0];
 			else
-				return Dico[ind][1][1];
+				return entries[ind][1][1];
 		}
 	}
 
@@ -62,3 +64,5 @@ class Langue {
 		}
 	}
 }
+
+console.log(Langue.Translatefrom("Follar", ES, FR));
