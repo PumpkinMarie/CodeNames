@@ -21,55 +21,84 @@
 		<script src="jeu.js"></script>
 		<link rel="stylesheet" href="style.css">
 	</head>
-	<body class="container-fluid">
-		<!--<div id="tour" onclick="banniereRemove()"></div>-->
-
+	<body class="container">
 		<div class="alert" id="closingRed">
 			<span class="closebtn" onclick="pursue()">&times;</span>
 			<strong>Listen!</strong> Votre tour est terminé. Fermez ce message pour continuer.
 		</div>
 
-		<header class="row justify-content-between head">
-			<div id="Box_tour_id" class="col-md-2 col-sm-6 order-1 box_tour">
-				<p id="Tour_Eq"></p>
-			</div>
-			<div class="col-md-6 order-3 choix_ME">
-				<input id="choix_ME_inside" type="text" name="indice" placeholder="Indice">
-				<input id="choix_ME_inside2" type="number" name="nbcartes" value="1" min="1" max="9">
-				<input id="choix_ME_but" type="button" value="Go" onclick="Clic_MasterAgent()">
-
-				<p id="choix_J_inside" style="display:none"></p>
-				<input id="choix_J" type="button" value="Go" style="display:none" onclick="GO()"></input>
-
-			</div>
-			<div class="col-md-3 col-sm-6 order-2 order-sm-3 iconesall">
-				<div id="son">
-					<button class="icones" type="button"><img class="iconesimage" src="ressources/son.png"></img>
-					</button>
-					<input id="barre_son" type="range" min="0" max="100" value="50">
-				</div>
-				<button class="icones" id="langage" type="button"><img class="iconesimage" id="langue_actuelle"
-				                                                       src="ressources/Drapeau_France.png"></img>
+		<nav class="navbar navbar-expand-lg row mt-2 mb-4">
+			<!-- Toggler/collapsibe Button -->
+			<div class="navbar-toggler col-2 offset-sm-0 col-sm-2 offset-md-1 col-md-1" data-toggle="collapse" data-target="#navbar">
+				<button type="button" class="btn text-center">
+					<span class="navbar-toggler-icon">
+						<img src="ressources/Hamburger_icon.svg_.png" class="img-fluid" alt="Navbar Burger">
+					</span>
 				</button>
-				<div id="langues" style="visibility:hidden">
-					<button class="icones" id="français" type="button" onclick="ChangerFrançais()"><img
-							class="iconesimage" src="ressources/Drapeau_France.png"></img></button>
-					<button class="icones" id="anglais" type="button" onclick="ChangerAnglais()"><img
-							class="iconesimage" src="ressources/anglais.jpg"></img></button>
-					<button class="icones" id="espagnol" type="button" onclick="ChangerEspagnol()"><img
-							class="iconesimage" src="ressources/espagnol.jpg"></img></button>
-				</div>
-				<button class="icones" id="options" type="button"><img class="iconesimage"
-				                                                       src="ressources/reg.png"></img></button>
-				<a href="index.html">
-					<button class="icones" type="button"><img class="iconesimage" src="ressources/exit.png"></img>
-					</button>
-				</a>
 			</div>
-		</header>
 
+			<div id="Box_tour_id" class="col-3 offset-sm-0 col-sm-3 offset-md-1 col-md-2 offset-lg-1 offset-xl-1 box_tour">
+				<p id="Tour_Eq">Equipe</p>
+			</div>
+			<div class="col-7 col-sm-7 col-md-7 col-lg-5 form-inline">
+				<div class="col-8 col-sm-9 form-group input-group">
+					<div class="input-group-prepend display-none-sm">
+						<span class="input-group-text">Indice : </span>
+					</div>
+					<input id="choix_ME_inside" class="form-control rounded-sm" type="text" name="indice" placeholder="Mot">
+					<input id="choix_ME_inside2" class="form-control col-sm-3" type="number"
+					       name="nbcartes" value="1" min="1" max="9">
+				</div>
+				<div class="col-3 col-sm-2 form-group ml-1">
+					<button id="choix_ME_but" class="btn" type="button" onclick="Clic_MasterAgent()">GO</button>
+				</div>
 
-		<div class="row table">
+				<div class="form-group">
+					<p id="choix_J_inside" style="display:none"></p>
+					<input id="choix_J" type="button" value="Go" style="display:none" onclick="GO()">
+				</div>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse col-12 col-sm-12 col-md-5 col-lg-4 row">
+				<div id="son" class="col-3 col-sm-3 col-md-3">
+					<button class="icones" type="button" data-toggle="popover" data-placement="bottom">
+						<img src="ressources/son.png" width="30px">
+					</button>
+				</div>
+				<div class="col-4 col-sm-4 col-md-5 dropdown dropright">
+					<button id="langage" class="icones dropdown-toggle col-12" data-toggle="dropdown" type="button">
+						<img id="langue_actuelle" src="" width="30px">
+					</button>
+					<div class="dropdown-menu">
+						<button id="français" class="dropdown-item"  type="button" onclick="ChangerFrançais()">
+							<img src="ressources/Drapeau_France.png" class="mr-2" width="30px">
+							Français
+						</button>
+						<button id="anglais" class="dropdown-item" type="button" onclick="ChangerAnglais()">
+							<img src="ressources/anglais.jpg" class="mr-2" width="30px">
+							English
+						</button>
+						<button id="espagnol" class="dropdown-item"  type="button" onclick="ChangerEspagnol()">
+							<img src="ressources/espagnol.jpg" class="mr-2" width="30px">
+							Español
+						</button>
+					</div>
+				</div>
+				<div class="col-3 col-sm-2">
+					<button class="icones" id="options" type="button">
+						<img src="ressources/reg.png" width="30px">
+					</button>
+				</div>
+				<div class="col-2 col-sm-2">
+					<a href="index.html">
+						<button id="exit" class="icones" type="button">
+							<img src="ressources/exit.png" width="30px">
+						</button>
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="row">
 			<div class="col-md-2 col-2">
 				<div class="progress" style="width:inherit;height:30px">
 					<!--on pourrait changer la couleur si le temps devient critique-->

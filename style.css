@@ -159,14 +159,15 @@ body {
 
 .box_tour {
 	background: #1AA3FF;
-	margin: 6px 0 6px 6px;
-	padding: 10px 0 6px 0;
 	border-radius: 10px;
 }
 
-.choix_ME {
-	margin: 6px 0 6px 6px;
-	padding: 6px 0 6px 20px;
+/***********************************************************************/
+/*	6) plateau.html */
+/***********************************************************************/
+#plateau-start.show {
+	background: black;
+	opacity: 1;
 }
 
 .carte {
@@ -185,53 +186,51 @@ body {
 	transform: rotate(90deg) translate(30vh);
 }
 
-.table {
-	height: 90vh;
-}
-
 .alert {
-    padding: 20px;
-    background-color: #f44336;
-    color: white;
-    opacity: 0;
-    transition: opacity 0.6s;
-    margin-bottom: 15px;
+	padding: 20px;
+	background-color: #f44336;
+	color: white;
+	opacity: 0;
+	transition: opacity 0.6s;
+	margin-bottom: 15px;
 }
 
 .closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
 }
 
 .closebtn:hover {
-    color: black;
+	color: black;
 }
 
 #tour{
-    text-align: center;
-    position: absolute;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    background: #1AA3FF;
-    z-index: 1;
-}
-
-/***********************************************************************/
-/*	6) plateau.html */
-/***********************************************************************/
-#plateau-start.show {
-	background: black;
+	text-align: center;
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 100%;
 	opacity: 1;
+	background: #1AA3FF;
+	z-index: 1;
 }
 
+@media screen and (max-width: 767px){
+	.display-none-sm {
+		display: none;
+	}
+
+	.rounded-sm {
+		border-top-left-radius: 0.25em!important;
+		border-bottom-left-radius: 0.25em!important;
+	}
+}
 
 /***********************************************************************/
 /*	7) Media Queries */
@@ -252,19 +251,5 @@ body {
 
 	.iconesimage {
 		width: 20px;
-	}
-
-	.choix_ME {
-		width: 100%;
-		height: auto;
-		padding: 0 0 0 0;
-	}
-
-	#choix_ME_inside {
-		width: 20%;
-	}
-
-	#choix_ME_inside2 {
-		width: 50%;
 	}
 }

@@ -168,7 +168,8 @@ $(document).ready(function () {
 	$('#exit').click(function() {
 		if (window.localStorage) {
 			for (key in localStorage) {
-				localStorage.removeItem(key);
+				if (key !== 'langue')
+					localStorage.removeItem(key);
 			}
 		}
 	});
