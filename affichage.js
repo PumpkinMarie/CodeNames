@@ -141,7 +141,6 @@ function AjoutEquipes(){
     localStorage.setItem("nbj2", document.getElementById('nbj2').value);
     window.open("plateau.html","_self");
 }
-}
 
 function banniereFJ (nom) {
    document.getElementById("tour").innerHTML = "Bravo" + nom + ". Tu as gagné!";

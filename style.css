@@ -26,6 +26,17 @@
 /***********************************************************************/
 
 /***********************************************************************/
+/*	0) Inconnue */
+/***********************************************************************/
+/* Pas index */
+.iconesimage {
+	width: 30px;
+}
+.iconesall {
+	padding: 12px 6px 6px 6px;
+}
+
+/***********************************************************************/
 /*	1) Général */
 /***********************************************************************/
 body {
@@ -38,17 +49,9 @@ body {
 	background: none;
 }
 
-.iconesimage{
-  width: 30px;
-}
-
 .icones:hover {
 	cursor: pointer;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
-.iconesall {
-	padding: 12px 6px 6px 6px;
 }
 
 #langues {
@@ -76,54 +79,56 @@ body {
 }
 
 .modes:hover {
-	cursor: pointer;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.modes_loc {
-	padding: 6px 0 6px 0;
-	margin: 12px 25px 6px 25px;
-	font: Bold 20px Arial;
-	background: #FF4500;
-	color: #fff;
-}
-
-.modes_loc:hover {
-	cursor: pointer;
-	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
-.modes_bout {
-	padding: 12px 0 24px 0;
-	font: Bold 20px Arial;
-	background: #FF4500;
-	color: #fff;
-	border: none;
-	border-bottom: black solid 1px;
-}
-
-.modes_bout:hover {
-	text-decoration: none;
-	color: inherit;
-	cursor: pointer;
-}
-
-#log {
-	width: auto;
-	height: auto;
-	min-width: 480px;
+.modes:disabled {
+	box-shadow: none;
 }
 
 /***********************************************************************/
 /*	3) local.html */
 /***********************************************************************/
-.desc {
+.modes-box {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	font: Bold 20px Arial;
+	background: #FF4500;
+	color: #fff;
+}
+
+.modes-box:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modes-title {
+	padding-top: 1em;
+	font: Bold 20px Arial;
+	background: #FF4500;
+	color: #fff;
+	border: none;
+}
+
+.modes-title:hover {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+.modes-divider {
+	border: 1px black solid;
+}
+
+.modes-content {
 	color: black;
 	padding: 10px 10px 10px 10px;
 	font: 0.9em sans-serif;
 	text-align: left;
 }
 
+/***********************************************************************/
+/*	4) coop.html */
+/***********************************************************************/
 .equipe {
 	display: inline-block;
 	padding: 6px 0 6px 0;
@@ -197,30 +202,12 @@ body {
 /***********************************************************************/
 @media (max-width: 768px) {
 
-	.modes_loc {
-		margin: 0 0 0 0;
-		border-bottom: 1px black solid;
-	}
-
-	.modes_bout {
-		border: none;
-	}
-
-	.desc {
-		display: none;
-	}
-
 	.equipe {
 		display: block;
 		padding: 6px 0 6px 0;
 		margin: 0 0 20px 0;
 		width: 100vw;
 		height: auto;
-	}
-
-	#logo {
-		height: auto;
-		width: 100vw;
 	}
 
 	.box_tour {

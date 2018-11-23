@@ -9,11 +9,27 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.4.11/css-doodle.min.js"></script>
 
 		<script src="affichage.js"></script>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body class="container-fluid">
+		<css-doodle style="z-index: -1; position: fixed; top: 0; left: 0; opacity: 0.2;">
+			:doodle {
+			@grid: 11;
+			grid-gap: 0.2em;
+			@size: 99vw;
+			}
+			margin: 1em;
+			background: @pick(
+			#ff1a1a,
+			#3366ff,
+			#e6e6e6,
+			#333333
+			);
+			box-shadow: 0 0 0 1.2em #696969 ;
+		</css-doodle>
 		<header class="row mt-2">
 			<div class="col-12 offset-sm-6 col-sm-6 offset-md-7 col-md-5 offset-lg-8 col-lg-4 row">
 				<div id="son" class="col-3 col-sm-3">
@@ -66,13 +82,13 @@
 				</a>
 			</div>
 			<div class="col-12 row mb-5">
-				<a href="local.html" class="offset-1 col-10 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6">
-					<button class="btn modes w-75" type="button">Reseau</button>
+				<a href="" class="offset-1 col-10 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6">
+					<button class="btn modes w-75" type="button" disabled>Reseau</button>
 				</a>
 			</div>
 			<div class="col-12 row mb-5">
-				<a href="local.html" class="offset-1 col-10 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6">
-					<button class="btn modes w-75" type="button">Tutoriel</button>
+				<a href="" class="offset-1 col-10 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6">
+					<button class="btn modes w-75" type="button" disabled>Tutoriel</button>
 				</a>
 			</div>
 		</div>
