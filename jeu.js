@@ -168,11 +168,11 @@ function Click_Carte ( x, y ) {
 		}
 		if ( !test ) {//Carte pas présente, on ajoute
 			masterSelection.push(noyau.getBoardState()[x][y]);
-			$(affCarte).css("box-shadow", "10px 10px");
+			$(affCarte).parent().css("border", "white 2px solid");
 		}
 		else {
 			masterSelection.splice(i, 1);//On retire la carte
-			$(affCarte).css("box-shadow", "0 0");
+			$(affCarte).parent().css("border", "black 2px solid");
 		}
 
 		cardsUpdate();
