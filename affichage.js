@@ -81,8 +81,18 @@ function banniereRemove () {
 }
 
 function banniereAffiche () {
+	console.log(noyau.teams[noyau.currentTeam].getName()+": "+noyau.teams[noyau.currentTeam].getScore());
    test = noyau.teams[noyau.currentTeam].getName();
    document.getElementById("tour").innerHTML = test + " à toi de jouer!";
+	 document.getElementById("Tour_Eq").innerHTML=test;
+	 if(noyau.teams[noyau.currentTeam].getColor()=="Blue"){
+	 		document.getElementById("Box_tour_id").style.backgroundColor="#1AA3FF";
+			document.getElementById("tour").style.backgroundColor="#1AA3FF";
+	 }
+	 else{
+	 		document.getElementById("Box_tour_id").style.backgroundColor="#FF3300";
+			document.getElementById("tour").style.backgroundColor="#FF3300";
+	 }
 	 $('#tour').css("visibility", "visible");
 }
 
@@ -144,5 +154,13 @@ function AjoutEquipes(){
 
 function banniereFJ (nom) {
    document.getElementById("tour").innerHTML = "Bravo" + nom + ". Tu as gagné!";
+	 if(noyau.teams[(noyau.currentTeam+1)%2].getColor()=="Blue"){
+	 		document.getElementById("Box_tour_id").style.backgroundColor="#1AA3FF";
+			document.getElementById("tour").style.backgroundColor="#1AA3FF";
+	 }
+	 else{
+	 		document.getElementById("Box_tour_id").style.backgroundColor="#FF3300";
+			document.getElementById("tour").style.backgroundColor="#FF3300";
+	 }
 	 $('#tour').css("visibility", "visible");
 }

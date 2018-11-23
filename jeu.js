@@ -89,12 +89,18 @@ function getNumberEquipe2(){
   return localStorage.getItem("nbj2");
 }
 
+let canPass;
+
 window.onload= function(){
   //Création du noyau
   noyau = new Noyau(getMode(), getLangue(), getEquipe1(), getNumberEquipe1(), getEquipe2(), getNumberEquipe2());
   HasCore=1;
+	canPass=false;
   cardsUpdate();
   console.log("Noyau créé");
+	console.log("Current:"+noyau.teams[noyau.currentTeam].getName());
+	console.log(noyau.teams[0].getName()+": "+noyau.teams[0].getScore());
+	console.log(noyau.teams[1].getName()+": "+noyau.teams[0].getScore());
 }
 
 let indice;
@@ -102,20 +108,36 @@ let indiceNb;
 let masterSelection=new Array();
 
 function GO(){
+	noyau.endTour();
 	cardsUpdate();
 	PhaseME();
+}
+
+function pursue(){
+	let e = document.getElementById("closingRed");
+	if(canPass){//sinon faux positif
+		cardsUpdate();
+		PhaseME();
+	}
+	e.style.opacity="0";
+}
+
+function waitForEnding(){
+	let e=document.getElementById("closingRed");
+	e.style.opacity="1";
 }
 
 function Click_Carte(x,y){
 	affCarte="#c"+x+y;
 	if(!noyau.isMaster()){//Tour du joueur
 		if(!noyau.verifySpyCard(noyau.getBoardState()[x][y])){//le tour se termine
-      cardsUpdate();
-			PhaseME();
+			canPass=true;
+			waitForEnding();
       //Message de changement de tour
     }
     else{//Les joueurs continuent
 			$("#choix_J").css("display","inline-block");
+			cardsUpdate();
     //Message de félicitation
     }
 	}
@@ -136,9 +158,10 @@ function Click_Carte(x,y){
       masterSelection.splice(i,1);//On retire la carte
 			$(affCarte).css("box-shadow","0 0");
     }
-    //Changer apparence de la carte sélectionnée?
+
+		cardsUpdate();
   }
-  cardsUpdate();//On met à jour l'affichage des cartes
+  //cardsUpdate();//On met à jour l'affichage des cartes
   if(noyau.isEndGame()){
     //Le jeu est terminé
     let winnerName=noyau.winner;

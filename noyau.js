@@ -14,9 +14,9 @@ class Noyau {
 		this.currentTeam=this.board.firstTeam; //"Blue" or "Red"
 		this.currentTeam=this.currentTeam=="Blue"?0:1;
 		this.teams=new Array();
-		this.setTeam("Blue",Team1Name,Team1NbPlayers);
 		this.setTeam("Red",Team2Name,Team2NbPlayers);//[Blue,Red]
-		this.teams[this.currentTeam].AddScore(-1);//First team has 1 more card
+		this.setTeam("Blue",Team1Name,Team1NbPlayers);
+		this.teams[this.board.getFirstTeam()=="Blue"?0:1].AddScore(-1);//First team has 1 more card
 	}
 
 	setTeam(color,name,NbPlayers) { //Set team parameters
@@ -84,9 +84,14 @@ class Noyau {
 				}
 				return true;
 			}
-			else if(card.team==this.teams[currentTeam].color){
-				this.teams[this.currentTeam].AddScore(1);
-				return this.endTour();
+			else if(card.team==this.teams[this.currentTeam].color){
+				if(this.teams[this.currentTeam].AddScore(1)){
+					this.gameEnd=true;
+					this.winner=this.teams[this.currentTeam].name;
+					return true;
+				}
+				else
+					return this.endTour();
 			}else
 				return this.endTour();
 		}
@@ -106,8 +111,8 @@ class Noyau {
 		else{
 			this.currentTeam=(this.currentTeam+1)%2;
 			this.switchMaster();
-			return false;
 		}
+		return false;
 	}
 
 	getScore() {
