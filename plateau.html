@@ -98,48 +98,93 @@
 			</div>
 		</nav>
 
-		<div class="row">
-			<div class="col-md-2 col-2">
-				<div class="progress" style="width:inherit;height:30px">
-					<!--on pourrait changer la couleur si le temps devient critique-->
-					<div id="sablier" class="progress-bar progress-bar-striped progress-bar-animated"
-					     style="width:50%;height:30px"></div>
+		<div class="row mb-5">
+			<div id="plateau" class="col-12 col-sm-12">
+				<div class="row">
+					<div class="offset-1 col-2 col-sm-2">
+						<div class="carte"><p id="c00" onclick="Click_Carte(0,0)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c10" onclick="Click_Carte(1,0)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c20" onclick="Click_Carte(2,0)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c30" onclick="Click_Carte(3,0)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c40" onclick="Click_Carte(4,0)"></p></div>
+					</div>
 				</div>
-			</div>
-			<div class="col-md-2 col-2" class="colonne">
-				<p id="c00" class="carte" onclick="Click_Carte(0,0)"></p>
-				<p id="c10" class="carte" onclick="Click_Carte(1,0)"></p>
-				<p id="c20" class="carte" onclick="Click_Carte(2,0)"></p>
-				<p id="c30" class="carte" onclick="Click_Carte(3,0)"></p>
-				<p id="c40" class="carte" onclick="Click_Carte(4,0)"></p>
-			</div>
-			<div class="col-md-2 col-2" class="colonne">
-				<p id="c01" class="carte" onclick="Click_Carte(0,1)"></p>
-				<p id="c11" class="carte" onclick="Click_Carte(1,1)"></p>
-				<p id="c21" class="carte" onclick="Click_Carte(2,1)"></p>
-				<p id="c31" class="carte" onclick="Click_Carte(3,1)"></p>
-				<p id="c41" class="carte" onclick="Click_Carte(4,1)"></p>
-			</div>
-			<div class="col-md-2 col-2" class="colonne">
-				<p id="c02" class="carte" onclick="Click_Carte(0,2)"></p>
-				<p id="c12" class="carte" onclick="Click_Carte(1,2)"></p>
-				<p id="c22" class="carte" onclick="Click_Carte(2,2)"></p>
-				<p id="c32" class="carte" onclick="Click_Carte(3,2)"></p>
-				<p id="c42" class="carte" onclick="Click_Carte(4,2)"></p>
-			</div>
-			<div class="col-md-2 col-2" class="colonne">
-				<p id="c03" class="carte" onclick="Click_Carte(0,3)"></p>
-				<p id="c13" class="carte" onclick="Click_Carte(1,3)"></p>
-				<p id="c23" class="carte" onclick="Click_Carte(2,3)"></p>
-				<p id="c33" class="carte" onclick="Click_Carte(3,3)"></p>
-				<p id="c43" class="carte" onclick="Click_Carte(4,3)"></p>
-			</div>
-			<div class="col-md-2 col-2" class="colonne">
-				<p id="c04" class="carte" onclick="Click_Carte(0,4)"></p>
-				<p id="c14" class="carte" onclick="Click_Carte(1,4)"></p>
-				<p id="c24" class="carte" onclick="Click_Carte(2,4)"></p>
-				<p id="c34" class="carte" onclick="Click_Carte(3,4)"></p>
-				<p id="c44" class="carte" onclick="Click_Carte(4,4)"></p>
+				<div class="row">
+					<div class="offset-1 col-2 col-sm-2">
+						<div class="carte"><p id="c01" onclick="Click_Carte(0,1)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c11" onclick="Click_Carte(1,1)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c21" onclick="Click_Carte(2,1)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c31" onclick="Click_Carte(3,1)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c41" onclick="Click_Carte(4,1)"></p></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="offset-1 col-2 col-sm-2">
+						<div class="carte"><p id="c02" onclick="Click_Carte(0,2)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c12" onclick="Click_Carte(1,2)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c22" onclick="Click_Carte(2,2)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c32" onclick="Click_Carte(3,2)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c42" onclick="Click_Carte(4,2)"></p></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="offset-1 col-2 col-sm-2">
+						<div class="carte"><p id="c03" onclick="Click_Carte(0,3)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c13" onclick="Click_Carte(1,3)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c23" onclick="Click_Carte(2,3)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c33" onclick="Click_Carte(3,3)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c43" onclick="Click_Carte(4,3)"></p></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="offset-1 col-2 col-sm-2">
+						<div class="carte"><p id="c04" onclick="Click_Carte(0,4)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c14" onclick="Click_Carte(1,4)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c24" onclick="Click_Carte(2,4)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c34" onclick="Click_Carte(3,4)"></p></div>
+					</div>
+					<div class="col-2 col-sm-2">
+						<div class="carte"><p id="c44" onclick="Click_Carte(4,4)"></p></div>
+					</div>
+				</div>
 			</div>
 		</div>
 
