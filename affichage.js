@@ -183,5 +183,5 @@ $(document).ready(function () {
 		$('#btn-modal-start').text( "Je suis le maître espion " + "bleu")
 			.addClass("btn-primary");
 	});
-	// tmp1.modal({show : true, backdrop: "static"});
+	tmp1.modal({show : true, backdrop: "static"});
 });

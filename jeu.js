@@ -67,7 +67,7 @@ function seeAsPlayer(){
      for(let j=0;j<5;j++){
         htmlCard[i][j]=document.getElementById("c"+i+j);
         htmlCard[i][j].innerHTML=CardArray[i][j].getValue();
-        ApplyColor(htmlCard[i][j],CardArray[i][j].seeAsPlayer());
+        ApplyColor(htmlCard[i][j].parentElement,CardArray[i][j].seeAsPlayer());
      }
   }
 }
