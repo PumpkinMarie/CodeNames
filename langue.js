@@ -54,15 +54,4 @@ class Langue {
 		let rand = Math.floor(Math.random() * Math.floor(entries.length));
 		return Langue.getWord(entries, rand, EN);
 	}
-
-
-	constructor(lang) {
-		if (lang != FR && lang != EN && lang != ES) {
-			actuel = FR;
-		} else {
-			actuel = lang;
-		}
-	}
 }
-
-console.log(Langue.Translatefrom("Follar", ES, FR));
