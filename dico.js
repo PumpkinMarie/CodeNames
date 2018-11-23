@@ -683,490 +683,1940 @@ const Dico = {
 		"Conversation",
 		"Conversación"
 	],
-	"Copain": ["Not Translated", "Amigo"],
-	"Coq": ["Not Translated", "Gallo"],
-	"Coquillage": ["Not Translated", "Molusco"],
-	"Corbeau": ["Not Translated", "Cuervo"],
-	"Corde": ["Not Translated", "Cuerda"],
-	"Corps": ["Not Translated", "Cuerpo"],
-	"Côte": ["Not Translated", "Costa"],
-	"Coude": ["Not Translated", "Codo"],
-	"Couloir": ["Not Translated", "Coridor"],
-	"Coup": ["Not Translated", "Golpe"],
-	"Cour": ["Not Translated", "Patio"],
-	"Courant": ["Not Translated", "Corriente"],
-	"Courrier": ["Not Translated", "Correo"],
-	"Cours": ["Not Translated", "Curso"],
-	"Course": ["Not Translated", "Carrera"],
-	"Court": ["Not Translated", "Corto"],
-	"Couteau": ["Not Translated", "Cuchillo"],
-	"Couvert": ["Not Translated", "Cubierto"],
-	"Couverture": ["Not Translated", "Manta"],
-	"Cowboy": ["Not Translated", "Vaquero"],
-	"Crac": ["Not Translated", "Grieta"],
-	"Crayon": ["Not Translated", "Crayón"],
-	"Crème": ["Not Translated", "Crema"],
-	"Critique": ["Not Translated", "Critiqua"],
-	"Crochet": ["Not Translated", "Gancho"],
-	"Croix": ["Not Translated", "Cruz"],
-	"Croûte": ["Not Translated", "Corteza"],
-	"Cuillère": ["Not Translated", "Cuchara"],
-	"Cuir": ["Not Translated", "Cuero"],
-	"Cuisine": ["Not Translated", "Cocina"],
-	"Culotte": ["Not Translated", "Bragas"],
-	"Cycle": ["Not Translated", "Ciclo"],
-	"Dard": ["Not Translated", "Aguijón"],
-	"Dé": ["Not Translated", "Dado"],
-	"Debout": ["Not Translated", "Parado"],
-	"Défaut": ["Not Translated", "Defecto"],
-	"Dehors": ["Not Translated", "Fuera"],
-	"Démocratie": ["Not Translated", "Democracia"],
-	"Dent": ["Not Translated", "Diente"],
-	"Dentiste": ["Not Translated", "Dentista"],
-	"Dessin": ["Not Translated", "Dibujo"],
-	"Devoir": ["Not Translated", "Tarea"],
-	"Diamant": ["Not Translated", "Diamante"],
-	"Dictionnaire": ["Not Translated", "Diccionario"],
-	"Dieu": ["Not Translated", "Dios"],
-	"Dinosaure": ["Not Translated", "Dinosaurio"],
-	"Discours": ["Not Translated", "Discurso"],
-	"Disque": ["Not Translated", "Disco"],
-	"Dix": ["Not Translated", "Diez"],
-	"Docteur": ["Not Translated", "Doctor"],
-	"Doigt": ["Not Translated", "Dedo"],
-	"Domino": ["Not Translated", "Dominó"],
-	"Dormir": ["Not Translated", "Dormir"],
-	"Dragon": ["Not Translated", "Dragón"],
-	"Droit": ["Not Translated", "Derecho"],
-	"Eau": ["Not Translated", "Agua"],
-	"Échec": ["Not Translated", "Fracaso"],
-	"Échelle": ["Not Translated", "Escala"],
-	"Éclair": ["Not Translated", "Relámpago"],
-	"École": ["Not Translated", "Escuela"],
-	"Écran": ["Not Translated", "Pantalla"],
-	"Écraser": ["Not Translated", "Aplastar"],
-	"Écrit": ["Not Translated", "Escrito"],
-	"Église": ["Not Translated", "Iglesia"],
-	"Égout": ["Not Translated", "Alcantarilla"],
-	"Électricité": ["Not Translated", "Electricida"],
-	"Éléphant": ["Not Translated", "Elefante"],
-	"Élève": ["Not Translated", "Alumno"],
-	"Elfe": ["Not Translated", "Elfo"],
-	"Empreinte": ["Not Translated", "Huella"],
-	"Enceinte": ["Not Translated", "Embarazada"],
-	"Épice": ["Not Translated", "Especia"],
-	"Épine": ["Not Translated", "Espina"],
-	"Erreur": ["Not Translated", "Error"],
-	"Espace": ["Not Translated", "Espacio"],
-	"Espion": ["Not Translated", "Espia"],
-	"Essence": ["Not Translated", "Gasolina"],
-	"État": ["Not Translated", "Estado"],
-	"Été": ["Not Translated", "Verano"],
-	"Étoile": ["Not Translated", "Estrella"],
-	"Étranger": ["Not Translated", "Extranjero"],
-	"Éventail": ["Not Translated", "Abanico"],
-	"Évolution": ["Not Translated", "Evolución"],
-	"Explosion": ["Not Translated", "Explosión"],
-	"Extension": ["Not Translated", "Extensión"],
-	"Face": ["Not Translated", "Cara"],
-	"Fan": ["Not Translated", "Fan"],
-	"Farce": ["Not Translated", "Broma"],
-	"Fatigue": ["Not Translated", "Cansado"],
-	"Fauteuil": ["Not Translated", "Asiento"],
-	"Femme": ["Not Translated", "Mujer"],
-	"Fenêtre": ["Not Translated", "Ventana"],
-	"Fer": ["Not Translated", "Hiero"],
-	"Fête": ["Not Translated", "Fiesta"],
-	"Feu": ["Not Translated", "Fuego"],
-	"Feuille": ["Not Translated", "Hoja"],
-	"Fidèle": ["Not Translated", "Fiel"],
-	"Fil": ["Not Translated", "Hilo"],
-	"Fille": ["Not Translated", "Chica"],
-	"Flamme": ["Not Translated", "Llama"],
-	"Flèche": ["Not Translated", "Flecha"],
-	"Fleur": ["Not Translated", "Flor"],
-	"Fleuve": ["Not Translated", "Río"],
-	"Fond": ["Not Translated", "Fondo"],
-	"Football": ["Not Translated", "Futbol"],
-	"Forêt": ["Not Translated", "Bosque"],
-	"Forger": ["Not Translated", "Forjar"],
-	"Foudre": ["Not Translated", "Trueno"],
-	"Fouet": ["Not Translated", "Látigo"],
-	"Four": ["Not Translated", "Horno"],
-	"Fourmi": ["Not Translated", "Hormiga"],
-	"France": ["Not Translated", "Francia"],
-	"Froid": ["Not Translated", "Frío"],
-	"Fromage": ["Not Translated", "Queso"],
-	"Front": ["Not Translated", "Frente"],
-	"Fruit": ["Not Translated", "Fruta"],
-	"Fuir": ["Not Translated", "Huir"],
-	"Futur": ["Not Translated", "Futuro"],
-	"Garçon": ["Not Translated", "Chico"],
-	"Gâteau": ["Not Translated", "Pastel"],
-	"Gauche": ["Not Translated", "Izquierda"],
-	"Gaz": ["Not Translated", "Gas"],
-	"Gazon": ["Not Translated", "Césped"],
-	"Gel": ["Not Translated", "Gel"],
-	"Genou": ["Not Translated", "Rodilla"],
-	"Glace": ["Not Translated", "Helado"],
-	"Gomme": ["Not Translated", "Gomma"],
-	"Gorge": ["Not Translated", "Cuello"],
-	"Goutte": ["Not Translated", "Gota"],
-	"Grand": ["Not Translated", "Grande"],
-	"Grèce": ["Not Translated", "Grecia"],
-	"Grenouille": ["Not Translated", "Rana"],
-	"Grippe": ["Not Translated", "Gripe"],
-	"Gris": ["Not Translated", "Gris"],
-	"Gros": ["Not Translated", "Gordo"],
-	"Groupe": ["Not Translated", "Grupo"],
-	"Guitare": ["Not Translated", "Guitarra"],
-	"Hasard": ["Not Translated", "Azar"],
-	"Haut": ["Not Translated", "Alto"],
-	"Hélicoptère": ["Not Translated", "Helicóptero"],
-	"Herbe": ["Not Translated", "Hierba"],
-	"Heureux": ["Not Translated", "Feliz"],
-	"Histoire": ["Not Translated", "Historia"],
-	"Hiver": ["Not Translated", "Invierno"],
-	"Hôtel": ["Not Translated", "Hotel"],
-	"Hugo": ["Not Translated", "Hugo"],
-	"Huile": ["Not Translated", "Aceite"],
-	"Humide": ["Not Translated", "Húmedo"],
-	"Humour": ["Not Translated", "Humor"],
-	"Indice": ["Not Translated", "Indice"],
-	"Internet": ["Not Translated", "Internet"],
-	"Inviter": ["Not Translated", "Invitado"],
-	"Italie": ["Not Translated", "Italia"],
-	"Jacques": ["Not Translated", "Jacobo"],
-	"Jambe": ["Not Translated", "Pierna"],
-	"Jambon": ["Not Translated", "Jamón"],
-	"Jardin": ["Not Translated", "Jardín"],
-	"Jaune": ["Not Translated", "Amarillo"],
-	"Jean": ["Not Translated", "Jeans"],
-	"Jeanne": ["Not Translated", "Jeanne"],
-	"Jet": ["Not Translated", "Chorro"],
-	"Jeu": ["Not Translated", "Juego"],
-	"Jogging": ["Not Translated", "Futín"],
-	"Jour": ["Not Translated", "Día"],
-	"Journal": ["Not Translated", "Diaro"],
-	"Jupiter": ["Not Translated", "Júpiter"],
-	"Kilo": ["Not Translated", "Kilo"],
-	"Kiwi": ["Not Translated", "Kiwi"],
-	"Laine": ["Not Translated", "Lana"],
-	"Lait": ["Not Translated", "Leche"],
-	"Langue": ["Not Translated", "Lengua"],
-	"Lapin": ["Not Translated", "Conejo"],
-	"Latin": ["Not Translated", "Latín"],
-	"Laver": ["Not Translated", "Lavar"],
-	"Lecteur": ["Not Translated", "Lector"],
-	"Léger": ["Not Translated", "Liviano"],
-	"Lent": ["Not Translated", "Lento"],
-	"Lettre": ["Not Translated", "Letra"],
-	"Lien": ["Not Translated", "Enlace"],
-	"Ligne": ["Not Translated", "Línea"],
-	"Linge": ["Not Translated", "Ropa"],
-	"Lion": ["Not Translated", "León"],
-	"Lit": ["Not Translated", "Cama"],
-	"Livre": ["Not Translated", "Libro"],
-	"Loi": ["Not Translated", "Ley"],
-	"Long": ["Not Translated", "Largo"],
-	"Louis": ["Not Translated", "Luis"],
-	"Loup": ["Not Translated", "Lobo"],
-	"Lumière": ["Not Translated", "Luz"],
-	"Lundi": ["Not Translated", "Lunes"],
-	"Lune": ["Not Translated", "Luna"],
-	"Lunette": ["Not Translated", "Anteojo"],
-	"Machine": ["Not Translated", "Máquina"],
-	"Macho": ["Not Translated", "Macho"],
-	"Main": ["Not Translated", "Mano"],
-	"Maison": ["Not Translated", "Casa"],
-	"Maîtresse": ["Not Translated", "Maestra"],
-	"Mal": ["Not Translated", "Mal"],
-	"Maladie": ["Not Translated", "Enfermo"],
-	"Maman": ["Not Translated", "Mama"],
-	"Mammouth": ["Not Translated", "Mamut"],
-	"Manger": ["Not Translated", "Comer"],
-	"Marais": ["Not Translated", "Marais"],
-	"Marc": ["Not Translated", "Marc"],
-	"Marche": ["Not Translated", "Caminar"],
-	"Mariage": ["Not Translated", "Casarse"],
-	"Marie": ["Not Translated", "Maria"],
-	"Mariée": ["Not Translated", "Casado"],
-	"Marque": ["Not Translated", "Marca"],
-	"Marseille": ["Not Translated", "Marsella"],
-	"Masse": ["Not Translated", "Masa"],
-	"Mer": ["Not Translated", "Mar"],
-	"Messe": ["Not Translated", "Misa"],
-	"Mètre": ["Not Translated", "Metro"],
-	"Métro": ["Not Translated", "Metro"],
-	"Miaou": ["Not Translated", "Miau"],
-	"Micro": ["Not Translated", "Micro"],
-	"Mieux": ["Not Translated", "Mejor"],
-	"Mille": ["Not Translated", "Mil"],
-	"Mine": ["Not Translated", "Mina"],
-	"Miroir": ["Not Translated", "Espejo"],
-	"Moderne": ["Not Translated", "Moderno"],
-	"Moitié": ["Not Translated", "Mitad"],
-	"Monde": ["Not Translated", "Mundo"],
-	"Monstre": ["Not Translated", "Monstruo"],
-	"Montagne": ["Not Translated", "Montaña"],
-	"Montre": ["Not Translated", "Reloj"],
-	"Mort": ["Not Translated", "Muerto"],
-	"Moteur": ["Not Translated", "Motor"],
-	"Moto": ["Not Translated", "Moto"],
-	"Mou": ["Not Translated", "Blando"],
-	"Mouche": ["Not Translated", "Mosca"],
-	"Moulin": ["Not Translated", "Molino"],
-	"Moustache": ["Not Translated", "Bigote"],
-	"Mouton": ["Not Translated", "Oveja"],
-	"Mur": ["Not Translated", "Muro"],
-	"Muscle": ["Not Translated", "Musculo"],
-	"Musique": ["Not Translated", "Música"],
-	"Mystère": ["Not Translated", "Misterio"],
-	"Nage": ["Not Translated", "Nadar"],
-	"Nature": ["Not Translated", "Natural"],
-	"Neige": ["Not Translated", "Nieve"],
-	"Neutre": ["Not Translated", "Neutral"],
-	"New York": ["Not Translated", "New York"],
-	"Nez": ["Not Translated", "Nariz"],
-	"Nid": ["Not Translated", "Nido"],
-	"Ninja": ["Not Translated", "Ninja"],
-	"Niveau": ["Not Translated", "Nivel"],
-	"Noël": ["Not Translated", "Navidad"],
-	"Nœud": ["Not Translated", "Nudo"],
-	"Noir": ["Not Translated", "Negro"],
-	"Nous": ["Not Translated", "Nosotros"],
-	"Nuage": ["Not Translated", "Nube"],
-	"Nuit": ["Not Translated", "Noche"],
-	"Numéro": ["Not Translated", "Número"],
-	"Œil": ["Not Translated", "Ojo"],
-	"Œuf": ["Not Translated", "Huevo"],
-	"Oiseau": ["Not Translated", "Pájaro"],
-	"Olympique": ["Not Translated", "Olímpico"],
-	"Ombre": ["Not Translated", "Sombra"],
-	"Ongle": ["Not Translated", "Uña"],
-	"Or": ["Not Translated", "Oro"],
-	"Oral": ["Not Translated", "Oral"],
-	"Orange": ["Not Translated", "Naranja"],
-	"Ordinateur": ["Not Translated", "Cumputadora"],
-	"Ordre": ["Not Translated", "Orden"],
-	"Ordure": ["Not Translated", "Basura"],
-	"Oreille": ["Not Translated", "Oreja"],
-	"Organe": ["Not Translated", "Organo"],
-	"Orgueil": ["Not Translated", "Orgullo"],
-	"Ours": ["Not Translated", "Oso"],
-	"Outil": ["Not Translated", "Herramienta"],
-	"Ouvert": ["Not Translated", "Abierto"],
-	"Ovale": ["Not Translated", "Ovalado"],
-	"Pain": ["Not Translated", "Pan"],
-	"Palais": ["Not Translated", "Palacio"],
-	"Panneau": ["Not Translated", "Panel"],
-	"Pantalon": ["Not Translated", "Pantalón"],
-	"Pantin": ["Not Translated", "Títere"],
-	"Papa": ["Not Translated", "Papa"],
-	"Papier": ["Not Translated", "Papel"],
-	"Papillon": ["Not Translated", "Mariposa"],
-	"Paradis": ["Not Translated", "Paraíso"],
-	"Parc": ["Not Translated", "Parque"],
-	"Paris": ["Not Translated", "París"],
-	"Parole": ["Not Translated", "Palabra"],
-	"Partie": ["Not Translated", "Partida"],
-	"Passe": ["Not Translated", "Pase"],
-	"Pâte": ["Not Translated", "Pasta"],
-	"Patin": ["Not Translated", "Patín"],
-	"Patte": ["Not Translated", "Pata"],
-	"Paul": ["Not Translated", "Paul"],
-	"Payer": ["Not Translated", "Pagar"],
-	"Pêche": ["Not Translated", "Pescar"],
-	"Peinture": ["Not Translated", "Pintura"],
-	"Pendule": ["Not Translated", "Péndulo"],
-	"Penser": ["Not Translated", "Pensar"],
-	"Personne": ["Not Translated", "Personna"],
-	"Petit": ["Not Translated", "Pequeño"],
-	"Peur": ["Not Translated", "Miedo"],
-	"Philosophe": ["Not Translated", "Filósofo"],
-	"Photo": ["Not Translated", "Foto"],
-	"Phrase": ["Not Translated", "Frase"],
-	"Piano": ["Not Translated", "Piano"],
-	"Pièce": ["Not Translated", "Pieza"],
-	"Pied": ["Not Translated", "Pie"],
-	"Pierre": ["Not Translated", "Piedra"],
-	"Pile": ["Not Translated", "Batería"],
-	"Pilote": ["Not Translated", "Piloto"],
-	"Pince": ["Not Translated", "Pincel"],
-	"Pioche": ["Not Translated", "Pico"],
-	"Pion": ["Not Translated", "Peón"],
-	"Pirate": ["Not Translated", "Pirata"],
-	"Pire": ["Not Translated", "Peor"],
-	"Piscine": ["Not Translated", "Piscina"],
-	"Place": ["Not Translated", "Plaza"],
-	"Plafond": ["Not Translated", "Techo"],
-	"Plage": ["Not Translated", "Playa"],
-	"Plaie": ["Not Translated", "Herida"],
-	"Plan": ["Not Translated", "Plana"],
-	"Planche": ["Not Translated", "Plancha"],
-	"Planète": ["Not Translated", "Planeta"],
-	"Plante": ["Not Translated", "Planta"],
-	"Plastique": ["Not Translated", "Plástico"],
-	"Plat": ["Not Translated", "Plato"],
-	"Plomb": ["Not Translated", "Plomo"],
-	"Plonger": ["Not Translated", "Zambullirse"],
-	"Pluie": ["Not Translated", "Lluvia"],
-	"Poche": ["Not Translated", "Bolsillo"],
-	"Poète": ["Not Translated", "Poeta"],
-	"Poids": ["Not Translated", "Peso"],
-	"Poing": ["Not Translated", "Puño"],
-	"Point": ["Not Translated", "Punto"],
-	"Poivre": ["Not Translated", "Pimienta"],
-	"Police": ["Not Translated", "Policía"],
-	"Politique": ["Not Translated", "Político"],
-	"Pollen": ["Not Translated", "Polen"],
-	"Polo": ["Not Translated", "Polo"],
-	"Pomme": ["Not Translated", "Manzana"],
-	"Pompe": ["Not Translated", "Bomba"],
-	"Pont": ["Not Translated", "Puente"],
-	"Population": ["Not Translated", "Poblacíon"],
-	"Port": ["Not Translated", "Puerto"],
-	"Porte": ["Not Translated", "Puerta"],
-	"Portefeuille": ["Not Translated", "Cartera"],
-	"Positif": ["Not Translated", "Positivo"],
-	"Poste": ["Not Translated", "Puesto"],
-	"Poubelle": ["Not Translated", "Basura"],
-	"Poule": ["Not Translated", "Pollo"],
-	"Poupée": ["Not Translated", "Muñeca"],
-	"Pousser": ["Not Translated", "Empujar"],
-	"Poussière": ["Not Translated", "Polvo"],
-	"Pouvoir": ["Not Translated", "Poder"],
-	"Préhistoire": ["Not Translated", "Prehistoria"],
-	"Premier": ["Not Translated", "Primero"],
-	"Présent": ["Not Translated", "Presente"],
-	"Presse": ["Not Translated", "Prensa"],
-	"Prier": ["Not Translated", "Rezar"],
-	"Princesse": ["Not Translated", "Princesa"],
-	"Prise": ["Not Translated", "Toma"],
-	"Privé": ["Not Translated", "Privado"],
-	"Professeur": ["Not Translated", "Professor"],
-	"Psychologie": ["Not Translated", "Psicología"],
-	"Public": ["Not Translated", "Publico"],
-	"Pull": ["Not Translated", "Suéter"],
-	"Punk": ["Not Translated", "Punk"],
-	"Puzzle": ["Not Translated", "Rompecabezas"],
-	"Pyjama": ["Not Translated", "Pijama"],
-	"Quatre": ["Not Translated", "Cuatro"],
-	"Quinze": ["Not Translated", "Quince"],
-	"Race": ["Not Translated", "Raza"],
-	"Radio": ["Not Translated", "Radio"],
-	"Raisin": ["Not Translated", "Uva"],
-	"Rap": ["Not Translated", "Rap"],
-	"Rat": ["Not Translated", "Rata"],
-	"Rayé": ["Not Translated", "Rallado"],
-	"Rayon": ["Not Translated", "Pasillo"],
-	"Réfléchir": ["Not Translated", "Reflexionar"],
-	"Reine": ["Not Translated", "Reina"],
-	"Repas": ["Not Translated", "Comida"],
-	"Reptile": ["Not Translated", "Reptil"],
-	"Requin": ["Not Translated", "Tiburón"],
-	"Rêve": ["Not Translated", "Sueño"],
-	"Riche": ["Not Translated", "Rico"],
-	"Rideau": ["Not Translated", "Cortina"],
-	"Rien": ["Not Translated", "Nada"],
-	"Rire": ["Not Translated", "Reír"],
-	"Robinet": ["Not Translated", "Grifo"],
-	"Roche": ["Not Translated", "Roca"],
-	"Roi": ["Not Translated", "Rey"],
-	"Rond": ["Not Translated", "Redondo"],
-	"Rose": ["Not Translated", "Rosa"],
-	"Roue": ["Not Translated", "Rueda"],
-	"Rouge": ["Not Translated", "Rojo"],
-	"Rouille": ["Not Translated", "Oxido"],
-	"Roux": ["Not Translated", "Pelirrojo"],
-	"Russie": ["Not Translated", "Russia"],
-	"Sable": ["Not Translated", "Arena"],
-	"Sabre": ["Not Translated", "Sable"],
-	"Sac": ["Not Translated", "Saco"],
-	"Sain": ["Not Translated", "Sano"],
-	"Saison": ["Not Translated", "Estación"],
-	"Sale": ["Not Translated", "Sucio"],
-	"Salle": ["Not Translated", "Sala"],
-	"Salut": ["Not Translated", "Hola"],
-	"SAMU": ["Not Translated", "SAMU"],
-	"Sandwich": ["Not Translated", "Sándwich"],
-	"Sang": ["Not Translated", "Sangre"],
-	"Sapin": ["Not Translated", "Abeto"],
-	"Satellite": ["Not Translated", "Satélite"],
-	"Saumon": ["Not Translated", "Salmon"],
-	"Saut": ["Not Translated", "Saltar"],
-	"Savoir": ["Not Translated", "Saber"],
-	"Schtroumpf": ["Not Translated", "Pitufo"],
-	"Science": ["Not Translated", "Scienca"],
-	"Scout": ["Not Translated", "Scout"],
-	"Sec": ["Not Translated", "Seco"],
-	"Seine": ["Not Translated", "Sena"],
-	"Sel": ["Not Translated", "Sal"],
-	"Sept": ["Not Translated", "Siete"],
-	"Serpent": ["Not Translated", "Serpiente"],
-	"Serrer": ["Not Translated", "Apretar"],
-	"Sexe": ["Not Translated", "Sexo"],
-	"Shampooing": ["Not Translated", "Champú"],
-	"Siècle": ["Not Translated", "Siglo"],
-	"Siège": ["Not Translated", "Asiento"],
-	"Sieste": ["Not Translated", "Siesta"],
-	"Silhouette": ["Not Translated", "Silueta"],
-	"Sirène": ["Not Translated", "Sirena"],
-	"Ski": ["Not Translated", "Ski"],
-	"Soleil": ["Not Translated", "Sol"],
-	"Sommeil": ["Not Translated", "Sueño"],
-	"Son": ["Not Translated", "Sonido"],
-	"Sonner": ["Not Translated", "Sonar"],
-	"Sorcière": ["Not Translated", "Bruja"],
-	"Sourd": ["Not Translated", "Sordo"],
-	"Sourire": ["Not Translated", "Sonrisa"],
-	"Souris": ["Not Translated", "Ratón"],
-	"Sport": ["Not Translated", "Deporte"],
-	"Star": ["Not Translated", "Estrella"],
-	"Station": ["Not Translated", "Estación"],
-	"Stylo": ["Not Translated", "Pluma"],
-	"Sur": ["Not Translated", "Encima"],
-	"Surface": ["Not Translated", "Superficie"],
-	"Sushi": ["Not Translated", "Sushi"],
-	"Swing": ["Not Translated", "Swing"],
-	"Tableau": ["Not Translated", "Pizarra"],
-	"Tache": ["Not Translated", "Manche"],
-	"Taille": ["Not Translated", "Tamaño"],
-	"Tante": ["Not Translated", "Tía"],
-	"Tapis": ["Not Translated", "Alfombra"],
-	"Tard": ["Not Translated", "Tarde"],
-	"Taxi": ["Not Translated", "Taxi"],
-	"Téléphone": ["Not Translated", "Teléfono"],
-	"Télévision": ["Not Translated", "Televisión"],
-	"Temple": ["Not Translated", "Templo"],
-	"Temps": ["Not Translated", "Tiempo"],
-	"Tennis": ["Not Translated", "Tenis"],
-	"Tête": ["Not Translated", "Cabeza"],
-	"Thé": ["Not Translated", "Té"],
-	"Tigre": ["Not Translated", "Tigre"],
-	"Tintin": ["Not Translated", "Tintin"],
-	"Tissu": ["Not Translated", "Tejido"],
-	"Titre": ["Not Translated", "Titulo"],
-	"Toast": ["Not Translated", "Tostada"],
-	"Toilette": ["Not Translated", "Baño"],
-	"Tokyo": ["Not Translated", "Tokyo"],
-	"Tombe": ["Not Translated", "Tumba"],
-	"Ton": ["Not Translated", "Tono"],
-	"Top": ["Not Translated", "Top"],
-	"Touche": ["Not Translated", "Ducha"],
-	"Toujours": ["Not Translated", "Siempre"],
-	"Tour": ["Not Translated", "Vuelta"],
-	"Tournoi": ["Not Translated", "Torneo"],
-	"Tout": ["Not Translated", "Todo"],
-	"Trace": ["Not Translated", "Huella"],
-	"Train": ["Not Translated", "Tren"],
-	"Traîner": ["Not Translated", "Arrastrar"],
-	"Transport": ["Not Translated", "Transporte"],
-	"Travail": ["Not Translated", "Trabajo"],
-	"Trésor": ["Not Translated", "Tesoro"],
-	"Triangle": ["Not Translated", "Triángulo"],
-	"Triste": ["Not Translated", "Triste"],
-	"Trône": ["Not Translated", "Trono"],
+	"Copain": [
+		"Friend", 
+		"Amigo"
+	],
+	"Coq": [
+		"Cock",
+		"Gallo"
+	],
+	"Coquillage": [
+		"Shell", 
+		"Molusco"
+	],
+	"Corbeau": [
+		"Raven", 
+		"Cuervo"
+	],
+	"Corde": [
+		"Rope", 
+		"Cuerda"
+	],
+	"Corps": [
+		"Body", 
+		"Cuerpo"
+	],
+	"Côte": [
+		"Coast", 
+		"Costa"
+	],
+	"Coude": [
+		"Elbow", 
+		"Codo"
+	],
+	"Couloir": [
+		"Corridor",
+		"Coridor"
+	],
+	"Coup": [
+		"Stroke", 
+		"Golpe"
+	],
+	"Cour": [
+		"Court", 
+		"Patio"
+	],
+	"Courant": [
+		"Current", 
+		"Corriente"
+	],
+	"Courrier": [
+		"Mail", 
+		"Correo"
+	],
+	"Cours": [
+		"Course", 
+		"Curso"
+	],
+	"Course": [
+		"Race", 
+		"Carrera"
+	],
+	"Court": [
+		"Short", 
+		"Corto"
+	],
+	"Couteau": [
+		"Knife", 
+		"Cuchillo"
+	],
+	"Couvert": [
+		"Covered", 
+		"Cubierto"
+	],
+	"Couverture": [
+		"Blancket", 
+		"Manta"
+	],
+	"Cowboy": [
+		"Cowboy", 
+		"Vaquero"
+	],
+	"Crac": [
+		"Crac", 
+		"Grieta"
+	],
+	"Crayon": [
+		"Pencil", 
+		"Crayón"
+	],
+	"Crème": [
+		"Cream", 
+		"Crema"
+	],
+	"Critique": [
+		"Criticism", 
+		"Critiqua"
+	],
+	"Crochet": [
+		"Hook", 
+		"Gancho"
+	],
+	"Croix": [
+		"Cross", 
+		"Cruz"
+	],
+	"Croûte": [
+		"Crust", 
+		"Corteza"
+	],
+	"Cuillère": [
+		"Spoon", 
+		"Cuchara"
+	],
+	"Cuir": [
+		"Leather", 
+		"Cuero"
+	],
+	"Cuisine": [
+		"Kitchen", 
+		"Cocina"
+	],
+	"Culotte": [
+		"Pantie", 
+		"Bragas"
+	],
+	"Cycle": [
+		"Cycle", 
+		"Ciclo"
+	],
+	"Dard": [
+		"Sting", 
+		"Aguijón"
+	],
+	"Dé": [
+		"Dice", 
+		"Dado"
+	],
+	"Debout": [
+		"Standing", 
+		"Parado"
+	],
+	"Défaut": [
+		"Default", 
+		"Defecto"
+	],
+	"Dehors": [
+		"Outside", 
+		"Fuera"
+	],
+	"Démocratie": [
+		"Democracy", 
+		"Democracia"
+	],
+	"Dent": [
+		"Teeth", 
+		"Diente"
+	],
+	"Dentiste": [
+		"Dentist", 
+		"Dentista"
+	],
+	"Dessin": [
+		"Drawing", 
+		"Dibujo"
+	],
+	"Devoir": [
+		"Homework", 
+		"Tarea"
+	],
+	"Diamant": [
+		"Diamond", 
+		"Diamante"
+	],
+	"Dictionnaire": [
+		"Dictionnary", 
+		"Diccionario"
+	],
+	"Dieu": [
+		"God", 
+		"Dios"
+	],
+	"Dinosaure": [
+		"Dinosaur", 
+		"Dinosaurio"
+	],
+	"Discours": [
+		"Speech", 
+		"Discurso"
+	],
+	"Disque": [
+		"Disk", 
+		"Disco"
+	],
+	"Dix": [
+		"Teen", 
+		"Diez"
+	],
+	"Docteur": [
+		"Doctor", 
+		"Doctor"
+	],
+	"Doigt": [
+		"Finger", 
+		"Dedo"
+	],
+	"Domino": [
+		"Domino", 
+		"Dominó"
+	],
+	"Dormir": [
+		"To sleep", 
+		"Dormir"
+	],
+	"Dragon": [
+		"Dragon", 
+		"Dragón"
+	],
+	"Droit": [
+		"Law", 
+		"Derecho"
+	],
+	"Eau": [
+		"Water", 
+		"Agua"
+	],
+	"Échec": [
+		"Failure", 
+		"Fracaso"
+	],
+	"Échelle": [
+		"Lader", 
+		"Escala"
+	],
+	"Éclair": [
+		"Lightning", 
+		"Relámpago"
+	],
+	"École": [
+		"School", 
+		"Escuela"
+	],
+	"Écran": [
+		"Screen", 
+		"Pantalla"
+	],
+	"Écraser": [
+		"To erase", 
+		"Aplastar"
+	],
+	"Écrit": [
+		"Writing", 
+		"Escrito"
+	],
+	"Église": [
+		"Church", 
+		"Iglesia"
+	],
+	"Égout": [
+		"Sewer", 
+		"Alcantarilla"
+	],
+	"Électricité": [
+		"Electricity", 
+		"Electricida"
+	],
+	"Éléphant": [
+		"Elephant", 
+		"Elefante"
+	],
+	"Élève": [
+		"Student", 
+		"Alumno"
+	],
+	"Elfe": [
+		"Elf", 
+		"Elfo"
+	],
+	"Empreinte": [
+		"Footprint", 
+		"Huella"
+	],
+	"Enceinte": [
+		"Pregnant", 
+		"Embarazada"
+	],
+	"Épice": [
+		"Spice", 
+		"Especia"
+	],
+	"Épine": [
+		"thorn", 
+		"Espina"
+	],
+	"Erreur": [
+		"Error", 
+		"Error"
+	],
+	"Espace": [
+		"Space", 
+		"Espacio"
+	],
+	"Espion": [
+		"Spy", 
+		"Espia"
+	],
+	"Essence": [
+		"Gas", 
+		"Gasolina"
+	],
+	"État": [
+		"State", 
+		"Estado"
+	],
+	"Été": [
+		"Spring", 
+		"Verano"
+	],
+	"Étoile": [
+		"Star", 
+		"Estrella"
+	],
+	"Étranger": [
+		"Stranger", 
+		"Extranjero"
+	],
+	"Éventail": [
+		"Fan", 
+		"Abanico"
+	],
+	"Évolution": [
+		"Evolution", 
+		"Evolución"
+	],
+	"Explosion": [
+		"Explosion", 
+		"Explosión"
+	],
+	"Extension": [
+		"Extension", 
+		"Extensión"
+	],
+	"Face": [
+		"Face", 
+		"Cara"
+	],
+	"Fan": [
+		"Fan", 
+		"Fan"
+	],
+	"Farce": [
+		"Joke", 
+		"Broma"
+	],
+	"Fatigue": [
+		"Tiredness", 
+		"Cansado"],
+	"Fauteuil": [
+		"Armchair", 
+		"Asiento"
+	],
+	"Femme": [
+		"Women", 
+		"Mujer"
+	],
+	"Fenêtre": [
+		"Window", 
+		"Ventana"
+	],
+	"Fer": [
+		"Iron", 
+		"Hiero"
+	],
+	"Fête": [
+		"Party", 
+		"Fiesta"
+	],
+	"Feu": [
+		"Fire", 
+		"Fuego"
+	],
+	"Feuille": [
+		"Leaf", 
+		"Hoja"
+	],
+	"Fidèle": [
+		"Faithful", 
+		"Fiel"
+	],
+	"Fil": [
+		"Son", 
+		"Hilo"
+	],
+	"Fille": [
+		"Girl", 
+		"Chica"
+	],
+	"Flamme": [
+		"Flame", 
+		"Llama"
+	],
+	"Flèche": [
+		"Arrow", 
+		"Flecha"
+	],
+	"Fleur": [
+		"Flower", 
+		"Flor"
+	],
+	"Fleuve": [
+		"River", 
+		"Río"
+	],
+	"Fond": [
+		"Background", 
+		"Fondo"
+	],
+	"Football": [
+		"Soccer", 
+		"Futbol"
+	],
+	"Forêt": [
+		"Forest", 
+		"Bosque"
+	],
+	"Forger": [
+		"To forge", 
+		"Forjar"
+	],
+	"Foudre": [
+		"Lightning", 
+		"Trueno"
+	],
+	"Fouet": [
+		"Whip", 
+		"Látigo"
+	],
+	"Four": [
+		"Oven", 
+		"Horno"
+	],
+	"Fourmi": [
+		"Ants", 
+		"Hormiga"
+	],
+	"France": [
+		"France",
+		"Francia"
+	],
+	"Froid": [
+		"Cold", 
+		"Frío"
+	],
+	"Fromage": [
+		"Cheese", 
+		"Queso"
+	],
+	"Front": [
+		"Forehead", 
+		"Frente"
+	],
+	"Fruit": [
+		"Fruit", 
+		"Fruta"
+	],
+	"Fuir": [
+		"To flee", "Huir"
+	],
+	"Futur": [
+		"Futur", 
+		"Futuro"
+	],
+	"Garçon": [
+		"Boy", 
+		"Chico"
+	],
+	"Gâteau": [
+		"Cake", 
+		"Pastel"
+	],
+	"Gauche": [
+		"Leftt", 
+		"Izquierda"
+	],
+	"Gaz": [
+		"Gas", 
+		"Gas"
+	],
+	"Gazon": [
+		"Grass", 
+		"Césped"
+	],
+	"Gel": [
+		"Gel", 
+		"Gel"
+	],
+	"Genou": [
+		"Knee", 
+		"Rodilla"
+	],
+	"Glace": [
+		"Ice cream", 
+		"Helado"
+	],
+	"Gomme": [
+		"Rubber", 
+		"Gomma"
+	],
+	"Gorge": [
+		"Throat", 
+		"Cuello"
+	],
+	"Goutte": [
+		"Drop", 
+		"Gota"
+	],
+	"Grand": [
+		"Tall", 
+		"Grande"
+	],
+	"Grèce": [
+		"Greece", 
+		"Grecia"
+	],
+	"Grenouille": [
+		"Frog", 
+		"Rana"
+	],
+	"Grippe": [
+		"Gripe", 
+		"Gripe"
+	],
+	"Gris": [
+		"Grey", 
+		"Gris"
+	],
+	"Gros": [
+		"Big", 
+		"Gordo"
+	],
+	"Groupe": [
+		"Group", 
+		"Grupo"
+	],
+	"Guitare": [
+		"Guitar", 
+		"Guitarra"
+	],
+	"Hasard": [
+		"Hazard", 
+		"Azar"
+	],
+	"Haut": [
+		"High", 
+		"Alto"
+	],
+	"Hélicoptère": [
+		"Helicopter", 
+		"Helicóptero"
+	],
+	"Herbe": [
+		"Grass", 
+		"Hierba"
+	],
+	"Heureux": [
+		"Happy", 
+		"Feliz"
+	],
+	"Histoire": [
+		"History", 
+		"Historia"
+	],
+	"Hiver": [
+		"Winter", 
+		"Invierno"
+	],
+	"Hôtel": [
+		"Hotel", 
+		"Hotel"
+	],
+	"Hugo": [
+		"Hugo", 
+		"Hugo"
+	],
+	"Huile": [
+		"Oil", 
+		"Aceite"
+	],
+	"Humide": [
+		"Wet", 
+		"Húmedo"
+	],
+	"Humour": [
+		"Humor", 
+		"Humor"
+	],
+	"Indice": [
+		"Clue", 
+		"Indice"
+	],
+	"Internet": [
+		"Internet", 
+		"Internet"
+	],
+	"Inviter": [
+		"Invite", 
+		"Invitado"
+	],
+	"Italie": [
+		"Italy", 
+		"Italia"
+	],
+	"Jacques": [
+		"Jacques", 
+		"Jacobo"
+	],
+	"Jambe": [
+		"Leg", 
+		"Pierna"
+	],
+	"Jambon": [
+		"Ham", 
+		"Jamón"
+	],
+	"Jardin": [
+		"Garden", 
+		"Jardín"
+	],
+	"Jaune": [
+		"Yellow", 
+		"Amarillo"
+	],
+	"Jean": [
+		"Jean", 
+		"Jeans"
+	],
+	"Jeanne": [
+		"Jeanne", 
+		"Jeanne"
+	],
+	"Jet": [
+		"Jet", 
+		"Chorro"
+	],
+	"Jeu": [
+		"Game", 
+		"Juego"
+	],
+	"Jogging": [
+		"Jogging", 
+		"Futín"
+	],
+	"Jour": [
+		"Day", 
+		"Día"
+	],
+	"Journal": [
+		"News", 
+		"Diaro"
+	],
+	"Jupiter": [
+		"Jupiter",
+		"Júpiter"
+	],
+	"Kilo": [
+		"Kilo", 
+		"Kilo"
+	],
+	"Kiwi": [
+		"Kiwi", 
+		"Kiwi"
+	],
+	"Laine": [
+		"Wool", 
+		"Lana"
+	],
+	"Lait": [
+		"Milk", 
+		"Leche"
+	],
+	"Langue": [
+		"Language", 
+		"Lengua"
+	],
+	"Lapin": [
+		"Rabbit", 
+		"Conejo"
+	],
+	"Latin": [
+		"Latin", 
+		"Latín"
+	],
+	"Laver": [
+		"Washing", 
+		"Lavar"
+	],
+	"Lecteur": [
+		"Reader", 
+		"Lector"
+	],
+	"Léger": [
+		"Lightweight", 
+		"Liviano"
+	],
+	"Lent": [
+		"Slow", 
+		"Lento"
+	],
+	"Lettre": [
+		"Letter", 
+		"Letra"
+	],
+	"Lien": [
+		"Link", 
+		"Enlace"
+	],
+	"Ligne": [
+		"Line", 
+		"Línea"
+	],
+	"Linge": [
+		"Laundry", 
+		"Ropa"
+	],
+	"Lion": [
+		"Lion", 
+		"León"
+	],
+	"Lit": [
+		"Bed", 
+		"Cama"
+	],
+	"Livre": [
+		"Book", 
+		"Libro"
+	],
+	"Loi": [
+		"Law", 
+		"Ley"
+	],
+	"Long": [
+		"Long", 
+		"Largo"
+	],
+	"Louis": [
+		"Louis", 
+		"Luis"
+	],
+	"Loup": [
+		"Wolf", 
+		"Lobo"
+	],
+	"Lumière": [
+		"Light", 
+		"Luz"
+	],
+	"Lundi": [
+		"Mondat", 
+		"Lunes"
+	],
+	"Lune": [
+		"Moon", 
+		"Luna"
+	],
+	"Lunette": [
+		"Glasses", 
+		"Anteojo"
+	],
+	"Machine": [
+		"Machine", 
+		"Máquina"
+	],
+	"Macho": [
+		"Machoman", 
+		"Macho"
+	],
+	"Main": [
+		"Hand", 
+		"Mano"
+	],
+	"Maison": [
+		"House", 
+		"Casa"
+	],
+	"Maîtresse": [
+		"Teacher", 
+		"Maestra"
+	],
+	"Mal": [
+		"Evil", 
+		"Mal"
+	],
+	"Maladie": [
+		"Diseases", 
+		"Enfermo"
+	],
+	"Maman": [
+		"Mom", 
+		"Mama"
+	],
+	"Mammouth": [
+		"Mammoth", 
+		"Mamut"
+	],
+	"Manger": [
+		"To eat", 
+		"Comer"
+	],
+	"Marais": [
+		"Swamp", 
+		"Marais"
+	],
+	"Marc": [
+		"Marc", 
+		"Marc"
+	],
+	"Marche": [
+		"Walk", 
+		"Caminar"
+	],
+	"Mariage": [
+		"Wedding", 
+		"Casarse"
+	],
+	"Marie": [
+		"Mary", 
+		"Maria"
+	],
+	"Mariée": [
+		"Married", 
+		"Casado"
+	],
+	"Marque": [
+		"Mark", 
+		"Marca"
+	],
+	"Marseille": [
+		"Marseille", 
+		"Marsella"
+	],
+	"Masse": [
+		"Mass", 
+		"Masa"
+	],
+	"Mer": [
+		"Sea", 
+		"Mar"
+	],
+	"Messe": [
+		"Mass", 
+		"Misa"
+	],
+	"Mètre": [
+		"Meter", 
+		"Metro"
+	],
+	"Métro": [
+		"Subway", 
+		"Metro"
+	],
+	"Miaou": [
+		"Miau", 
+		"Miau"
+	],
+	"Micro": [
+		"Micro", 
+		"Micro"
+	],
+	"Mieux": [
+		"Better", 
+		"Mejor"
+	],
+	"Mille": [
+		"Thousant", 
+		"Mil"
+	],
+	"Mine": [
+		"Mine", 
+		"Mina"
+	],
+	"Miroir": [
+		"Mirror", 
+		"Espejo"
+	],
+	"Moderne": [
+		"Modern", 
+		"Moderno"
+	],
+	"Moitié": [
+		"Half", 
+		"Mitad"
+	],
+	"Monde": [
+		"World", 
+		"Mundo"
+	],
+	"Monstre": [
+		"Monster", 
+		"Monstruo"
+	],
+	"Montagne": [
+		"Mountain", 
+		"Montaña"
+	],
+	"Montre": [
+		"Watch", 
+		"Reloj"
+	],
+	"Mort": [
+		"Dead", 
+		"Muerto"
+	],
+	"Moteur": [
+		"Motor", 
+		"Motor"
+	],
+	"Moto": [
+		"Motorbike",
+		"Moto"
+	],
+	"Mou": [
+		"Soft", 
+		"Blando"
+	],
+	"Mouche": [
+		"Fly", 
+		"Mosca"
+	],
+	"Moulin": [
+		"Windmill", 
+		"Molino"
+	],
+	"Moustache": [
+		"Mustache", 
+		"Bigote"
+	],
+	"Mouton": [
+		"Sheep", 
+		"Oveja"
+	],
+	"Mur": [
+		"Wall", 
+		"Muro"
+	],
+	"Muscle": [
+		"Muscle", 
+		"Musculo"
+	],
+	"Musique": [
+		"Music", 
+		"Música"
+	],
+	"Mystère": [
+		"Mistery", 
+		"Misterio"
+	],
+	"Nage": [
+		"Swimming", 
+		"Nadar"
+	],
+	"Nature": [
+		"Nature", 
+		"Natural"
+	],
+	"Neige": [
+		"Snow", 
+		"Nieve"
+	],
+	"Neutre": [
+		"Neutral", 
+		"Neutral"
+	],
+	"New York": [
+		"New York", 
+		"New York"
+	],
+	"Nez": [
+		"Noze", 
+		"Nariz"
+	],
+	"Nid": [
+		"Nest", 
+		"Nido"
+	],
+	"Ninja": [
+		"Ninja", 
+		"Ninja"
+	],
+	"Niveau": [
+		"Level", 
+		"Nivel"
+	],
+	"Noël": [
+		"Christmas", 
+		"Navidad"
+	],
+	"Nœud": [
+		"Node", 
+		"Nudo"
+	],
+	"Noir": [
+		"Black", 
+		"Negro"
+	],
+	"Nous": [
+		"us", 
+		"Nosotros"
+	],
+	"Nuage": [
+		"Cloud", 
+		"Nube"
+	],
+	"Nuit": [
+		"Night", 
+		"Noche"
+	],
+	"Numéro": [
+		"Number", 
+		"Número"
+	],
+	"Œil": [
+		"Eye", 
+		"Ojo"
+	],
+	"Œuf": [
+		"Egg", 
+		"Huevo"
+	],
+	"Oiseau": [
+		"Bird", 
+		"Pájaro"
+	],
+	"Olympique": [
+		"Olympic", 
+		"Olímpico"
+	],
+	"Ombre": [
+		"Shadow", 
+		"Sombra"
+	],
+	"Ongle": [
+		"Nail",
+		"Uña"
+	],
+	"Or": [
+		"Gold",
+		"Oro"
+	],
+	"Oral": [
+		"Oral", 
+		"Oral"
+	],
+	"Orange": [
+		"Orange", 
+		"Naranja"
+	],
+	"Ordinateur": [
+		"Computer", 
+		"Cumputadora"
+	],
+	"Ordre": [
+		"Order", 
+		"Orden"
+	],
+	"Ordure": [
+		"Trash", 
+		"Basura"
+	],
+	"Oreille": [
+		"Hear", 
+		"Oreja"
+	],
+	"Organe": [
+		"Organ", 
+		"Organo"
+	],
+	"Orgueil": [
+		"Pride", 
+		"Orgullo"
+	],
+	"Ours": [
+		"Bear", 
+		"Oso"
+	],
+	"Outil": [
+		"Tool", 
+		"Herramienta"
+	],
+	"Ouvert": [
+		"Open", 
+		"Abierto"
+	],
+	"Ovale": [
+		"Oval", 
+		"Ovalado"
+	],
+	"Pain": [
+		"Bread", 
+		"Pan"
+	],
+	"Palais": [
+		"Palace", 
+		"Palacio"
+	],
+	"Panneau": [
+		"Sign", 
+		"Panel"
+	],
+	"Pantalon": [
+		"Trouser", 
+		"Pantalón"
+	],
+	"Pantin": [
+		"Puppet", 
+		"Títere"
+	],
+	"Papa": [
+		"Dad", 
+		"Papa"
+	],
+	"Papier": [
+		"Paper", 
+		"Papel"
+	],
+	"Papillon": [
+		"Butterfly", 
+		"Mariposa"
+	],
+	"Paradis": [
+		"Heaven", 
+		"Paraíso"
+	],
+	"Parc": [
+		"Park", 
+		"Parque"
+	],
+	"Paris": [
+		"Paris", 
+		"París"
+	],
+	"Parole": [
+		"Lyrics", 
+		"Palabra"
+	],
+	"Partie": [
+		"Piece", 
+		"Partida"
+	],
+	"Passe": [
+		"Pass", 
+		"Pase"
+	],
+	"Pâte": [
+		"dough", 
+		"Pasta"
+	],
+	"Patin": [
+		"Skate", 
+		"Patín"
+	],
+	"Patte": [
+		"Paw", 
+		"Pata"
+	],
+	"Paul": [
+		"Paul", 
+		"Paul"
+	],
+	"Payer": [
+		"To pay", 
+		"Pagar"
+	],
+	"Pêche": [
+		"Fishing", 
+		"Pescar"
+	],
+	"Peinture": [
+		"Paint", 
+		"Pintura"
+	],
+	"Pendule": [
+		"Pendulum", 
+		"Péndulo"
+	],
+	"Penser": [
+		"Thinking", 
+		"Pensar"
+	],
+	"Personne": [
+		"Nobody", 
+		"Personna"
+	],
+	"Petit": [
+		"Small", 
+		"Pequeño"
+	],
+	"Peur": [
+		"Fear", 
+		"Miedo"
+	],
+	"Philosophe": [
+		"Philosopher", 
+		"Filósofo"
+	],
+	"Photo": [
+		"Picture", 
+		"Foto"
+	],
+	"Phrase": [
+		"Phrase", 
+		"Frase"
+	],
+	"Piano": [
+		"Piano", 
+		"Piano"
+	],
+	"Pièce": [
+		"Piece", 
+		"Pieza"
+	],
+	"Pied": [
+		"Foot", 
+		"Pie"
+	],
+	"Pierre": [
+		"Rock", 
+		"Piedra"
+	],
+	"Pile": [
+		"Battery", 
+		"Batería"
+	],
+	"Pilote": [
+		"Pilot", 
+		"Piloto"
+	],
+	"Pince": [
+		"Claw", 
+		"Pincel"
+	],
+	"Pioche": [
+		"Pickaxe", 
+		"Pico"
+	],
+	"Pion": [
+		"Pawn", 
+		"Peón"
+	],
+	"Pirate": [
+		"Pirate", 
+		"Pirata"
+	],
+	"Pire": [
+		"Worst", 
+		"Peor"
+	],
+	"Piscine": [
+		"Pool", 
+		"Piscina"
+	],
+	"Place": [
+		"Place", 
+		"Plaza"
+	],
+	"Plafond": [
+		"Roof", 
+		"Techo"
+	],
+	"Plage": [
+		"Beach", 
+		"Playa"
+	],
+	"Plaie": [
+		"Wound", 
+		"Herida"
+	],
+	"Plan": [
+		"Plan", 
+		"Plana"
+	],
+	"Planche": [
+		"Board", 
+		"Plancha"
+	],
+	"Planète": [
+		"Planet", 
+		"Planeta"
+	],
+	"Plante": [
+		"Plant", 
+		"Planta"
+	],
+	"Plastique": [
+		"Plastic", 
+		"Plástico"
+	],
+	"Plat": [
+		"Flat", 
+		"Plato"
+	],
+	"Plomb": [
+		"Lead", 
+		"Plomo"
+	],
+	"Plonger": [
+		"Plunge", 
+		"Zambullirse"
+	],
+	"Pluie": [
+		"Rain", 
+		"Lluvia"
+	],
+	"Poche": [
+		"Pocket", 
+		"Bolsillo"
+	],
+	"Poète": [
+		"Poet", 
+		"Poeta"
+	],
+	"Poids": [
+		"Weight", 
+		"Peso"
+	],
+	"Poing": [
+		"Fist", 
+		"Puño"
+	],
+	"Point": [
+		"Point", 
+		"Punto"
+	],
+	"Poivre": [
+		"Pepper", 
+		"Pimienta"
+	],
+	"Police": [
+		"Police", 
+		"Policía"
+	],
+	"Politique": [
+		"Politic", 
+		"Político"
+	],
+	"Pollen": [
+		"Pollen", 
+		"Polen"
+	],
+	"Polo": [
+		"Polo", 
+		"Polo"
+	],
+	"Pomme": [
+		"Apple", 
+		"Manzana"
+	],
+	"Pompe": [
+		"Push Up", 
+		"Bomba"
+	],
+	"Pont": [
+		"Bridge", 
+		"Puente"
+	],
+	"Population": [
+		"Population", 
+		"Poblacíon"
+	],
+	"Port": [
+		"Port", 
+		"Puerto"
+	],
+	"Porte": [
+		"Door", 
+		"Puerta"
+	],
+	"Portefeuille": [
+		"Wallet", 
+		"Cartera"
+	],
+	"Positif": [
+		"Positive", 
+		"Positivo"
+	],
+	"Poste": [
+		"Post", 
+		"Puesto"
+	],
+	"Poubelle": [
+		"Trash Can", 
+		"Basura"
+	],
+	"Poule": [
+		"Chicken", 
+		"Pollo"
+	],
+	"Poupée": [
+		"Doll", 
+		"Muñeca"
+	],
+	"Pousser": [
+		"To push", 
+		"Empujar"
+	],
+	"Poussière": [
+		"Dust", 
+		"Polvo"
+	],
+	"Pouvoir": [
+		"Power", 
+		"Poder"
+	],
+	"Préhistoire": [
+		"Prehistory", 
+		"Prehistoria"
+	],
+	"Premier": [
+		"First", 
+		"Primero"
+	],
+	"Présent": [
+		"Present", 
+		"Presente"
+	],
+	"Presse": [
+		"Press", 
+		"Prensa"
+	],
+	"Prier": [
+		"Pray", 
+		"Rezar"
+	],
+	"Princesse": [
+		"Princess", 
+		"Princesa"
+	],
+	"Prise": [
+		"Taken", 
+		"Toma"
+	],
+	"Privé": [
+		"Private", 
+		"Privado"
+	],
+	"Professeur": [
+		"Professor", 
+		"Professor"
+	],
+	"Psychologie": [
+		"Psychology", 
+		"Psicología"
+	],
+	"Public": [
+		"Public", 
+		"Publico"
+	],
+	"Pull": [
+		"Sweater", 
+		"Suéter"
+	],
+	"Punk": [
+		"Punk", 
+		"Punk"
+	],
+	"Puzzle": [
+		"Puzzle", 
+		"Rompecabezas"
+	],
+	"Pyjama": [
+		"Pajamas", 
+		"Pijama"
+	],
+	"Quatre": [
+		"Four", 
+		"Cuatro"
+	],
+	"Quinze": [
+		"Fifteen", 
+		"Quince"
+	],
+	"Race": [
+		"Race", 
+		"Raza"
+	],
+	"Radio": [
+		"Radio", 
+		"Radio"
+	],
+	"Raisin": [
+		"Grape", 
+		"Uva"
+	],
+	"Rap": [
+		"Rap", 
+		"Rap"
+	],
+	"Rat": [
+		"Rat", 
+		"Rata"
+	],
+	"Rayé": [
+		"Striped", 
+		"Rallado"
+	],
+	"Rayon": [
+		"Ray", 
+		"Pasillo"
+	],
+	"Réfléchir": [
+		"To reflect", 
+		"Reflexionar"
+	],
+	"Reine": [
+		"Queen", 
+		"Reina"
+	],
+	"Repas": [
+		"Meal", 
+		"Comida"
+	],
+	"Reptile": [
+		"Reptil", 
+		"Reptil"
+	],
+	"Requin": [
+		"Shark", 
+		"Tiburón"
+	],
+	"Rêve": [
+		"Dream", 
+		"Sueño"
+	],
+	"Riche": [
+		"Rich", 
+		"Rico"
+	],
+	"Rideau": [
+		"Curtains", 
+		"Cortina"
+	],
+	"Rien": [
+		"Nothing", 
+		"Nada"
+	],
+	"Rire": [
+		"Laughter", 
+		"Reír"
+	],
+	"Robinet": [
+		"Tap", 
+		"Grifo"
+	],
+	"Roche": [
+		"Rock", 
+		"Roca"
+	],
+	"Roi": [
+		"King", 
+		"Rey"
+	],
+	"Rond": [
+		"Round", 
+		"Redondo"
+	],
+	"Rose": [
+		"Pink", 
+		"Rosa"
+	],
+	"Roue": [
+		"Wheel", 
+		"Rueda"
+	],
+	"Rouge": [
+		"Red", 
+		"Rojo"
+	],
+	"Rouille": [
+		"Rust", 
+		"Oxido"
+	],
+	"Roux": [
+		"Red", 
+		"Pelirrojo"
+	],
+	"Russie": [
+		"Russia", 
+		"Russia"
+	],
+	"Sable": [
+		"Sand", 
+		"Arena"
+	],
+	"Sabre": [
+		"Saber", 
+		"Sable"
+	],
+	"Sac": [
+		"Bag", 
+		"Saco"
+	],
+	"Sain": [
+		"Healthy", 
+		"Sano"
+	],
+	"Saison": [
+		"Season", 
+		"Estación"
+	],
+	"Sale": [
+		"Dirty", 
+		"Sucio"
+	],
+	"Salle": [
+		"Room", 
+		"Sala"
+	],
+	"Salut": [
+		"Hello", 
+		"Hola"
+	],
+	"SAMU": [
+		"SAMU", 
+		"SAMU"
+	],
+	"Sandwich": [
+		"Sandwich", 
+		"Sándwich"
+	],
+	"Sang": [
+		"Blood", 
+		"Sangre"
+	],
+	"Sapin": [
+		"Fir", 
+		"Abeto"
+	],
+	"Satellite": [
+		"Satellit", 
+		"Satélite"
+	],
+	"Saumon": [
+		"Salmon", 
+		"Salmon"
+	],
+	"Saut": [
+		"Jump", 
+		"Saltar"
+	],
+	"Savoir": [
+		"Knowledge", 
+		"Saber"
+	],
+	"Schtroumpf": [
+		"Smurf", 
+		"Pitufo"
+	],
+	"Science": [
+		"Science", 
+		"Scienca"
+	],
+	"Scout": [
+		"Scout", 
+		"Scout"
+	],
+	"Sec": [
+		"Dry", 
+		"Seco"
+	],
+	"Seine": [
+		"Seine", 
+		"Sena"
+	],
+	"Sel": [
+		"Salt", 
+		"Sal"
+	],
+	"Sept": [
+		"Seven", 
+		"Siete"
+	],
+	"Serpent": [
+		"Snake", 
+		"Serpiente"
+	],
+	"Serrer": [
+		"Tight", 
+		"Apretar"
+	],
+	"Sexe": [
+		"Sex", 
+		"Sexo"
+	],
+	"Shampooing": [
+		"Shampoo", 
+		"Champú"
+	],
+	"Siècle": [
+		"Century", 
+		"Siglo"
+	],
+	"Siège": [
+		"Seat", 
+		"Asiento"
+	],
+	"Sieste": [
+		"Nap", 
+		"Siesta"
+	],
+	"Silhouette": [
+		"Silhouette", 
+		"Silueta"
+	],
+	"Sirène": [
+		"Mermaid", 
+		"Sirena"
+	],
+	"Ski": [
+		"Ski", 
+		"Ski"
+	],
+	"Soleil": [
+		"Sun", 
+		"Sol"
+	],
+	"Sommeil": [
+		"Sleep", 
+		"Sueño"
+	],
+	"Son": [
+		"His", 
+		"Sonido"
+	],
+	"Sonner": [
+		"Ringing", 
+		"Sonar"
+	],
+	"Sorcière": [
+		"Witch", 
+		"Bruja"
+	],
+	"Sourd": [
+		"Deaf", 
+		"Sordo"
+	],
+	"Sourire": [
+		"Smile", 
+		"Sonrisa"
+	],
+	"Souris": [
+		"Mouse", 
+		"Ratón"
+	],
+	"Sport": [
+		"Sport",
+		"Deporte"
+	],
+	"Star": [
+		"Star", 
+		"Estrella"
+	],
+	"Station": [
+		"Station", 
+		"Estación"
+	],
+	"Stylo": [
+		"Pen", 
+		"Pluma"
+	],
+	"Sur": [
+		"On", 
+		"Encima"
+	],
+	"Surface": [
+		"Area", 
+		"Superficie"
+	],
+	"Sushi": [
+		"Sushi", 
+		"Sushi"
+	],
+	"Swing": [
+		"Swing", 
+		"Swing"
+	],
+	"Tableau": [
+		"Board", 
+		"Pizarra"
+	],
+	"Tache": [
+		"Task", 
+		"Manche"
+	],
+	"Taille": [
+		"Size", 
+		"Tamaño"
+	],
+	"Tante": [
+		"Aunt", 
+		"Tía"
+	],
+	"Tapis": [
+		"Carpet", 
+		"Alfombra"
+	],
+	"Tard": [
+		"Late", 
+		"Tarde"
+	],
+	"Taxi": [
+		"Taxi", 
+		"Taxi"
+	],
+	"Téléphone": [
+		"Phone", 
+		"Teléfono"
+	],
+	"Télévision": [
+		"Television", 
+		"Televisión"
+	],
+	"Temple": [
+		"Temple", 
+		"Templo"
+	],
+	"Temps": [
+		"Time", 
+		"Tiempo"
+	],
+	"Tennis": [
+		"Tennis", 
+		"Tenis"
+	],
+	"Tête": [
+		"Head", 
+		"Cabeza"
+	],
+	"Thé": [
+		"Tea", 
+		"Té"
+	],
+	"Tigre": [
+		"Tiger", 
+		"Tigre"
+	],
+	"Tintin": [
+		"Tintin", 
+		"Tintin"
+	],
+	"Tissu": [
+		"Fabric", 
+		"Tejido"
+	],
+	"Titre": [
+		"Title", 
+		"Titulo"
+	],
+	"Toast": [
+		"Toast", 
+		"Tostada"
+	],
+	"Toilette": [
+		"Toilet", 
+		"Baño"
+	],
+	"Tokyo": [
+		"Tokyo", 
+		"Tokyo"
+	],
+	"Tombe": [
+		"Grave", 
+		"Tumba"
+	],
+	"Ton": [
+		"Tone", 
+		"Tono"
+	],
+	"Top": [
+		"Top", 
+		"Top"
+	],
+	"Touche": [
+		"Touch", 
+		"Ducha"
+	],
+	"Toujours": [
+		"Always", 
+		"Siempre"
+	],
+	"Tour": [
+		"Tower", 
+		"Vuelta"
+	],
+	"Tournoi": [
+		"Tournament", 
+		"Torneo"
+	],
+	"Tout": [
+		"Everything", 
+		"Todo"
+	],
+	"Trace": [
+		"Track", 
+		"Huella"
+	],
+	"Train": [
+		"Train", 
+		"Tren"
+	],
+	"Traîner": [
+		"Chilling", 
+		"Arrastrar"
+	],
+	"Transport": [
+		"Transport", 
+		"Transporte"
+	],
+	"Travail": [
+		"Job", 
+		"Trabajo"
+	],
+	"Trésor": [
+		"Treasure", 
+		"Tesoro"
+	],
+	"Triangle": [
+		"Triangle", 
+		"Triángulo"
+	],
+	"Triste": [
+		"Sad", 
+		"Triste"
+	],
+	"Trône": [
+		"Throne", 
+		"Trono"
+	],
 	"Troupeau": [
 		"Herd",
 		"Manada"
