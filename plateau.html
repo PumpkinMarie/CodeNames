@@ -22,7 +22,7 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body class="container-fluid">
-		<div id="tour" onclick="banniereRemove()"></div>
+		<!--<div id="tour" onclick="banniereRemove()"></div>-->
 
 		<div class="alert" id="closingRed">
 			<span class="closebtn" onclick="pursue()">&times;</span>
@@ -30,7 +30,7 @@
 		</div>
 
 		<header class="row justify-content-between head">
-			<div class="col-md-2 col-sm-6 order-1	box_tour" id="Box_tour_id">
+			<div id="Box_tour_id" class="col-md-2 col-sm-6 order-1 box_tour">
 				<p id="Tour_Eq"></p>
 			</div>
 			<div class="col-md-6 order-3 choix_ME">
@@ -115,17 +115,14 @@
 		</div>
 
 		<!-- Modal for start -->
-		<div id="platean-start" class="modal">
-			<div class="modal-dialog">
+		<div id="plateau-start" class="modal">
+			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h4 class="modal-title">Début du jeu</h4>
 					</div>
-					<div class="modal-body"></div>
 					<div class="modal-footer">
-						<button type="button" id="btn-modal-start" class="btn" data-dismiss="modal">
-							Je suis le maître espion
-						</button>
+						<button type="button" id="btn-modal-start" class="btn" data-dismiss="modal"></button>
 					</div>
 				</div>
 			</div>
