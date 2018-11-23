@@ -60,7 +60,6 @@ class Board{
 				}
 			}
 			this.lang=lang;
-			this.langObj.actuel=lang;
 		}
 	}
 

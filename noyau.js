@@ -10,12 +10,12 @@ class Noyau {
 		this.turn="master";//master or player
 		//this.setTeam("Black","Trap",0); //non playable teams to represent grey and black cards
 		//this.setTeam("Grey","Neutral",0);
-		this.board=this.createBoard();
-		this.currentTeam=this.board.firstTeam; //"Blue" or "Red"
-		this.currentTeam=this.currentTeam=="Blue"?0:1;
 		this.teams=new Array();
 		this.setTeam("Red",Team2Name,Team2NbPlayers);//[Blue,Red]
 		this.setTeam("Blue",Team1Name,Team1NbPlayers);
+		this.board=this.createBoard();
+		this.currentTeam=this.board.firstTeam; //"Blue" or "Red"
+		this.currentTeam=this.currentTeam=="Blue"?0:1;
 		this.teams[this.board.getFirstTeam()=="Blue"?0:1].AddScore(-1);//First team has 1 more card
 	}
 

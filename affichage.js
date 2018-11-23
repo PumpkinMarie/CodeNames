@@ -27,8 +27,10 @@ if (typeof(Storage) !== "undefined") {
 }
 
 function changeNoyauLang() {
-	if ( HasCore )
+	if ( HasCore ){
 		noyau.langUpdate(getLangue());
+    cardsUpdate();
+  }
 }
 
 //ces 3 fonctions sont appelées si on change la langue de l'interface et
@@ -37,21 +39,21 @@ function ChangerAnglais(){
     $('#langue_actuelle').attr("src","./ressources/anglais.jpg");
     $('#langues').css("visibility","hidden");
     localStorage.setItem("langue", "./ressources/anglais.jpg");
-    changeLangue();
+    changeNoyauLang();
 }
 
 function ChangerEspagnol(){
     $('#langue_actuelle').attr("src","./ressources/espagnol.jpg");
     $('#langues').css("visibility","hidden");
     localStorage.setItem("langue", "./ressources/espagnol.jpg");
-    changeLangue();
+    changeNoyauLang();
 }
 
 function ChangerFrançais(){
     $('#langue_actuelle').attr("src","./ressources/Drapeau_France.png");
     $('#langues').css("visibility","hidden");
     localStorage.setItem("langue", "./ressources/Drapeau_France.png");
-    changeLangue();
+    changeNoyauLang();
 }
 
 function banniereRemove () {

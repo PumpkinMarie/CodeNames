@@ -52,6 +52,6 @@ class Langue {
 	static getWordRandom(language) {
 		let entries = Object.entries(Dico);
 		let rand = Math.floor(Math.random() * Math.floor(entries.length));
-		return Langue.getWord(entries, rand, EN);
+		return Langue.getWord(entries, rand, language);
 	}
 }

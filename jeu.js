@@ -27,12 +27,14 @@ let noyau;
 
 function getLangue () {
 	let lang = localStorage.getItem("langue");
-	if ( lang == "Drapeau_France.png" )
+	console.log("langue="+lang)
+	if ( lang == "./ressources/Drapeau_France.png" )
 		return FR;
-	else if ( lang == "anglais.jpg" )
+	else if ( lang == "./ressources/anglais.jpg" )
 		return EN;
-	else if ( lang == "espagnol.jpg" )
+	else if ( lang == "./ressources/espagnol.jpg" )
 		return ES;
+	else
 	return FR; //else
 }
 
@@ -172,7 +174,7 @@ function Click_Carte ( x, y ) {
 			masterSelection.splice(i, 1);//On retire la carte
 			$(affCarte).css("box-shadow", "0 0");
 		}
-		
+
 		cardsUpdate();
 	}
 	//cardsUpdate();//On met à jour l'affichage des cartes
