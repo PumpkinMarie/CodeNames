@@ -1,5 +1,9 @@
 # CodeNames
 
+Pour lancer le menu de démarrage, ouvrez le fichier index.html et naviguez ensuite dans l'interface.
+
+
+
 ## Règles
 
 Sur PDF:
