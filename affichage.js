@@ -16,7 +16,7 @@ if (typeof(Storage) !== "undefined") {
       localStorage.setItem("nom_equipe1", "Equipe 1");
     if(document.getElementById("Tour_Eq")!=null){
         document.getElementById("Tour_Eq").innerHTML = localStorage.getItem("nom_equipe1");
-        document.getElementById("tour").innerHTML = localStorage.getItem("nom_equipe1") + " à toi de jouer!";
+      //  document.getElementById("tour").innerHTML = localStorage.getItem("nom_equipe1") + " à toi de jouer!";
     }
     if(localStorage.getItem("nom_equipe2")==null)
       localStorage.setItem("nom_equipe2", "Equipe 2");
@@ -57,23 +57,23 @@ function ChangerFrançais(){
 }
 
 function banniereRemove () {
-	$('#tour').css("visibility", "hidden");
+	//$('#tour').css("visibility", "hidden");
 }
 
 function banniereAffiche () {
 	console.log(noyau.teams[noyau.currentTeam].getName()+": "+noyau.teams[noyau.currentTeam].getScore());
    test = noyau.teams[noyau.currentTeam].getName();
-   document.getElementById("tour").innerHTML = test + " à toi de jouer!";
+   //document.getElementById("tour").innerHTML = test + " à toi de jouer!";
 	 document.getElementById("Tour_Eq").innerHTML=test;
 	 if(noyau.teams[noyau.currentTeam].getColor()=="Blue"){
 	 		document.getElementById("Box_tour_id").style.backgroundColor="#1AA3FF";
-			document.getElementById("tour").style.backgroundColor="#1AA3FF";
+			//document.getElementById("tour").style.backgroundColor="#1AA3FF";
 	 }
 	 else{
 	 		document.getElementById("Box_tour_id").style.backgroundColor="#FF3300";
-			document.getElementById("tour").style.backgroundColor="#FF3300";
+			//document.getElementById("tour").style.backgroundColor="#FF3300";
 	 }
-	 $('#tour').css("visibility", "visible");
+	 //$('#tour').css("visibility", "visible");
 }
 
 function PhaseCoequipier(){
@@ -133,16 +133,16 @@ function AjoutEquipes(){
 }
 
 function banniereFJ (nom) {
-   document.getElementById("tour").innerHTML = "Bravo" + nom + ". Tu as gagné!";
+   //document.getElementById("tour").innerHTML = "Bravo" + nom + ". Tu as gagné!";
 	 if(noyau.teams[(noyau.currentTeam+1)%2].getColor()=="Blue"){
 	 		document.getElementById("Box_tour_id").style.backgroundColor="#1AA3FF";
-			document.getElementById("tour").style.backgroundColor="#1AA3FF";
+			//document.getElementById("tour").style.backgroundColor="#1AA3FF";
 	 }
 	 else{
 	 		document.getElementById("Box_tour_id").style.backgroundColor="#FF3300";
-			document.getElementById("tour").style.backgroundColor="#FF3300";
+			//document.getElementById("tour").style.backgroundColor="#FF3300";
 	 }
-	 $('#tour').css("visibility", "visible");
+	// $('#tour').css("visibility", "visible");
 }
 
 $(document).ready(function () {

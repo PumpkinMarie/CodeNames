@@ -7,7 +7,7 @@ class Card{
 	}
 	getValue(){//Get the word
 		if(this.isrevealed)
-			return "";
+			return "___";
 		return this.value;
 	}
 	getTeam(){ //card's type: Blue,Red,Grey,Black,hidden
