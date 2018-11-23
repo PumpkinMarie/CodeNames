@@ -14,24 +14,34 @@
 		<script src="affichage.js"></script>
 		<link rel="stylesheet" href="style.css">
 	</head>
-	<body class="container">
-		<css-doodle style="z-index: -1; position: fixed; top: 0; left: 0; opacity: 0.2;">
-			:doodle {
-			@grid: 11;
-			grid-gap: 0.2em;
-			@size: 99vw;
+	<body class="container-fluid">
+		<css-doodle grid="11" style="z-index: -1; position: fixed; top: 0; left: 0; opacity: 0.2;">
+			:container {
+				width: 100vw;
+				heidth: 100vh;
+				background: #696969;
+				padding: 1em;
 			}
-			margin: 1em;
+			:doodle {
+				grid-gap: 50px;
+				@size: 10vw 200vh;
+			}
 			background: @pick(
-			#ff1a1a,
-			#3366ff,
-			#e6e6e6,
-			#333333
+				#ff1a1a,
+				#3366ff,
+				#e6e6e6,
+				#333333
 			);
-			box-shadow: 0 0 0 1.2em #696969 ;
 		</css-doodle>
-		<header class="row mt-2">
-			<div class="col-12 offset-sm-6 col-sm-6 offset-md-7 col-md-5 offset-lg-8 col-lg-4 row">
+		<nav class="navbar navbar-expand-sm row mt-2">
+			<!-- Toggler/collapsibe Button -->
+			<button class="navbar-toggler col-2 " type="button" data-toggle="collapse" data-target="#navbar">
+				<span class="navbar-toggler-icon">
+					<img src="ressources/Hamburger_icon.svg_.png" class="img-fluid" alt="Navbar Burger">
+				</span>
+			</button>
+
+			<div id="navbar" class="collapse navbar-collapse col-10 offset-sm-6 col-sm-6 offset-md-7 col-md-5 offset-lg-8 col-lg-4 row">
 				<div id="son" class="col-3 col-sm-3">
 					<button class="icones" type="button" data-toggle="popover" data-placement="bottom">
 						<img src="ressources/son.png" width="30px">
@@ -39,10 +49,10 @@
 				</div>
 				<div class="col-4 col-sm-4 dropdown dropright">
 					<button id="langage" class="icones dropdown-toggle" data-toggle="dropdown" type="button">
-						<img id="langue_actuelle" src="ressources/Drapeau_France.png" width="30px">
+						<img id="langue_actuelle" src="" width="30px">
 					</button>
 					<div class="dropdown-menu">
-						<button id="français" class="dropdown-item" type="button" onclick="ChangerFrançais()">
+						<button id="français" class="dropdown-item"  type="button" onclick="ChangerFrançais()">
 							<img src="ressources/Drapeau_France.png" class="mr-2" width="30px">
 							Français
 						</button>
@@ -50,7 +60,7 @@
 							<img src="ressources/anglais.jpg" class="mr-2" width="30px">
 							English
 						</button>
-						<button id="espagnol" class="dropdown-item" type="button" onclick="ChangerEspagnol()">
+						<button id="espagnol" class="dropdown-item"  type="button" onclick="ChangerEspagnol()">
 							<img src="ressources/espagnol.jpg" class="mr-2" width="30px">
 							Español
 						</button>
@@ -63,49 +73,61 @@
 				</div>
 				<div class="col-2 col-sm-2">
 					<a href="index.html">
-						<button class="icones" type="button">
+						<button id="exit" class="icones" type="button">
 							<img src="ressources/exit.png" width="30px">
 						</button>
 					</a>
 				</div>
 			</div>
-		</header>
+		</nav>
 
 		<div class="row mt-5">
 			<div class="offset-md-1 col-md-10 offset-lg-2 col-lg-8">
 				<img id="logo" class="img-fluid" src="ressources/index.png" alt="logo code names">
 			</div>
 		</div>
-		<div class="row justify-content-center">
-			<div class="equipe col-md-3">
+		<div class="row mt-5">
+			<div class="offset-1 col-10 offset-sm-1 col-sm-10 offset-md-1 col-md-4 offset-lg-2 col-lg-3 equipe">
 				<p id="eq1">Equipe 1</p>
 				<form class="form">
-					<p> Couleur de l'équipe </p>
-					<input id="col1" type="color" name="head" value="#4d94ff"></br></br>
-					<p>Nom de l'équipe : </p>
-					<input id="nom1" type="text" name="Nom" value="Equipe 1"></br></br>
-					<p>Nombre de joueurs : </p>
-					<input id="nbj1" type="number" name="nbjoueurs" min="2" value="2">
+					<div class="form-group">
+						<label for="col1">Couleur de l'équipe : </label>
+						<input id="col1" class="form-control offset-1 col-10 offset-sm-2 col-sm-8" type="color" name="head" value="#4d94ff">
+					</div>
+					<div class="form-group">
+						<label for="nom1">Nom de l'équipe : </label>
+						<input id="nom1" class="form-control" type="text" name="Nom" value="Equipe 1">
+					</div>
+					<div class="form-group">
+						<label for="nbj1">Nombre de joueurs : </label>
+						<input id="nbj1" class="form-control" type="number" name="nbjoueurs" min="2" max="4" value="2">
+					</div>
 				</form>
 			</div>
-			<div class="equipe col-md-3">
+			<div class="offset-1 col-10 offset-sm-1 col-sm-10 offset-md-2 col-md-4 offset-lg-2 col-lg-3 equipe">
 				<p id="eq2">Equipe 2</p>
 				<form class="form">
-					<p> Couleur de l'équipe </p>
-					<input id="col2" type="color" name="head" value="#ff751a"></br></br>
-					<p>Nom de l'équipe : </p>
-					<input id="nom2" type="text" name="Nom2" value="Equipe 2"></br></br>
-					<p>Nombre de joueurs : </p>
-					<input id="nbj2" type="number" name="nbjoueurs2" min="2" value="2">
+					<div class="form-group">
+						<label for="col2">Couleur de l'équipe : </label>
+						<input id="col2" class="form-control offset-1 col-10 offset-sm-2 col-sm-8" type="color" name="head" value="#ff751a">
+					</div>
+					<div class="form-group">
+						<label for="nom2">Nom de l'équipe : </label>
+						<input id="nom2" class="form-control" type="text" name="Nom" value="Equipe 2">
+					</div>
+					<div class="form-group">
+						<label for="nbj2">Nombre de joueurs : </label>
+						<input id="nbj2" class="form-control" type="number" name="nbjoueurs" min="2" max="4" value="2">
+					</div>
 				</form>
 			</div>
 		</div>
-		<input type="submit" value="Lancer jeu" onclick="AjoutEquipes()">
-	
-		<audio src="./ressources/SoundEffect/MainTheme.mp3" loop autoplay width=0>
-			Florent Combe
-			https://www.youtube.com/watch?v=zAoqbN0mWIA
-		</audio>
-		
+		<div class="row mt-4 mb-5">
+			<div class="col-12 col-sm-12">
+				<button type="button" class="btn btn-light" onclick="AjoutEquipes()">
+					Lancer le jeu
+				</button>
+			</div>
+		</div>
 	</body>
 </html>

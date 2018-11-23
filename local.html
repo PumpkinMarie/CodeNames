@@ -5,33 +5,43 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.4.11/css-doodle.min.js"></script>
+		<link rel="stylesheet" href="./ressources/bootstrap.min.css">
+		<script src="./ressources/jquery.min.js"></script>
+		<script src="./ressources/popper.min.js"></script>
+		<script src="./ressources/bootstrap.min.js"></script>
+		<script src="./ressources/css-doodle.min.js"></script>
 
 		<script src="affichage.js"></script>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body class="container-fluid">
-		<css-doodle style="z-index: -1; position: fixed; top: 0; left: 0; opacity: 0.2;">
-			:doodle {
-			@grid: 11;
-			grid-gap: 0.2em;
-			@size: 99vw;
+		<css-doodle grid="11" style="z-index: -1; position: fixed; top: 0; left: 0; opacity: 0.2;">
+			:container {
+			width: 100vw;
+			heidth: 100vh;
+			background: #696969;
+			padding: 1em;
 			}
-			margin: 1em;
+			:doodle {
+			grid-gap: 50px;
+			@size: 10vw 200vh;
+			}
 			background: @pick(
 			#ff1a1a,
 			#3366ff,
 			#e6e6e6,
 			#333333
 			);
-			box-shadow: 0 0 0 1.2em #696969 ;
 		</css-doodle>
-		<header class="row mt-2">
-			<div class="col-12 offset-sm-6 col-sm-6 offset-md-7 col-md-5 offset-lg-8 col-lg-4 row">
+		<nav class="navbar navbar-expand-sm row mt-2">
+			<!-- Toggler/collapsibe Button -->
+			<button class="navbar-toggler col-2 " type="button" data-toggle="collapse" data-target="#navbar">
+				<span class="navbar-toggler-icon">
+					<img src="ressources/Hamburger_icon.svg_.png" class="img-fluid" alt="Navbar Burger">
+				</span>
+			</button>
+
+			<div id="navbar" class="collapse navbar-collapse col-10 offset-sm-6 col-sm-6 offset-md-7 col-md-5 offset-lg-8 col-lg-4 row">
 				<div id="son" class="col-3 col-sm-3">
 					<button class="icones" type="button" data-toggle="popover" data-placement="bottom">
 						<img src="ressources/son.png" width="30px">
@@ -39,10 +49,10 @@
 				</div>
 				<div class="col-4 col-sm-4 dropdown dropright">
 					<button id="langage" class="icones dropdown-toggle" data-toggle="dropdown" type="button">
-						<img id="langue_actuelle" src="ressources/Drapeau_France.png" width="30px">
+						<img id="langue_actuelle" src="" width="30px">
 					</button>
 					<div class="dropdown-menu">
-						<button id="français" class="dropdown-item" type="button" onclick="ChangerFrançais()">
+						<button id="français" class="dropdown-item"  type="button" onclick="ChangerFrançais()">
 							<img src="ressources/Drapeau_France.png" class="mr-2" width="30px">
 							Français
 						</button>
@@ -50,7 +60,7 @@
 							<img src="ressources/anglais.jpg" class="mr-2" width="30px">
 							English
 						</button>
-						<button id="espagnol" class="dropdown-item" type="button" onclick="ChangerEspagnol()">
+						<button id="espagnol" class="dropdown-item"  type="button" onclick="ChangerEspagnol()">
 							<img src="ressources/espagnol.jpg" class="mr-2" width="30px">
 							Español
 						</button>
@@ -63,13 +73,13 @@
 				</div>
 				<div class="col-2 col-sm-2">
 					<a href="index.html">
-						<button class="icones" type="button">
+						<button id="exit" class="icones" type="button">
 							<img src="ressources/exit.png" width="30px">
 						</button>
 					</a>
 				</div>
 			</div>
-		</header>
+		</nav>
 		<div class="row mt-5">
 			<div class="offset-md-1 col-md-10 offset-lg-2 col-lg-8">
 				<img id="logo" class="img-fluid" src="ressources/index.png" alt="logo code names">
@@ -87,7 +97,8 @@
 					Bonne chance!
 				</p>
 			</div>
-			<div class="offset-1 col-10 offset-md-2 col-md-5 offset-lg-1 col-lg-2 modes-box" onclick="window.location='competitif.html';">
+			<div class="offset-1 col-10 offset-md-2 col-md-5 offset-lg-1 col-lg-2 modes-box"
+			     onclick="window.location='competitif.html';">
 				<p class="modes-title">Solo </p>
 				<div class="modes-divider"></div>
 				<p class="modes-content">

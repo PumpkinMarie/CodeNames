@@ -131,12 +131,12 @@ body {
 /*	4) coop.html */
 /***********************************************************************/
 .equipe {
-	display: inline-block;
-	padding: 6px 0 6px 0;
-	margin: 12px 12px 6px 12px;
 	color: #fff;
-	width: 25vw;
-	height: 48vh;
+	margin-bottom: 1em;
+	padding: 1em;
+	border: 2px black solid;
+	border-radius: 10px;
+	background: #696969;
 }
 
 .form {
@@ -147,12 +147,14 @@ body {
 	padding: 6px 0 6px 0;
 	font: Bold 20px Arial;
 	background: #4d94ff;
+	border-radius: 5px;
 }
 
 #eq2 {
 	padding: 6px 0 6px 0;
 	font: Bold 20px Arial;
 	background: #ff751a;
+	border-radius: 5px;
 }
 
 .box_tour {
@@ -223,18 +225,18 @@ body {
 }
 
 /***********************************************************************/
+/*	6) plateau.html */
+/***********************************************************************/
+#plateau-start.show {
+	background: black;
+	opacity: 1;
+}
+
+
+/***********************************************************************/
 /*	7) Media Queries */
 /***********************************************************************/
 @media (max-width: 768px) {
-
-	.equipe {
-		display: block;
-		padding: 6px 0 6px 0;
-		margin: 0 0 20px 0;
-		width: 100vw;
-		height: auto;
-	}
-
 	.box_tour {
 		height: 10vh;
 		margin: 0 0 0 0;
