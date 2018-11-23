@@ -1,7 +1,7 @@
 class Board{
 
 	getFirstTeam(){
-		return firsTeam;
+		return this.firsTeam;
 	}
 
 	randomCard(repartition){

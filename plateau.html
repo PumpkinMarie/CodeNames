@@ -13,9 +13,13 @@
 	<body class="container-fluid">
 		<div id="tour" onclick="banniereRemove()"></div>
 
+		<div class="alert" id="closingRed">
+  		<span class="closebtn" onclick="pursue()">&times;</span>
+  		<strong>Listen!</strong> Votre tour est terminé. Fermez ce message pour continuer.
+		</div>
 
 		<header class="row justify-content-between head">
-			<div class="col-md-2 col-sm-6 order-1	box_tour">
+			<div class="col-md-2 col-sm-6 order-1	box_tour" id="Box_tour_id">
 				<p id="Tour_Eq"></p>
 			</div>
 			<div class="col-md-6 order-3 choix_ME">
