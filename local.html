@@ -1,65 +1,111 @@
 <!DOCTYPE html>
-
 <html>
-
 	<head>
 		<title>CodeNames</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.4.11/css-doodle.min.js"></script>
+
+		<script src="affichage.js"></script>
 		<link rel="stylesheet" href="style.css">
 	</head>
-
-	<body class="container">
-		<header class="row">
-			<div class="col-md-9"></div>
-			<div class="col-md-3">
-			<div id="son">
-				<button class="icones" type="button"><img src="ressources/son.png" width="30px" width="auto" ></img></button>
-				<input id="barre_son" type="range" min="0" max="100" value="50">
+	<body class="container-fluid">
+		<css-doodle style="z-index: -1; position: fixed; top: 0; left: 0; opacity: 0.2;">
+			:doodle {
+			@grid: 11;
+			grid-gap: 0.2em;
+			@size: 99vw;
+			}
+			margin: 1em;
+			background: @pick(
+			#ff1a1a,
+			#3366ff,
+			#e6e6e6,
+			#333333
+			);
+			box-shadow: 0 0 0 1.2em #696969 ;
+		</css-doodle>
+		<header class="row mt-2">
+			<div class="col-12 offset-sm-6 col-sm-6 offset-md-7 col-md-5 offset-lg-8 col-lg-4 row">
+				<div id="son" class="col-3 col-sm-3">
+					<button class="icones" type="button" data-toggle="popover" data-placement="bottom">
+						<img src="ressources/son.png" width="30px">
+					</button>
+				</div>
+				<div class="col-4 col-sm-4 dropdown dropright">
+					<button id="langage" class="icones dropdown-toggle" data-toggle="dropdown" type="button"
+					        onclick="AfficherLangues()">
+						<img id="langue_actuelle" src="ressources/Drapeau_France.png" width="30px">
+					</button>
+					<div class="dropdown-menu">
+						<button id="français" class="dropdown-item" type="button" onclick="ChangerFrançais()">
+							<img src="ressources/Drapeau_France.png" class="mr-2" width="30px">
+							Français
+						</button>
+						<button id="anglais" class="dropdown-item" type="button" onclick="ChangerAnglais()">
+							<img src="ressources/anglais.jpg" class="mr-2" width="30px">
+							English
+						</button>
+						<button id="espagnol" class="dropdown-item" type="button" onclick="ChangerEspagnol()">
+							<img src="ressources/espagnol.jpg" class="mr-2" width="30px">
+							Español
+						</button>
+					</div>
+				</div>
+				<div class="col-3 col-sm-3">
+					<button class="icones" id="options" type="button">
+						<img src="ressources/reg.png" width="30px">
+					</button>
+				</div>
+				<div class="col-2 col-sm-2">
+					<a href="index.html">
+						<button class="icones" type="button">
+							<img src="ressources/exit.png" width="30px">
+						</button>
+					</a>
+				</div>
 			</div>
-			<button class="icones" id="langage" type="button" onclick="AfficherLangues()"><img id="langue_actuelle" src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
-			<div id="langues" style="visibility:hidden">
-				<button class="icones" id="français" type="button" onclick="ChangerFrançais()"><img src="ressources/Drapeau_France.png" width="30px" width="auto" ></img></button>
-				<button class="icones" id="anglais" type="button" onclick="ChangerAnglais()"><img src="ressources/anglais.jpg" width="30px" width="auto" ></img></button>
-				<button class="icones" id="espagnol" type="button" onclick="ChangerEspagnol()"><img src="ressources/espagnol.jpg" width="30px" width="auto" ></img></button>
-
-			</div>
-			<button class="icones" id="options" type="button"><img src="ressources/reg.png" width="30px" width="auto" ></img></button>
-			<a href="index.html"><button class="icones" type="button"><img src="ressources/exit.png" width="30px" width="auto" ></img></button></a>
-		</div>
 		</header>
-		<div class="row">
-			<img class="col-md-8 offset-md-2" id="logo" src="ressources/index.png" alt="logo code names">
-		</div>
-		<div class="row justify-content-center">
-			<div class="modes_loc col-md-3" onclick="ModeCompet()">
-				<p class="modes_bout">Competitif	</p>
-				<p class="desc">Agents, préparez-vous pour une bataille acharnée.
-Votre mission, si toutefois vous choisissez ce mode, est de vaincre l’équipe adverse composée d’autres joueurs.
-Votre groupe d’ami sera divisé en 2 équipes d’au moins 2 joueurs(1 maitre espion et 1 agent).
-Bonne chance!</p>
-			</div>
-			<div class="modes_loc col-md-3" onclick="ModeCoop()">
-				<p class="modes_bout">Coop	</p>
-				<p class="desc">Agents, les machines ont envahi le monde.
-Votre mission, si toutefois vous choisissez ce mode, est de vaincre l’équipe adverse composée de leurs agents.
-Votre équipe d'au moins 2 joueurs devra affronter une IA (débrancher l’ordinateur ne compte pas).
-Bonne chance !</p>
-			</div>
-			<div class="modes_loc col-md-3" onclick="window.location='competitif.html';">
-				<p class="modes_bout">Solo	</p>
-				<p class="desc">Règle du mode solo : on ne joue pas au mode solo
-</p>
+		<div class="row mt-5">
+			<div class="offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+				<img id="logo" class="img-fluid" src="ressources/index.png" alt="logo code names">
 			</div>
 		</div>
-
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-		<script src="affichage.js"></script>
-
-
+		<div class="container mt-3"><div class="row">
+			<div class="offset-1 col-10 offset-md-0 col-md-5 offset-lg-0 col-lg-4 modes-box" onclick="ModeCompet()">
+				<p class="modes-title">Competitif </p>
+				<div class="modes-divider"></div>
+				<p class="modes-content">
+					Agents, préparez-vous pour une bataille acharnée.
+					Votre mission, si toutefois vous choisissez ce mode, est de vaincre l’équipe adverse composée
+					d’autres joueurs.
+					Votre groupe d’ami sera divisé en 2 équipes d’au moins 2 joueurs(1 maitre espion et 1 agent).
+					Bonne chance!
+				</p>
+			</div>
+			<div class="offset-1 col-10 offset-md-2 col-md-5 offset-lg-1 col-lg-2 modes-box" onclick="window.location='competitif.html';">
+				<p class="modes-title">Solo </p>
+				<div class="modes-divider"></div>
+				<p class="modes-content">
+					Règle du mode solo : on ne joue pas au mode solo
+				</p>
+			</div>
+			<div class="offset-1 col-10 offset-md-3 col-md-6 offset-lg-1 col-lg-4 modes-box" onclick="ModeCoop()">
+				<p class="modes-title">Coop </p>
+				<div class="modes-divider"></div>
+				<p class="modes-content">
+					Agents, les machines ont envahi le monde.
+					Votre mission, si toutefois vous choisissez ce mode, est de vaincre l’équipe adverse composée de
+					leurs agents.
+					Votre équipe d'au moins 2 joueurs devra affronter une IA (débrancher l’ordinateur ne compte pas).
+					Bonne chance !
+				</p>
+			</div>
+		</div></div>
 	</body>
-
 </html>
