@@ -97,11 +97,39 @@
 				</a>
 			</div>
 			<div class="col-12 row mb-5">
-				<a href="" class="offset-1 col-10 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6">
-					<button class="btn modes w-75" type="button" disabled>Tutoriel</button>
+				<a class="offset-1 col-10 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6">
+					<button class="btn modes w-75" type="button" data-toggle="modal" data-target="#myModal">Tutoriel</button>
 				</a>
 			</div>
 		</div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Header</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+					<div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=szYTmx0bYyw"></iframe>
+				</div>
+					</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
 
 		<audio src="./ressources/SoundEffect/MainTheme.mp3" loop autoplay width=0>
 			Florent Combe

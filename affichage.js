@@ -1,7 +1,7 @@
 
 let HasCore=0;
 if (typeof(Storage) !== "undefined") {
-    // Store
+    // On store les éléments qui doivent être conservées entre les pages
     if(localStorage.getItem("langue")==null)
       localStorage.setItem("langue", "ressources/Drapeau_France.png");
     $('#langue_actuelle').attr("src",localStorage.getItem("langue"));
@@ -31,6 +31,8 @@ function changeNoyauLang() {
 		noyau.langUpdate(getLangue());
 }
 
+//ces 3 fonctions sont appelées si on change la langue de l'interface et
+//change l'image du drapeau principal
 function ChangerAnglais(){
     $('#langue_actuelle').attr("src","./ressources/anglais.jpg");
     $('#langues').css("visibility","hidden");
@@ -143,14 +145,14 @@ function banniereFJ (nom) {
 
 $(document).ready(function () {
 	let tmp1, tmp2, tmp3;
-	
+
 	// Gestion de la barre de son
 	$('#son [data-toggle="popover"]').popover({
 		html : true,
 		trigger : "focus",
 		content: '<div class="input-group"><input id="barre_son" type="range" min="0" max="100" value="50"></div>'
 	});
-	
+
 	// Gestion de la langue
 	tmp1 = $('#langue_actuelle');
 	if (window.localStorage && window.localStorage.hasOwnProperty('langue')) {
@@ -163,7 +165,7 @@ $(document).ready(function () {
 	else {
 		tmp1.attr('src', './ressources/Drapeau_France.png');
 	}
-	
+
 	// Gestion de l'exit du jeu
 	$('#exit').click(function() {
 		if (window.localStorage) {
@@ -173,7 +175,7 @@ $(document).ready(function () {
 			}
 		}
 	});
-	
+
 	// Gestion modal début plateau.html
 	tmp1 = $('#plateau-start');
 	tmp1.on("show.bs.modal", function() {

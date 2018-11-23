@@ -3,7 +3,7 @@ let TourME=1;
 let TourJ=0;
 
 //Temporaire
-function getWord(entries, index, language) {
+/*function getWord(entries, index, language) {
 	if (language == FR) {
 		return entries[index][0];
 	} else if (language == EN) {
@@ -21,7 +21,7 @@ function getWordRandom(language) {
 		word = getWord(entries, rand, language);
 	}
 	return word;
-}//Fin temporaire
+}//Fin temporaire*/
 
 let noyau;
 
@@ -58,6 +58,20 @@ function ApplyColor(card,color){//card's type: Blue,Red,Grey,Black,hidden
   card.style.backgroundColor= "#"+c;
 }
 
+function seeAsPlayer(){
+  //On récupère les cartes
+  let CardArray=noyau.getBoardState();
+  let htmlCard=new Array();
+  for(let i=0;i<5;i++){
+     htmlCard[i]=new Array();
+     for(let j=0;j<5;j++){
+        htmlCard[i][j]=document.getElementById("c"+i+j);
+        htmlCard[i][j].innerHTML=CardArray[i][j].getValue();
+        ApplyColor(htmlCard[i][j],CardArray[i][j].seeAsPlayer());
+     }
+  }
+}
+
 function cardsUpdate(){
   //On récupère les cartes
   let CardArray=noyau.getBoardState();
@@ -70,7 +84,6 @@ function cardsUpdate(){
         ApplyColor(htmlCard[i][j].parentElement,CardArray[i][j].getTeam());
      }
   }
-
 }
 
 function getEquipe1(){
@@ -123,6 +136,7 @@ function pursue(){
 }
 
 function waitForEnding(){
+	seeAsPlayer();
 	let e=document.getElementById("closingRed");
 	e.style.opacity="1";
 }

@@ -6,7 +6,7 @@ class Board{
 
 	randomCard(repartition){
 		let random=Math.floor(repartition.length*Math.random());
-		let result=new Card(getWordRandom(this.lang),repartition[random],this.noyau);
+		let result=new Card(Langue.getWordRandom(this.lang),repartition[random],this.noyau);
 		repartition.splice(random,1);
 		return result;
 	}
@@ -53,10 +53,14 @@ class Board{
 	}
 
 	langUpdate(lang){//On change la langue de tous les mots
-		for(let i=0;i<5;i++){
-			for(let j=0;j<5;j++){
-				this.CardBoard[i][j].value=getWord(this.CardBoard[i][j].value,lang);
+		if((lang==FR ||lang==EN ||lang==ES) && lang!=this.lang){
+			for(let i=0;i<5;i++){
+				for(let j=0;j<5;j++){
+					this.CardBoard[i][j].value=Langue.Translatefrom(this.CardBoard[i][j].value,this.lang,lang);
+				}
 			}
+			this.lang=lang;
+			this.langObj.actuel=lang;
 		}
 	}
 
