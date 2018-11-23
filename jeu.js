@@ -131,6 +131,7 @@ function GO () {
 function pursue () {
 	let e = document.getElementById("closingRed");
 	if ( canPass ) {//sinon faux positif
+		resetBorder();
 		cardsUpdate();
 		PhaseME();
 	}
@@ -141,6 +142,15 @@ function waitForEnding () {
 	seeAsPlayer();
 	let e = document.getElementById("closingRed");
 	e.style.opacity = "1";
+}
+
+function resetBorder(){
+	for(let i=0;i<5;i++){
+		for(let j=0;j<5;j++){
+			console.log()
+			$("#c"+i+j).parent().css("border", "black 2px solid");
+		}
+	}
 }
 
 function Click_Carte ( x, y ) {
@@ -196,5 +206,6 @@ function Clic_MasterAgent () {
 		noyau.setMasterSelection(masterSelection);//Change automatiquement le tour noyau
 		masterSelection = new Array();//On reset
 	}
+	resetBorder();
 	cardsUpdate();//On affiche les cartes des joueurs si réussi, sinon cartes ME
 }
