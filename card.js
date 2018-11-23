@@ -15,6 +15,11 @@ class Card{
 		return "hidden";
 	return this.team;
 	}
+	seeAsPlayer(){
+		if(!this.isrevealed)
+			return "hidden";
+		return this.team;
+	}
 	reveal(){ //the card has been chosen
 		this.isrevealed=true;
 	}
