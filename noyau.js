@@ -68,9 +68,13 @@ class Noyau {
 			this.winner=this.teams[(this.currentTeam+1)%2].name;
 			return false;
 		}else if(card.getTeam()=="Grey"){
+			var audio = new Audio('./ressources/SoundEffect/GreyCard.mp3');
+			audio.play();
 			return this.endTour();
 		}
 		else if(card.team!=this.teams[this.currentTeam].color){ //Neither Black nor Grey. It must be blue or red and of the opposite team
+			var audio = new Audio('./ressources/SoundEffect/WrongGuess.mp3');
+			audio.play();
 			if(this.teams[(this.currentTeam+1)%2].AddScore(1)){//Has the other team won from that mistake?
 				this.gameEnd=true;
 				this.winner=this.teams[(this.currentTeam+1)%2].name;
@@ -79,6 +83,8 @@ class Noyau {
 			else
 				return this.endTour();
 		}else{ //Is the card related to the tip?
+			var audio = new Audio('./ressources/SoundEffect/GoodGuess.mp3');
+			audio.play();
 			if(this.teams[this.currentTeam].isInCardArray(card)){
 				if(this.teams[this.currentTeam].AddScore(1)){
 					this.gameEnd=true;
