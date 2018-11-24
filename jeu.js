@@ -104,24 +104,31 @@ function getNumberEquipe2 () {
 	return localStorage.getItem("nbj2");
 }
 
+let masterSelection = new Array();
 let canPass;
+let ia;
 
 window.onload = function () {
 	//Création du noyau
 	noyau = new Noyau(getMode(), getLangue(), getEquipe1(), getNumberEquipe1(), getEquipe2(), getNumberEquipe2());
 	HasCore = 1;
 	canPass = false;
+	ia=new IA(noyau);
 	cardsUpdate();
 	console.log("Noyau créé");
 	console.log("Current:" + noyau.teams[noyau.currentTeam].getName());
 	console.log(noyau.teams[0].getName() + ":0 " + noyau.teams[0].getScore());
 	console.log(noyau.teams[1].getName() + ":1 " + noyau.teams[0].getScore());
 	banniereAffiche();
+	if(noyau.teams[noyau.currentTeam].getColor()=="Red"){
+		MasterIA();
+		//Le master IA a joué
+		while(ia.spyPLay());
+	}
 }
 
 let indice;
 let indiceNb;
-let masterSelection = new Array();
 
 function GO () {
 	if(!canPass){
@@ -154,6 +161,31 @@ function resetBorder(){
 			console.log()
 			$("#c"+i+j).parent().css("border", "black 2px solid");
 		}
+	}
+}
+
+function Click_Carte_IA ( x, y ) {
+	affCarte = "#c" + x + y;
+	if(!canPass && !noyau.isEndGame()){
+			if ( !noyau.verifySpyCard(noyau.getBoardState()[x][y]) ) {//le tour se termine
+				canPass = true;
+				waitForEnding();
+				//Message de changement de tour
+			}
+			else {//Les joueurs continuent
+				$("#choix_J").css("display", "inline-block");
+				cardsUpdate();
+				//Message de félicitation
+			}
+	}
+	//cardsUpdate();//On met à jour l'affichage des cartes
+	if ( noyau.isEndGame() ) {
+		//Le jeu est terminé
+		let winnerName = noyau.winner;
+		banniereFJ(winnerName);
+		var audio = new Audio('./ressources/SoundEffect/EndGame.mp3');
+		audio.volume=document.getElementById('barre_son').value/100;
+		audio.play();
 	}
 }
 
@@ -202,6 +234,15 @@ function Click_Carte ( x, y ) {
 		audio.volume=document.getElementById('barre_son').value/100;
 		audio.play();
 	}
+}
+
+function MasterIA(){
+	masterSelection=ia.setMasterSelectionCardArray();
+	AfficheJoueur();
+	noyau.setMasterSelection(masterSelection);//Change automatiquement le tour noyau
+	masterSelection = new Array();
+	resetBorder();
+	cardsUpdate();
 }
 
 function Clic_MasterAgent () {

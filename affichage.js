@@ -94,7 +94,11 @@ function PhaseME() {
 	$('#choix_J_inside').css("display", "none");
 	$('#choix_J').css("display", "none");
 	banniereAffiche();
-
+	if(noyau.teams[noyau.currentTeam].getColor()=="Red"){
+		MasterIA();
+		//Le master IA a joué
+		while(ia.spyPLay());//
+	}
 }
 
 function ModeCompet() {
@@ -119,16 +123,22 @@ function AfficheJoueur() {
 function AjoutEquipes() {
 	document.getElementById('col1').value;
 	localStorage.setItem("couleur_equipe", document.getElementById('col1').value);
-	document.getElementById('col2').value;
-	localStorage.setItem("couleur_equipe2", document.getElementById('col2').value);
+	if(localStorage.getItem("mode")!="cooperative"){
+		document.getElementById('col2').value;
+		localStorage.setItem("couleur_equipe2", document.getElementById('col2').value);
+	}
 	document.getElementById('nom1').value;
 	localStorage.setItem("nom_equipe1", document.getElementById('nom1').value);
-	document.getElementById('nom2').value;
-	localStorage.setItem("nom_equipe2", document.getElementById('nom2').value);
+	if(localStorage.getItem("mode")!="cooperative"){
+		document.getElementById('nom2').value;
+		localStorage.setItem("nom_equipe2", document.getElementById('nom2').value);
+	}
 	document.getElementById('nbj1').value;
 	localStorage.setItem("nbj1", document.getElementById('nbj1').value);
-	document.getElementById('nbj2').value;
-	localStorage.setItem("nbj2", document.getElementById('nbj2').value);
+	if(localStorage.getItem("mode")!="cooperative"){
+		document.getElementById('nbj2').value;
+		localStorage.setItem("nbj2", document.getElementById('nbj2').value);
+	}
 	window.open("plateau.html", "_self");
 }
 
