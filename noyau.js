@@ -16,7 +16,7 @@ class Noyau {
 		this.board=this.createBoard();
 		this.currentTeam=this.board.firstTeam; //"Blue" or "Red"
 		this.currentTeam=this.currentTeam=="Blue"?0:1;
-		this.teams[this.board.getFirstTeam()=="Blue"?0:1].AddScore(-1);//First team has 1 more card
+		//this.teams[this.board.getFirstTeam()=="Blue"?0:1].AddScore(-1);//First team has 1 more card
 	}
 
 	setTeam(color,name,NbPlayers) { //Set team parameters
