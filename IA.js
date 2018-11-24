@@ -63,6 +63,3 @@ class IA {
 		this.board = noyau.getBoardState();
 	}
 }
-
-let ia = new IA(test);
-ia.spyPLay();
