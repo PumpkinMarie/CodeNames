@@ -116,6 +116,7 @@ window.onload = function () {
 	console.log("Current:" + noyau.teams[noyau.currentTeam].getName());
 	console.log(noyau.teams[0].getName() + ":0 " + noyau.teams[0].getScore());
 	console.log(noyau.teams[1].getName() + ":1 " + noyau.teams[0].getScore());
+	banniereAffiche();
 }
 
 let indice;
