@@ -1,7 +1,8 @@
 # CodeNames
 
-Pour lancer le menu de démarrage, ouvrez le fichier index.html et naviguez ensuite dans l'interface.
-
+Pour lancer le menu de démarrage, ouvrez le fichier index.html avec un navigateur et naviguez ensuite dans l'interface.
+Vous avez aussi la possibilité d'accèder au serveur hébergeant le jeu à l'adresse: http://louis-th.xyz/index.html
+Voici le lien de notre dépôt git: https://github.com/PumpkinMarie/CodeNames
 
 
 ## Règles
