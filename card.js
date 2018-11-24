@@ -21,6 +21,8 @@ class Card{
 		return this.team;
 	}
 	reveal(){ //the card has been chosen
+		var audio = new Audio('./ressources/SoundEffect/Reveal.wav');
+		audio.play();	
 		this.isrevealed=true;
 	}
 	isRevealed(){
