@@ -155,37 +155,39 @@ function resetBorder(){
 
 function Click_Carte ( x, y ) {
 	affCarte = "#c" + x + y;
-	if ( !noyau.isMaster() ) {//Tour du joueur
-		if ( !noyau.verifySpyCard(noyau.getBoardState()[x][y]) ) {//le tour se termine
-			canPass = true;
-			waitForEnding();
-			//Message de changement de tour
-		}
-		else {//Les joueurs continuent
-			$("#choix_J").css("display", "inline-block");
-			cardsUpdate();
-			//Message de félicitation
-		}
-	}
-	else {//On ajoute à la sélection du master
-		let test = false;
-		let i;
-		for ( i = 0 ; i < masterSelection.length ; i++ ) {
-			if ( masterSelection[i].getValue() == noyau.getBoardState()[x][y].getValue() ) {
-				test = true;
-				break;
+	if(!canPass){
+		if ( !noyau.isMaster() ) {//Tour du joueur
+			if ( !noyau.verifySpyCard(noyau.getBoardState()[x][y]) ) {//le tour se termine
+				canPass = true;
+				waitForEnding();
+				//Message de changement de tour
+			}
+			else {//Les joueurs continuent
+				$("#choix_J").css("display", "inline-block");
+				cardsUpdate();
+				//Message de félicitation
 			}
 		}
-		if ( !test ) {//Carte pas présente, on ajoute
-			masterSelection.push(noyau.getBoardState()[x][y]);
-			$(affCarte).parent().css("border", "white 2px solid");
-		}
-		else {
-			masterSelection.splice(i, 1);//On retire la carte
-			$(affCarte).parent().css("border", "black 2px solid");
-		}
+		else {//On ajoute à la sélection du master
+			let test = false;
+			let i;
+			for ( i = 0 ; i < masterSelection.length ; i++ ) {
+				if ( masterSelection[i].getValue() == noyau.getBoardState()[x][y].getValue() ) {
+					test = true;
+					break;
+				}
+			}
+			if ( !test ) {//Carte pas présente, on ajoute
+				masterSelection.push(noyau.getBoardState()[x][y]);
+				$(affCarte).parent().css("border", "white 2px solid");
+			}
+			else {
+				masterSelection.splice(i, 1);//On retire la carte
+				$(affCarte).parent().css("border", "black 2px solid");
+			}
 
-		cardsUpdate();
+			cardsUpdate();
+		}
 	}
 	//cardsUpdate();//On met à jour l'affichage des cartes
 	if ( noyau.isEndGame() ) {
