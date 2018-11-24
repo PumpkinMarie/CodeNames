@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<title>CodeNames</title>
 		<meta charset="utf-8">
@@ -14,6 +15,7 @@
 		<script src="affichage.js"></script>
 		<link rel="stylesheet" href="style.css">
 	</head>
+
 	<body class="container-fluid">
 		<css-doodle grid="11" style="z-index: -1; position: fixed; top: 0; left: 0; opacity: 0.2;">
 			:container {
@@ -52,7 +54,7 @@
 						<img id="langue_actuelle" src="" width="30px">
 					</button>
 					<div class="dropdown-menu">
-						<button id="français" class="dropdown-item"  type="button" onclick="ChangerFrançais()">
+						<button id="français" class="dropdown-item" type="button" onclick="ChangerFrançais()">
 							<img src="ressources/Drapeau_France.png" class="mr-2" width="30px">
 							Français
 						</button>
@@ -60,7 +62,7 @@
 							<img src="ressources/anglais.jpg" class="mr-2" width="30px">
 							English
 						</button>
-						<button id="espagnol" class="dropdown-item"  type="button" onclick="ChangerEspagnol()">
+						<button id="espagnol" class="dropdown-item" type="button" onclick="ChangerEspagnol()">
 							<img src="ressources/espagnol.jpg" class="mr-2" width="30px">
 							Español
 						</button>
@@ -85,43 +87,45 @@
 				<img id="logo" class="img-fluid" src="ressources/index.png" alt="logo code names">
 			</div>
 		</div>
-		<div class="container mt-3"><div class="row">
-			<div class="offset-1 col-10 offset-md-0 col-md-5 offset-lg-0 col-lg-4 modes-box" onclick="ModeCompet()">
-				<p class="modes-title">Competitif </p>
-				<div class="modes-divider"></div>
-				<p class="modes-content">
-					Agents, préparez-vous pour une bataille acharnée.
-					Votre mission, si toutefois vous choisissez ce mode, est de vaincre l’équipe adverse composée
-					d’autres joueurs.
-					Votre groupe d’ami sera divisé en 2 équipes d’au moins 2 joueurs(1 maitre espion et 1 agent).
-					Bonne chance!
-				</p>
+		<div class="container mt-3">
+			<div class="row">
+				<div class="offset-1 col-10 offset-md-0 col-md-5 offset-lg-0 col-lg-4 modes-box" onclick="ModeCompet()">
+					<p class="modes-title">Competitif </p>
+					<div class="modes-divider"></div>
+					<p class="modes-content">
+						Agents, préparez-vous pour une bataille acharnée.
+						Votre mission, si toutefois vous choisissez ce mode, est de vaincre l’équipe adverse composée
+						d’autres joueurs.
+						Votre groupe d’ami sera divisé en 2 équipes d’au moins 2 joueurs(1 maitre espion et 1 agent).
+						Bonne chance!
+					</p>
+				</div>
+				<div class="offset-1 col-10 offset-md-2 col-md-5 offset-lg-1 col-lg-2 modes-box" onclick="window.location='competitif.html';">
+					<p class="modes-title">Solo </p>
+					<div class="modes-divider"></div>
+					<p class="modes-content">
+						Règle du mode solo : on ne joue pas au mode solo
+					</p>
+				</div>
+				<div class="offset-1 col-10 offset-md-3 col-md-6 offset-lg-1 col-lg-4 modes-box" onclick="ModeCoop()">
+					<p class="modes-title">Coop </p>
+					<div class="modes-divider"></div>
+					<p class="modes-content">
+						Agents, les machines ont envahi le monde.
+						Votre mission, si toutefois vous choisissez ce mode, est de vaincre l’équipe adverse composée de
+						leurs agents.
+						Votre équipe d'au moins 2 joueurs devra affronter une IA (débrancher l’ordinateur ne compte pas).
+						Bonne chance !
+					</p>
+				</div>
 			</div>
-			<div class="offset-1 col-10 offset-md-2 col-md-5 offset-lg-1 col-lg-2 modes-box"
-			     onclick="window.location='competitif.html';">
-				<p class="modes-title">Solo </p>
-				<div class="modes-divider"></div>
-				<p class="modes-content">
-					Règle du mode solo : on ne joue pas au mode solo
-				</p>
-			</div>
-			<div class="offset-1 col-10 offset-md-3 col-md-6 offset-lg-1 col-lg-4 modes-box" onclick="ModeCoop()">
-				<p class="modes-title">Coop </p>
-				<div class="modes-divider"></div>
-				<p class="modes-content">
-					Agents, les machines ont envahi le monde.
-					Votre mission, si toutefois vous choisissez ce mode, est de vaincre l’équipe adverse composée de
-					leurs agents.
-					Votre équipe d'au moins 2 joueurs devra affronter une IA (débrancher l’ordinateur ne compte pas).
-					Bonne chance !
-				</p>
-			</div>
-		</div></div>
+		</div>
 
-		<audio src="./ressources/SoundEffect/MainTheme.mp3" loop autoplay width=0>
+		<audio src="./ressources/SoundEffect/MainTheme.mp3" loop autoplay width=0 id="music">
 			Florent Combe
 			https://www.youtube.com/watch?v=zAoqbN0mWIA
 		</audio>
-		
+
 	</body>
+
 </html>

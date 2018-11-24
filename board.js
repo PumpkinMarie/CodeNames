@@ -23,7 +23,8 @@ class Board{
 			red++;
 			this.firsTeam="Red";
 		}
-
+		this.noyau.teams[1].score=blue;
+		this.noyau.teams[0].score=red;
 		while(blue+red+neutral+assassin>0){
 			if(blue>0){
 				repartition.push("Blue");
