@@ -94,7 +94,7 @@ function PhaseME() {
 	$('#choix_J_inside').css("display", "none");
 	$('#choix_J').css("display", "none");
 	banniereAffiche();
-	if(noyau.teams[noyau.currentTeam].getColor()=="Red"){
+	if(noyau.teams[noyau.currentTeam].getColor()=="Red" && noyau.mode=="cooperative"){
 		MasterIA();
 		//Le master IA a joué
 		while(ia.spyPLay());//

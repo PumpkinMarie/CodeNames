@@ -113,14 +113,15 @@ window.onload = function () {
 	noyau = new Noyau(getMode(), getLangue(), getEquipe1(), getNumberEquipe1(), getEquipe2(), getNumberEquipe2());
 	HasCore = 1;
 	canPass = false;
-	ia=new IA(noyau);
+	if(noyau.mode=="cooperative")
+		ia=new IA(noyau);
 	cardsUpdate();
 	console.log("Noyau créé");
 	console.log("Current:" + noyau.teams[noyau.currentTeam].getName());
 	console.log(noyau.teams[0].getName() + ":0 " + noyau.teams[0].getScore());
 	console.log(noyau.teams[1].getName() + ":1 " + noyau.teams[0].getScore());
 	banniereAffiche();
-	if(noyau.teams[noyau.currentTeam].getColor()=="Red"){
+	if(noyau.teams[noyau.currentTeam].getColor()=="Red" && noyau.mode=="cooperative"){
 		MasterIA();
 		//Le master IA a joué
 		while(ia.spyPLay());
