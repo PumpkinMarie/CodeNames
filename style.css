@@ -248,6 +248,13 @@ p {
 	z-index: 1;
 }
 
+#choix_J_inside {
+	padding: 0.5em;
+	background: #aaaaaa;
+	border-radius: 10px;
+	border: 1px solid black;
+}
+
 @media screen and (max-width: 767px) {
 	.display-none-sm {
 		display: none;

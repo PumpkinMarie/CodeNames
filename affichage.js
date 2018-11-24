@@ -67,10 +67,12 @@ function banniereAffiche() {
 	document.getElementById("Tour_Eq").innerHTML = test;
 	if (noyau.teams[noyau.currentTeam].getColor() == "Blue") {
 		document.getElementById("Box_tour_id").style.backgroundColor = "#1AA3FF";
+		$("#btn-modal-start").addClass('btn-primary').text('Je suis le maître espion bleu!');
 		//document.getElementById("tour").style.backgroundColor="#1AA3FF";
 	}
 	else {
 		document.getElementById("Box_tour_id").style.backgroundColor = "#FF3300";
+		$("#btn-modal-start").addClass('btn-danger').text('Je suis le maître espion rouge!');
 		//document.getElementById("tour").style.backgroundColor="#FF3300";
 	}
 	//$('#tour').css("visibility", "visible");
@@ -89,6 +91,7 @@ function PhaseME() {
 	test = noyau.teams[noyau.currentTeam].getColor();
 	$('#box_tour').css("background", test);
 	$('#choix_ME_inside').css("display", "inline-block");
+	$('#choix_ME_inside').prev().show();
 	$('#choix_ME_inside2').css("display", "inline-block");
 	$('#choix_ME_but').css("display", "inline-block");
 	$('#choix_J_inside').css("display", "none");
@@ -115,7 +118,7 @@ function AfficheJoueur() {
 	$(".carte").css("box-shadow", "0 0");
 	document.getElementById('choix_J_inside').innerHTML = "Indice :" + indice + " en " + indiceNb + " cartes";
 	$('#choix_J_inside').css("display", "block");
-	$('#choix_ME_inside').css("display", "none ");
+	$('#choix_ME_inside').css("display", "none ").prev().hide();
 	$('#choix_ME_inside2').css("display", "none");
 	$('#choix_ME_but').css("display", "none");
 }
@@ -144,14 +147,8 @@ function AjoutEquipes() {
 
 function banniereFJ(nom) {
 	//document.getElementById("tour").innerHTML = "Bravo" + nom + ". Tu as gagné!";
-	if (noyau.teams[(noyau.currentTeam + 1) % 2].getColor() == "Blue") {
-		document.getElementById("Box_tour_id").style.backgroundColor = "#1AA3FF";
-		//document.getElementById("tour").style.backgroundColor="#1AA3FF";
-	}
-	else {
-		document.getElementById("Box_tour_id").style.backgroundColor = "#FF3300";
-		//document.getElementById("tour").style.backgroundColor="#FF3300";
-	}
+	$('#plateau-end').modal();
+	$('#plateau-end-content').text("Bravo " + nom + ", ce fut un excellent jeu!");
 	// $('#tour').css("visibility", "visible");
 }
 
@@ -188,11 +185,10 @@ $(document).ready(function () {
 	});
 
 	// Gestion modal début plateau.html
-	tmp1 = $('#plateau-start');
-	tmp1.on("show.bs.modal", function () {
-		// noyau.teams[noyau.currentTeam].getColor()
-		$('#btn-modal-start').text("Je suis le maître espion " + "bleu")
-			.addClass("btn-primary");
-	});
-	tmp1.modal({ show: true, backdrop: "static" });
+	$('#plateau-start').modal({ show: true, backdrop: "static" });
+	
+	// Fin de l'affichage des scores
+	$('#btn-modal-end').click(function() {
+		document.location.href = "./index.html";
+	})
 });
