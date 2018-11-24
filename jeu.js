@@ -114,8 +114,8 @@ window.onload = function () {
 	cardsUpdate();
 	console.log("Noyau créé");
 	console.log("Current:" + noyau.teams[noyau.currentTeam].getName());
-	console.log(noyau.teams[0].getName() + ": " + noyau.teams[0].getScore());
-	console.log(noyau.teams[1].getName() + ": " + noyau.teams[0].getScore());
+	console.log(noyau.teams[0].getName() + ":0 " + noyau.teams[0].getScore());
+	console.log(noyau.teams[1].getName() + ":1 " + noyau.teams[0].getScore());
 }
 
 let indice;
@@ -131,6 +131,7 @@ function GO () {
 function pursue () {
 	let e = document.getElementById("closingRed");
 	if ( canPass ) {//sinon faux positif
+		canPass=false;
 		resetBorder();
 		cardsUpdate();
 		PhaseME();
@@ -155,7 +156,7 @@ function resetBorder(){
 
 function Click_Carte ( x, y ) {
 	affCarte = "#c" + x + y;
-	if(!canPass){
+	if(!canPass && !noyau.isEndGame()){
 		if ( !noyau.isMaster() ) {//Tour du joueur
 			if ( !noyau.verifySpyCard(noyau.getBoardState()[x][y]) ) {//le tour se termine
 				canPass = true;
