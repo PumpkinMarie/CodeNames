@@ -195,6 +195,8 @@ function Click_Carte ( x, y ) {
 		//Le jeu est terminé
 		let winnerName = noyau.winner;
 		banniereFJ(winnerName);
+		var audio = new audio('./ressources/SoundEffect/EndGame.mp3');
+		audio.play();
 	}
 }
 

@@ -62,6 +62,8 @@ class Noyau {
 	verifySpyCard(card) { //attributes the points/actions corresponding to the cards chosen by a team
 		card.reveal();
 		if(card.team=="Black"){
+			var audio = new Audio('./ressources/SoundEffect/BlackCard.wav');
+			audio.play();
 			this.gameEnd=true;
 			this.winner=this.teams[(this.currentTeam+1)%2].name;
 			return false;
@@ -106,6 +108,8 @@ class Noyau {
 	}
 
 	endTour() {
+		var audio = new Audio('./ressources/SoundEffect/EndTurn.wav');
+		audio.play();
 		if(this.isMaster())
 			this.switchMaster();
 		else{
