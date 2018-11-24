@@ -151,7 +151,7 @@ $(document).ready(function () {
 	// Gestion de la barre de son
 	$('#son [data-toggle="popover"]').popover({
 		html: true,
-		content: '<div class="input-group"><input id="barre_son" type="range" min="0" max="100" value="50" mouseLeave=changeVolume()></div>'
+		content: '<div class="input-group"><input id="barre_son" type="range" min="0" max="100" value="50" onchange="changeVolume()"></div>'
 	});
 
 	// Gestion de la langue
