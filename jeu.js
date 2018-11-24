@@ -123,9 +123,11 @@ let indiceNb;
 let masterSelection = new Array();
 
 function GO () {
-	noyau.endTour();
-	cardsUpdate();
-	PhaseME();
+	if(!canPass){
+		noyau.endTour();
+		cardsUpdate();
+		PhaseME();
+	}
 }
 
 function pursue () {
