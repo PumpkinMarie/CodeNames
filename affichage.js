@@ -152,7 +152,7 @@ $(document).ready(function () {
 	$('#son [data-toggle="popover"]').popover({
 		html: true,
 		trigger: "focus",
-		content: '<div class="input-group"><input id="barre_son" type="range" min="0" max="100" value="50"></div>'
+		content: '<div class="input-group"><input id="barre_son" type="range" min="0" max="100" value="50" onchange=changeVolume()></div>'
 	});
 
 	// Gestion de la langue
