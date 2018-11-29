@@ -147,13 +147,13 @@ function pursue () {
 		cardsUpdate();
 		PhaseME();
 	}
-	e.style.opacity = "0";
+	e.style.display = "none";
 }
 
 function waitForEnding () {
 	seeAsPlayer();
 	let e = document.getElementById("closingRed");
-	e.style.opacity = "1";
+	e.style.display = "block";
 }
 
 function resetBorder(){
